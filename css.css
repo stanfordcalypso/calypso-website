@@ -1,0 +1,45 @@
+body {margin:0; font-family:Arial,Tahoma,sans-serif; background:#FFF url('bg.png') repeat-x scroll top left;}
+img {border:4px solid #BBB;}
+table#wrapper {margin:0 auto 0 auto; width:70%; border:1px solid #666; border-top:0; background:#FFF url('backdrop.jpg') no-repeat scroll top left;}
+table#wrapper td#left {width:70%; vertical-align:bottom; height:10px}
+table#wrapper td#right {vertical-align:top; width:30%; height:100%;}
+table#nav {margin:0 4px 0 4px;}
+table#nav td {padding:4px 10px 4px 10px;}
+table#nav td a {display:block; color:#333; text-decoration:none; font-size:11pt; font-weight:bold;}
+table#nav td a:hover {text-decoration:underline;}
+table#nav td#here {background-color:#C33; color:#FFF;}
+table#nav td#here a {color:#FFF;}
+div#logo {
+  height:130px;
+  vertical-align:middle;
+  background:transparent url('calypso_logo.png') no-repeat scroll 25px 10px;
+  color:#C33;
+  padding:20px 0 0 130px;
+  font:small-caps bold 32pt Arial,Tahoma,sans-serif;
+}
+td#content {vertical-align:top; border-top:6px solid #C33; background:#FFF url('back_pan.jpg') no-repeat scroll bottom right; padding:12px;}
+td#content h1 {font-size:12pt; color:#69C; margin:4px 0 0
+6px; background:url('calypso_icon.png') no-repeat 0px 2px; padding-left:22px;}
+td#content p {line-height:1.4em; color:#666; font-size:10pt; margin:2px 0 14px 2px; border-left:1px solid #C99; padding:0 4px 0 6px;}
+td#content table {width:100%;}
+td#content table td,td#content table td.full {width:100%; vertical-align:top;}
+td#content table td.half {width:50%;}
+td#content table td.third {width:33%;}
+td#content a {color:#58B; text-decoration:none; padding:0 2px 0 2px;}
+td#content a:hover {background-color:#FF9; color:#CA0;}
+div.green {margin:0; height:100%; padding:10px 4px 10px 14px; background-color:#AEA;}
+div.green h1 {margin:0 0 6px 0; font-size:16pt;}
+div#calendar {background-color:#EEE;}
+tr#foot td {background-color:#AEA; padding:4px 10px 4px 10px; color:#686; font-size:10pt;}
+tr#foot td a {text-decoration:underline; color:#676;}
+tr#foot td a:hover {color:#343;}
+div.column {float:right;}
+div.space {background-color:#EEF; height:60px;}
+iframe#calembed {height:500px;}
+blockquote {margin: 0 0 14px 14px; color:#558; font-size:10pt;}
+span.caption {padding:4px; font-style:italic;}
+ul {margin:0}
+ul li {line-height:1.4em; color:#666; font-size:10pt;}
+div.notice {background-color:#FF9; color:#CA0; border:1px solid #A80;}
+div.notice h1 {font-weight:bold;}
+div.notice p {border:0 !important; margin:0; color:#FFF;}
