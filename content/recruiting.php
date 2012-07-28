@@ -2,7 +2,7 @@
   <td class='half'>
   <h1>Join Cardinal Calypso</h1>
     <p>Cardinal Calypso is searching for four talented Stanford students to join our band this school year. If you love music and sunshine and want to be a part of a friendly and exciting student group, we would love for you to try out.</p>
-    <p>Come find us at the Activities Fair on Friday, September 28</b>. We'll field any questions you have, detail the audition process, and offer you the chance to sign up for a one-on-one audition later in the week. </p>
+    <p>Come find us at the Activities Fair on Friday, September 28</b>! We'll field any questions you have, detail the audition process, and offer you the chance to sign up for a one-on-one audition later in the week. </p>
   </td>
   <td class='half'>
     <h1>Sweet Details</h1>
