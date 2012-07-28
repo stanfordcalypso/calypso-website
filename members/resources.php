@@ -6,7 +6,7 @@
     <ul>
     	<li><a href="http://groupspaces.com/CardinalCalypso/files/">GroupSpaces</a></li>
     	<li><a href="https://afs.stanford.edu/?path=/afs/ir/group/calypso/scores">Stanford AFS</a></li>
-        <li><a href+"https://docs.google.com/spreadsheet/ccc?key=0AgKYtGU3LpIWdEMwU0hoVEdiczVVUFNoLWpYWThZcmc#gid=0">Spring Show Theme Ideas</a></li>
+        <li><a href="https://docs.google.com/spreadsheet/ccc?key=0AgKYtGU3LpIWdEMwU0hoVEdiczVVUFNoLWpYWThZcmc#gid=0">Spring Show Theme Ideas</a></li>
     </ul>
 	<b>Calypso on the Web</b>
     <ul>
@@ -41,7 +41,7 @@
     <ul>
     	<li><a href="https://orgsync.com/home">OrgSync</a></li>
     	<li><a href="http://mygroups2.stanford.edu/">MyGroups2</a></li>
-        <li><a href+"https://github.com/stanfordcalypso/calypso-website">Github</a></li>
+        <li><a href="https://github.com/stanfordcalypso/calypso-website">Github</a></li>
         <li><a href="http://giving.stanford.edu/get/layout/g2s/TSF">TSF</a></li>
     </ul>
     
