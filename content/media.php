@@ -10,7 +10,7 @@
         <tr><td class='half'>
 		<h1>Videos</h1>
 		<p>
-			<iframe width="392" height="221" src="http://www.youtube.com/watch?v=yUfXOv5MCeI" frameborder="0" allowfullscreen></iframe><br />
+			<iframe width="392" height="221" src="http://www.youtube.com/embed/yUfXOv5MCeI" frameborder="0" allowfullscreen></iframe>
             <span class='caption'>Spring Show, 2012 - Jerk it Out (The Caesars)</span><br /><br />
             <iframe width="392" height="221" src="http://www.youtube.com/embed/ziAlbHqS27E" frameborder="0" allowfullscreen></iframe><br />
    <span class='caption'>Spring Show, 2011 - Jamming (Bob Marley) / Epic Drum Solo / Pan in A Minor</span><br /><br />
