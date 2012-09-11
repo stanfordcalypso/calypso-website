@@ -28,7 +28,7 @@
 	<tr>
 		<td class='full' colspan='2'>
 			<h1>Joining Cardinal Calypso</h1>
-			<p>Auditions are held at the beginning of every fall quarter. If you think you should fall outside of this schedule, or if you have any other questions, we encourage you to <a href='?p=booking'>contact</a> a leader of the group.</p>
+			<p>Auditions are held at the beginning of every fall quarter, and you can find information about this year's auditions on our <a href='?p=recruiting'>recruiting</a> page. If you think you should fall outside of this schedule, or if you have any other questions, we encourage you to <a href='?p=booking'>contact</a> a leader of the group.</p>
 			<h1>Current Lineup</h1>
 			<p>
 			  <strong>'11</strong> Alexis Arnold<br />
