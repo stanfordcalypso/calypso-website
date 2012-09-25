@@ -13,8 +13,8 @@
   	<h1>Want More Info?</h1>
     <p>
     <ul>
-      <li>Information Session on Thursday, September 27 in Roble Theater. Time TBA.</li>
       <li>Activities Fair on Friday, September 28 in White Plaza from 12-4 PM.</li>
+      <li>Information Session on Monday, October 1 in Roble Theater at 8 PM.</li>
     </ul>
     </p>
     <h1>Fall 2012 Auditions</h1>
