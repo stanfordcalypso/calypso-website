@@ -1,7 +1,7 @@
 <table cellspacing='0' cellpadding='0'><tr>
   <td class='half'>
   <h1>Join Cardinal Calypso</h1>
-    <p>Cardinal Calypso holds auditions once per year at the beginning of fall quarter, and this year we are searching for four talented Stanford students to join our band! If you love music and sunshine and want to be a part of a friendly and exciting student group, we would love for you to try out.
+    <p>Cardinal Calypso holds auditions once per year at the beginning of fall quarter, and this year we are searching for five talented Stanford students to join our band! If you love music and sunshine and want to be a part of a friendly and exciting student group, we would love for you to try out.
     <ul>
       <li>No previous steel drum experience is necessary. Bring your musicianship.</li>
       <li>We meet for four hours a week (tentatively Sundays 4-6pm and one other weekday in the evening).</li>
