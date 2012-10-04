@@ -18,8 +18,8 @@
     <p>Cardinal Calypso will bring an exciting Caribbean mood to your event. Our arrangements cover both traditional calypso music and danceable popular songs, appropriate for classy and informal events alike.
       <a href='?p=booking'>Learn more &raquo;</a>
     </p>
-    <h1>Joining Cardinal Calypso</h1>
-    <p>Cardinal Calypso is looking for new members this fall! For more information, visit our <a href='?p=recruiting'>recruiting</a> page.
+    <h1>Upcoming Shows</h1>
+    <p>Check out our Google Calendar to the right to see what's coming up in the world of Calypso!
     </p>
   </td></tr>
   <tr><td class='full' colspan='2'><a title='See more photos' href='?p=media'><img src='photos/calypso06.jpg' alt='Cardinal Calypso' /></a></td></tr>

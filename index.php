@@ -8,7 +8,7 @@
     <td id='left'>
       <div id='logo'></div>
       <table id='nav' cellspacing='0' cellpadding='0'><tr><?php
-   $actions = array('home' => 'Home', 'group' => 'The Group', 'pans' => 'The Pans', 'booking' => 'Booking', 'media' => 'Media', 'premieres' => 'Premieres', 'requestgig' => 'Request Gig', 'requestgig2' => 'Request Gig', 'recruiting' => 'Recruiting');
+   $actions = array('home' => 'Home', 'group' => 'The Group', 'pans' => 'The Pans', 'booking' => 'Booking', 'media' => 'Media', 'premieres' => 'Premieres', 'requestgig' => 'Request Gig', 'requestgig2' => 'Request Gig');
 	$p = (isset($_GET['p']) && in_array($_GET['p'], array_keys($actions))) ? $_GET['p'] : 'home';
 	foreach ($actions as $key => $label) {
 	  if ($key == "requestgig" || $key == "requestgig2") {
