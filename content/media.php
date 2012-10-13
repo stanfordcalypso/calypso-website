@@ -2,9 +2,9 @@
   <td class='full' colspan='2'>
                 <h1>Recordings</h1>
 		<p>
-			<a href='music/bacchanal_lady.mp3'>David Rudder - Bacchanal Lady</a> (160kbps mp3, 3:11)<br />
-			<a href='music/here_comes_the_sun.mp3'>The Beatles - Here Comes the Sun</a> (160kbps mp3, 3:05)<br />
-			<a href='music/bohemian_rhapsody.mp3'>Queen - Bohemian Rhapsody, second half</a> (160kbps mp3, 3:00)
+			<a href='music/pan.mp3'>Kitchener - Pan in A Minor</a> (160kbps mp3, 3:11)<br />
+			<a href='music/ipanema.mp3'>Antonio Carlos Jobim - The Girl from Ipanema</a> (160kbps mp3, 3:05)<br />
+			<a href='music/flathead.mp3'>The Fratellis - Flathead</a> (160kbps mp3, 3:00)
 		</p>
         </td></tr>
         <tr><td class='half'>

@@ -9,20 +9,20 @@
   </td></tr>
 	<tr>
 		<td class='half'><p>
-			Bob Marley - Three Little Birds<br />
-			The Beatles - Here Comes the Sun<br />
+			Bob Marley - Jammin'<br />
+			The Beatles - Ob-La-Di, Ob-La-Da<br />
 			David Rudder - The Hammer<br />
-			Dexys Midnight Runners - Come on Eileen<br />
+			Dispatch - The General<br />
 			The Fratellis - Flathead<br />
-			Honeycut - Aluminum City<br />
+			Antonio Carlos Jobim - The Girl from Ipanema<br />
 	  </p></td>
 		<td class='half'><p>
 				Michael Jackson - Billie Jean<br />
-				Radiohead - Paranoid Android<br />
-				Red Hot Chili Peppers - Under the Bridge<br />
-				Rodrigo y Gabriela - Ixtapa<br />
-				Simon & Garfunkel - Mrs. Robinson<br />
-				Stevie Wonder - Sir Duke
+				Kitchener - Pan in A Minor<br />
+				The Caesars - Jerk it Out<br />
+				Outkast - Hey Ya<br />
+				Toto - Africa<br />
+				Scissor Sisters - Take Your Mama
 	  </p></td>
 	</tr>
 	<tr>
@@ -35,6 +35,7 @@
 				<strong>'13</strong> Aaron Acosta, Adam Genecov, Will Tucker<br />
 				<strong>'14</strong> Henry Biermann, Emma Sagan<br />
 				<strong>'15</strong> Lauryn Isford, Amy Kim, Clara McCreery, Prithvi Ramakrishnan, Justin Wiguna<br />
+                <strong>'16</strong> Gio Jacuzzi, Bri Mostoller, Alan Propp, Amanda Quay, Leopold Wambersie<br />
 			</p>
 			<h1>Alumni</h1>
    <p>Akwasi Abrefah ('12), Josh Archibald-Seiffer, Alexis Arnold ('11), Chris Balane, David Brown, Arielle Craig, Kevin Danna, Mike Demmitt, Nancy Falxa-Raymond, David Germain, Maxine Holland ('11), Sally Hudson, <a target='_blank' href='http://www.lucaswilljohnson.com'>Lucas Johnson ('11)</a>, Dana Katz ('12), Binna Kim ('13), Monique King, Liezel Labios, David Miller, Kai Neo ('14), <a target='_blank' href='http://terribleben.com'>Ben Roth ('11), </a>, Jesse Ruder ('12), Flip Tanedo, Art Tosborvorn, Alex Williamson, Cathy Ye, Nate Zwerdling ('11)</p>
