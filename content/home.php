@@ -1,12 +1,12 @@
 <table cellspacing='0' cellpadding='0'>
-  <!-- <tr>
+  <tr>
     <td class='full' colspan='2'>
     <div class='notice'>
       <h1>Join Calypso</h1>
       <p>Looking to perform with a group of friendly people? <a href='?p=recruiting'>Calypso is interested in you</a>.</p>
     </div>
     </td>
-  </tr> -->
+  </tr>
   <tr>
   <td class='half'>
   <h1>Welcome</h1>

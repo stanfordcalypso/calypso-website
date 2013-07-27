@@ -109,7 +109,10 @@ function showupcominggigs(x) {
             if (x[i][6] == 1)
                 txt += " cleaning up";
                 
-            txt += ".";
+            txt += ".<br />";
+            
+            if (x[i][9] != "")
+            	txt += "Comment: " + x[i][9];
         }
         
         txt += " (<a href='?action=respond&gigid=" + x[i][3] + "'>edit</a>)";

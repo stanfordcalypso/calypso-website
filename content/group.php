@@ -31,14 +31,14 @@
 			<p>Auditions are held at the beginning of every fall quarter, and you can find information about this year's auditions on our <a href='?p=recruiting'>recruiting</a> page. If you think you should fall outside of this schedule, or if you have any other questions, we encourage you to <a href='?p=booking'>contact</a> a leader of the group.</p>
 			<h1>Current Lineup</h1>
 			<p>
-				<strong>'12</strong> Allison Fink, Jonathan Potter<br />
+				<strong>'12</strong> Jonathan Potter<br />
 				<strong>'13</strong> Aaron Acosta, Adam Genecov, Will Tucker<br />
 				<strong>'14</strong> Henry Biermann, Emma Sagan<br />
-				<strong>'15</strong> Lauryn Isford, Amy Kim, Clara McCreery, Prithvi Ramakrishnan, Justin Wiguna<br />
-                <strong>'16</strong> Gio Jacuzzi, Bri Mostoller, Alan Propp, Amanda Quay, Leopold Wambersie<br />
+				<strong>'15</strong> Lauryn Isford, Amy Kim, Clara McCreery, Prithvi Ramakrishnan<br />
+                <strong>'16</strong> Gio Jacuzzi, Alan Propp, Amanda Quay, Leopold Wambersie<br />
 			</p>
 			<h1>Alumni</h1>
-   <p>Akwasi Abrefah ('12), Josh Archibald-Seiffer, Alexis Arnold ('11), Chris Balane, David Brown, Arielle Craig, Kevin Danna, Mike Demmitt, Nancy Falxa-Raymond, David Germain, Maxine Holland ('11), Sally Hudson, <a target='_blank' href='http://www.lucaswilljohnson.com'>Lucas Johnson ('11)</a>, Dana Katz ('12), Binna Kim ('13), Monique King, Liezel Labios, David Miller, Kai Neo ('14), <a target='_blank' href='http://terribleben.com'>Ben Roth ('11), </a>, Jesse Ruder ('12), Flip Tanedo, Art Tosborvorn, Alex Williamson, Cathy Ye, Nate Zwerdling ('11)</p>
+   <p>Akwasi Abrefah ('12), Josh Archibald-Seiffer, Alexis Arnold ('11), Chris Balane, David Brown, Arielle Craig, Kevin Danna, Mike Demmitt, Nancy Falxa-Raymond, Allison Fink ('12), David Germain, Maxine Holland ('11), Sally Hudson, <a target='_blank' href='http://www.lucaswilljohnson.com'>Lucas Johnson ('11)</a>, Dana Katz ('12), Binna Kim ('13), Monique King, Liezel Labios, David Miller, Bri Mostoller ('16), Kai Neo ('14), <a target='_blank' href='http://terribleben.com'>Ben Roth ('11), </a>, Jesse Ruder ('12), Flip Tanedo, Art Tosborvorn, Justin Wiguna ('15), Alex Williamson, Cathy Ye, Nate Zwerdling ('11)</p>
 		</td>
   </tr>
 </table>

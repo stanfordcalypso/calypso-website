@@ -144,7 +144,7 @@ else if ($action == "singlegig") {
 }
 else if ($action == "gigresponses") {
     if (haveinput('gigid')) {
-        $result = mysql_query("SELECT members.sunetid, members.name, responses.loading, responses.playing, responses.cleanup, responses.car FROM responses, members WHERE responses.gigid = '$input[gigid]' AND responses.sunetid = members.sunetid ORDER BY members.name");
+        $result = mysql_query("SELECT members.sunetid, members.name, responses.loading, responses.playing, responses.cleanup, responses.car, responses.comments FROM responses, members WHERE responses.gigid = '$input[gigid]' AND responses.sunetid = members.sunetid ORDER BY members.name");
         echoresult($result);
     }
 }
@@ -228,7 +228,7 @@ else if ($action == "deletegig") {
 else if ($action == "upcominggigs") {
   deleteoldgigs();
     if (haveinput('id')) {
-        $result = mysql_query("SELECT gigs.name, gigs.date, gigs.starttime, gigs.gigid, responses.loading, responses.playing, responses.cleanup, responses.car, gigs.loadtime FROM gigs, responses WHERE responses.sunetid = '$input[id]' AND responses.gigid = gigs.gigid ORDER BY gigs.date, gigs.starttime");
+        $result = mysql_query("SELECT gigs.name, gigs.date, gigs.starttime, gigs.gigid, responses.loading, responses.playing, responses.cleanup, responses.car, gigs.loadtime, responses.comments FROM gigs, responses WHERE responses.sunetid = '$input[id]' AND responses.gigid = gigs.gigid ORDER BY gigs.date, gigs.starttime");
       
         echoresult($result);
     }

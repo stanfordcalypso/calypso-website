@@ -61,11 +61,13 @@ function showgigresponses(x) {
     var cleanup = new Array();
     var cars = new Array();
     var notcoming = new Array();
+    var comments = new Array();
     
     for (var i = 0; i < x.length - 1; i++) {
         var p = new Object();
         p.id = x[i][0];
         p.name = x[i][1];
+        p.comment = x[i][6];
         if (x[i][2] == 1)
             loading.push(p);
         if (x[i][3] == 1)
@@ -74,8 +76,12 @@ function showgigresponses(x) {
             cleanup.push(p);
         if (x[i][5] == 1)
             cars.push(p);
-	if (x[i][2] == 0 && x[i][3] == 0 && x[i][4] == 0 && x[i][5] == 0)
+		if (x[i][2] == 0 && x[i][3] == 0 && x[i][4] == 0 && x[i][5] == 0)
 	    notcoming.push(p);
+	    if (x[i][6] != "") {
+	    	comments.push(p);
+	    }
+	    
     }
     
     var txt = "<table style='width:400px'>";
@@ -112,13 +118,21 @@ function showgigresponses(x) {
     }
     txt += "</div></td></tr>";
 
-    txt += "<tr><td style='width:80px;padding-top:30px'>Not coming: </td><td style='width:320px;padding-top:30px'><div style='width:320px'>";
+    txt += "<tr><td style='width:80px'>Not coming: </td><td style='width:320px'><div style='width:320px'>";
     for (var i = 0; i < notcoming.length; i++) {
         txt += notcoming[i].name;
         if (i < notcoming.length - 1)
             txt += ", ";
     }
     txt += "</div></td></tr>";
+    txt += "</table><br />";
+    txt += "<h1>Comments</h1><br />";
+    txt += "<table style='width:400px'>";
+    for (var i = 0; i < comments.length; i++) {
+    	txt += "<tr><td style='width:80px'>" + comments[i].name + ": </td><td style='width:320px'><div style='width:320px'>";
+    	txt+= comments[i].comment;
+    	txt += "</div></td></tr>";
+    }
     
     txt += "</table>";
     txt += "<br /><a href='?action=songstoplay&gigid=" + window.currentgig + "'>Show recommended songs</a>";
