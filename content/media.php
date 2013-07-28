@@ -10,6 +10,8 @@
         <tr><td class='half'>
 		<h1>Videos</h1>
 		<p>
+			<iframe width="392" height="221" src="//www.youtube.com/embed/ZTso93pBB5U" frameborder="0" allowfullscreen></iframe>
+			<span class='caption'>Spring Show, 2013 - Song for My Father (Horace Silver)</span><br /><br />
 			<iframe width="392" height="221" src="http://www.youtube.com/embed/yUfXOv5MCeI" frameborder="0" allowfullscreen></iframe>
             <span class='caption'>Spring Show, 2012 - Jerk it Out (The Caesars)</span><br /><br />
             <iframe width="392" height="221" src="http://www.youtube.com/embed/ziAlbHqS27E" frameborder="0" allowfullscreen></iframe><br />
