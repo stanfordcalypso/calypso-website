@@ -6,6 +6,7 @@
     <ul>
     	<li><a href="http://groupspaces.com/CardinalCalypso/files/">GroupSpaces</a></li>
     	<li><a href="https://afs.stanford.edu/?path=/afs/ir/group/calypso/scores">Stanford AFS</a></li>
+    	<li><a href="https://www.dropbox.com/sh/cw2bv875u1qxv2y/i65-NDaf_U">Dropbox</a></li>
         <li><a href="https://docs.google.com/spreadsheet/ccc?key=0AgKYtGU3LpIWdEMwU0hoVEdiczVVUFNoLWpYWThZcmc#gid=0">Spring Show Theme Ideas</a></li>
     </ul>
 	<h1>Calypso on the Web</h1>
@@ -18,7 +19,7 @@
      <ul>
     	<li><a href="pan_layout.pdf">Pan Layouts</a></li>
         <li><a href="soloing.html">Akwasi's Guide to Soloing</a></li>
-    	<li>Jesse's Song Visualizer (coming soon)</li>
+    	<li><a href="http://cardinalcalypso.stanford.edu/vis">JP's Song Visualizer</a></li>
     </ul>
     <h1>Arranging and Composing</h1>
     <ul>
@@ -36,6 +37,7 @@
     <h1>Pan in the World</h1>
     <ul>
     	<li><a href="http://www.panonthenet.com">Pan on the Net</a></li>
+    	<li><a href="http://www.pan-jumbie.com/">Pan Jumbie</a></li>
     </ul>
     <h1>Managing Calypso</h1>
     <ul>
