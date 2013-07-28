@@ -4,27 +4,7 @@
 		<p>Cardinal Calypso is Stanford University's premiere steelpan ensemble. We bring the music and culture of Trinidad and Tobago to the greater university community by performing both traditional Caribbean music and popular songs, as well as exuding general enthusiasm for music, dancing, and sunshine. Our members are all students at Stanford, and we arrange all our own songs. We also write <a href='?p=premieres'>original music</a>.</p>
 		<p>We are organized as a student group under the Stanford University Office of Student Affairs. We were founded in 2005 through a <a target='_blank' href='http://www.stanfordalumni.org/students/studentsreader.html?content_instance_id=114676'>Robert L. Pierce award</a> from the Stanford Alumni Association. Also, we are supported by a grant from the <a target='_blank' href='http://assu.stanford.edu'>Associated Students of Stanford University</a> and through generous donations to <a target='_blank' href='http://givingtostanford.stanford.edu/tsf/'>The Stanford Fund</a>. Unlike <a target='_blank' href='http://www.orgs.muohio.edu/musteel/'>some collegiate ensembles</a>, we are a relatively young and small student group, but we have great aspirations.</p>
 		<p>To learn more about the steelpan and the calypso tradition, you can <a href='?p=pans'>read more about the pans</a>. If you are interested in having Cardinal Calypso perform at an event, please visit <a href='?p=booking'>booking</a>.</p>
-
-		<h1>Selected repertoire, past and present</h1>
   </td></tr>
-	<tr>
-		<td class='half'><p>
-			Bob Marley - Jammin'<br />
-			The Beatles - Ob-La-Di, Ob-La-Da<br />
-			David Rudder - The Hammer<br />
-			Dispatch - The General<br />
-			The Fratellis - Flathead<br />
-			Antonio Carlos Jobim - The Girl from Ipanema<br />
-	  </p></td>
-		<td class='half'><p>
-				Michael Jackson - Billie Jean<br />
-				Kitchener - Pan in A Minor<br />
-				The Caesars - Jerk it Out<br />
-				Outkast - Hey Ya<br />
-				Toto - Africa<br />
-				Scissor Sisters - Take Your Mama
-	  </p></td>
-	</tr>
 	<tr>
 		<td class='full' colspan='2'>
 			<h1>Joining Cardinal Calypso</h1>

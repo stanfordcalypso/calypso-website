@@ -1,7 +1,8 @@
-<table cellspacing='0' cellpadding='0'><tr>
+<table cellspacing='0' cellpadding='0'>
+<tr>
   <td class='full' colspan='2'>
 		<h1>Booking</h1>
-		<p>Cardinal Calypso is available during the regular school year to perform at your event. We are a small ensemble of acoustic steel pans, plus a drum set and electric bass, all performed by <a href='?p=group'>Stanford students</a>. We play a variety of music, including traditional soca and calypso, reggae, and other popular music. In the past, our <a href='?p=group'>versatile repertoire</a> has included songs by The Beatles, Michael Jackson, Radiohead, and well-known jazz standards, among many others. We are timely and friendly, and audiences love our approachable style and international flavor. You can hear a recording of us on the <a href='?p=media'>Media</a> page.</p>
+		<p>Cardinal Calypso is available during the regular school year to perform at your event. We are a small ensemble of acoustic steel pans, plus a drum set and electric bass, all performed by <a href='?p=group'>Stanford students</a>. We play a variety of music, including traditional soca and calypso, reggae, and other popular music. In the past, our <a href='?p=group'>versatile repertoire</a> has included songs by The Beatles, Michael Jackson, Radiohead, and well-known jazz standards, among many others. We are timely and friendly, and audiences love our approachable style and international flavor. You can hear some recordings of us on the <a href='?p=media'>Media</a> page.</p>
 		<p>Our typical shows include seasonal parties and festivals, Caribbean cultural events, charity events and fundraisers, and broader student musical events. If you're interested in booking us for your event, even if it falls outside these categories, we are excited to hear from you:</p>
 		<center><blockquote>
 		<a href='?p=requestgig'><strong style='font-size:1.4em'>Book us!</strong></a>

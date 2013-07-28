@@ -21,7 +21,7 @@
 	}
       ?></tr></table>
     </td>
-    <td id='right' rowspan='2'><div class='green'>
+    <td id='right' rowspan='2'><div class='cal_container'>
       <h1>Calendar</h1>
       <div id='calendar'>
         <iframe id='calembed' src="http://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showTabs=0&amp;showCalendars=0&amp;mode=AGENDA&amp;wkst=1&amp;bgcolor=%23eeeeff&amp;src=tuleai9qf617ins2h47jfeiqac%40group.calendar.google.com" frameborder="0" scrolling="no"></iframe>
