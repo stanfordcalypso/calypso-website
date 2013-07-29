@@ -1,4 +1,4 @@
-body {margin:0; font-family:Arial,Tahoma,sans-serif; background:#FFF url('../bg.png') repeat-x scroll top left;}
+body {margin:0; font-family:Arial,Tahoma,sans-serif; background:#FFF;}
 img {border:4px solid #BBB;}
 table#wrapper {margin:0 auto 0 auto; width:70%; border:1px solid #666; border-top:0; background:#FFF url('../backdrop.jpg') no-repeat scroll top left;}
 table#wrapper td#left {width:70%; vertical-align:bottom; height:10px}
@@ -30,9 +30,9 @@ td#content a:hover {background-color:#FF9; color:#CA0;}
 div.green {margin:0; height:100%; padding:10px 4px 10px 14px; background-color:#AEA;}
 div.green h1 {margin:0 0 6px 0; font-size:16pt;}
 div#calendar {background-color:#EEE;}
-tr#foot td {background-color:#AEA; padding:4px 10px 4px 10px; color:#686; font-size:10pt;}
-tr#foot td a {text-decoration:underline; color:#676;}
-tr#foot td a:hover {color:#343;}
+tr#foot td {background-color:#C33; padding:4px 10px 4px 10px; color:#FFF; font-size:10pt;}
+tr#foot td a {text-decoration:underline; color:#FFF;}
+tr#foot td a:hover {color:#00FFFF;}
 div.column {float:right;}
 div.space {background-color:#EEF; height:60px;}
 iframe#calembed {height:500px;}

@@ -10,7 +10,9 @@
 <tr><td><div style='width:100px'>End time:</div></td><td><div id="endtime"></div></td>
 <td style='padding-left:20px'><div style='width:100px'>Location:</div></td><td><input size='20' id='giglocation'></td></tr>
 
-<tr><td colspan=2>Comments (attire):<br /><textarea id='gigcomments' row='3' cols='25'></textarea></td><td style='padding-left:20px'><div style='width:100px'>Confirmed:</div></td><td><input type='checkbox' id='gigconfirmed'></td></tr></table>
+<tr><td colspan=2>Attire and Comments:<br /><textarea id='gigcomments' row='3' cols='25'></textarea></td>
+<td style='padding-left:20px'><div style='width:100px'>Confirmed:</div></td><td><input type='checkbox' id='gigconfirmed'></td>
+</tr></table>
 
 <br />
 

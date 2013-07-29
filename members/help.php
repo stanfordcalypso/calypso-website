@@ -15,7 +15,7 @@
    <li>Type "cd /afs/ir.stanford.edu/group/calypso". Press enter.</li>
    <li>Type "cd cgi-bin". Press enter.</li>
    <li>Type "cd members". Press enter.</li>
-   <li>If you get an error at any of these steps, email <a href='mailto:jruder@stanford.edu'>Jesse</a> and tell say exactly which command failed.</li>
+   <li>If you get an error at any of these steps, email <a href='mailto:jruder@stanford.edu'>Jesse</a> and say exactly which command failed.</li>
    <li>Type "emacs .htaccess &". Press enter.</li>
    <li>Navigate the cursor to the space immediately after the last id currently listed. For each new member, add one space followed by the member's id. Do not press enter or make a new line.</li>
    <li>If there is a file drop down menu, click on File->Save and then File->Exit Emacs. Otherwise, hold the control key and press "x" followed by "s" while still holding control. Now hold control and type "x" then "c".</li>

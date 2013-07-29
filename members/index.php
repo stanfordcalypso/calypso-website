@@ -132,6 +132,6 @@ mysql_close($con);
 </td>
 
   </tr>
-  <tr id='foot'><td colspan='2'>Copyright &copy;2006-2011 Cardinal Calypso &middot; <a href='http://assu.stanford.edu' target='_blank'>ASSU</a> &middot; <a href='http://www.facebook.com/group.php?gid=2200276540' target='_blank'>FB</a></td></tr>
+  <tr id='foot'><td colspan='2'>Copyright &copy;2006-<?=date('Y')?> Cardinal Calypso &middot; <a href='http://assu.stanford.edu' target='_blank'>ASSU</a> &middot; <a href='http://www.facebook.com/group.php?gid=2200276540' target='_blank'>FB</a></td></tr>
 </table></div></body>
 </html>

@@ -38,7 +38,8 @@ if (isset($_GET['gigid'])) {
 <tr><td><div style='width:100px'>End time:</div></td><td><div id="endtime"></div></td>
 <td style='padding-left:20px'><div style='width:100px'>Location:</div></td><td><input size='20' id='giglocation' value='<?php echo $giglocation; ?>'></td></tr>
 
-  <tr><td colspan=2>Comments:<br /><textarea id='gigcomments' row='3' cols='25'><?php echo $gigcomments; ?></textarea></td><td style='padding-left:20px'><div style='width:100px'>Confirmed:</div></td><td><input type='checkbox' id='gigconfirmed'<?php if ($gigconfirmed == 1){echo " checked";} ?>></td></tr></table>
+  <tr><td colspan=2>Attire and Comments:<br /><textarea id='gigcomments' row='3' cols='25'><?php echo $gigcomments; ?></textarea></td>
+  <td style='padding-left:20px'><div style='width:100px'>Confirmed:</div></td><td><input type='checkbox' id='gigconfirmed'<?php if ($gigconfirmed == 1){echo " checked";} ?>></td></tr></table>
 
 <br />
 
