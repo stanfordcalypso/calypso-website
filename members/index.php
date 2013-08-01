@@ -20,6 +20,7 @@ else if (isset($_POST[action]) && !empty($_POST[action])) {
     select {border:2px solid #ccc};
   </style>
 <script type="text/javascript" src="jessejs.js"></script>
+<script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
 </head>
 <body><div align='center'><table id='wrapper' cellspacing='0' cellpadding='0'>
   <tr>

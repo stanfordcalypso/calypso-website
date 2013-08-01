@@ -25,6 +25,7 @@ td#content table {width:100%;}
 td#content table td,td#content table td.full {width:100%; vertical-align:top;}
 td#content table td.half {width:50%;}
 td#content table td.third {width:33%;}
+td#content table td.two-thirds {width:67%;}
 td#content a {color:#58B; text-decoration:none; padding:0 2px 0 2px;}
 td#content a:hover {background-color:#FF9; color:#CA0;}
 div.green {margin:0; height:100%; padding:10px 4px 10px 14px; background-color:#AEA;}

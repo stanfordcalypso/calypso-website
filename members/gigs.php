@@ -1,4 +1,4 @@
-<tr><td class='half'>
+<tr><td class='third'>
 <h1>Gigs</h1>
 <br />
 <div id="allgigs">Loading...</div>
@@ -29,19 +29,21 @@ function selectgig2(x) {
     x = x.split(smalldivider);
     currentgig = x[0];
     var txt = "<h1>Info for " + x[1] + "</h1><br />";
-    txt += "<table style='width:350px'>";
-    txt += "<tr><td><div style='width:150px'>Date:</div></td><td><div style='width:200px'>" + printdate(x[3]) + "</div></td></tr>";
-    txt += "<tr><td><div style='width:150px'>Load time:</div></td><td>" + printtime(x[4]) + "</td></tr>";
-    txt += "<tr><td>Start time:</td><td>" + printtime(x[5]) + "</td></tr>";
-    txt += "<tr><td>End time:</td><td>" + printtime(x[6]) + "</td></tr>";
-    txt += "<tr><td>Location:</td><td>" + x[7] + "</td></tr>";
-    txt += "<tr><td>Confirmed:</td><td>";
+    txt += "<table>";
+    txt += "<tr><td style='width:500px'><div style='width:110px'>Date:</div></td><td>" + printdate(x[3]) + "</td></tr>";
+    txt += "<tr><td style='width:500px'><div style='width:110px'>Load Time:</div></td><td>" + printtime(x[4]) + "</td></tr>";
+    txt += "<tr><td style='width:500px'><div style='width:110px'>Start Time:</div></td><td>" + printtime(x[5]) + "</td></tr>";
+    txt += "<tr><td style='width:500px'><div style='width:110px'>End Time:</div></td><td>" + printtime(x[6]) + "</td></tr>";
+    txt += "<tr><td style='width:500px'><div style='width:110px'>Location:</div></td><td>" + x[7] + "</td></tr>";
+    txt += "<tr><td style='width:500px'><div style='width:110px'>Confirmed:</div></td><td>";
     if (x[8] == 1)
       txt += "Yes";
     else
       txt += "No";
     txt += "</td></tr>";
-    txt += "<tr><td>Comments:</td><td>";
+    txt += "<tr><td style='width:500px'><div style='width:110px'>Attire:</div></td><td>";
+    txt += x[10] + "</td></tr>";
+    txt += "<tr><td style='width:500px'><divstyle='width:110px'>Comments:</div></td><td>";
     txt += x[2] + "</td></tr>";
     txt += "<tr><td colspan='2'>&nbsp;<br /><center><input type='button' value='Edit Gig' onclick='window.location=\"?action=editgig&gigid="+x[0]+"\"'></center></td></tr>"
     txt += "</table>";
@@ -84,54 +86,54 @@ function showgigresponses(x) {
 	    
     }
     
-    var txt = "<table style='width:400px'>";
+    var txt = "<table>";
     
-    txt += "<tr><td style='width:80px'>Loading: </td><td style='width:320px'><div style='width:320px'>";
+    txt += "<tr><td style='width:500px'><div style='width:110px'>Loading:</div></td><td>";
     for (var i = 0; i < loading.length; i++) {
         txt += loading[i].name;
         if (i < loading.length - 1)
             txt += ", ";
     }
-    txt += "</div></td></tr>";
+    txt += "</td></tr>";
     
-    txt += "<tr><td style='width:80px'>Playing: </td><td style='width:320px'><div style='width:320px'>";
+    txt += "<tr><td style='width:500px'><div style='width:110px'>Playing:</div></td><td>";
     for (var i = 0; i < playing.length; i++) {
         txt += playing[i].name;
         if (i < playing.length - 1)
             txt += ", ";
     }
-    txt += "</div></td></tr>";
+    txt += "</td></tr>";
     
-    txt += "<tr><td style='width:80px'>Cleanup: </td><td style='width:320px'><div style='width:320px'>";
+    txt += "<tr><td style='width:500px'><div style='width:110px'>Cleanup:</div></td><td>";
     for (var i = 0; i < cleanup.length; i++) {
         txt += cleanup[i].name;
         if (i < cleanup.length - 1)
             txt += ", ";
     }
-    txt += "</div></td></tr>";
+    txt += "</td></tr>";
     
-    txt += "<tr><td style='width:80px'>Cars: </td><td style='width:320px'><div style='width:320px'>";
+    txt += "<tr><td style='width:500px'><div style='width:110px'>Cars:</div></td><td>";
     for (var i = 0; i < cars.length; i++) {
         txt += cars[i].name;
         if (i < cars.length - 1)
             txt += ", ";
     }
-    txt += "</div></td></tr>";
+    txt += "</td></tr>";
 
-    txt += "<tr><td style='width:80px'>Not coming: </td><td style='width:320px'><div style='width:320px'>";
+    txt += "<tr><td style='width:500px'><div style='width:110px'>Not Coming:</div></td><td>";
     for (var i = 0; i < notcoming.length; i++) {
         txt += notcoming[i].name;
         if (i < notcoming.length - 1)
             txt += ", ";
     }
-    txt += "</div></td></tr>";
+    txt += "</td></tr>";
     txt += "</table><br />";
     txt += "<h1>Comments</h1><br />";
-    txt += "<table style='width:400px'>";
+    txt += "<table>";
     for (var i = 0; i < comments.length; i++) {
-    	txt += "<tr><td style='width:80px'>" + comments[i].name + ": </td><td style='width:320px'><div style='width:320px'>";
+    	txt += "<tr><td style='width:500px'><div style='width:110px'>" + comments[i].name + ":</div></td><td>";
     	txt+= comments[i].comment;
-    	txt += "</div></td></tr>";
+    	txt += "</td></tr>";
     }
     
     txt += "</table>";
@@ -142,7 +144,7 @@ function showgigresponses(x) {
 </script>
 
 
-</td><td class='half'>
+</td><td class='two-thirds'>
 <div id="singlegig"></div>
 
 </td></tr>

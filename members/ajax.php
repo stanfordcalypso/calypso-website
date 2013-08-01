@@ -138,7 +138,7 @@ else if ($action == "allgigs") {
 }
 else if ($action == "singlegig") {
     if (haveinput('gigid')) {
-        $result = mysql_query("SELECT gigid, name, comments, date, loadtime, starttime, endtime, location, confirmed, creator FROM gigs WHERE gigid = '$input[gigid]'");
+        $result = mysql_query("SELECT gigid, name, comments, date, loadtime, starttime, endtime, location, confirmed, creator, attire FROM gigs WHERE gigid = '$input[gigid]'");
         echoresult($result);
     }
 }
@@ -164,14 +164,14 @@ else if ($action == "savegig") {
 }
 else if ($action == "addgig") {
   deleteoldgigs();
-    if (haveinput('name') && haveinput('date') && haveinput('loadtime') && haveinput('starttime') && haveinput('endtime') && haveinput('location') && haveinput('confirmed') && haveinput('comments')) {
+    if (haveinput('name') && haveinput('date') && haveinput('loadtime') && haveinput('starttime') && haveinput('endtime') && haveinput('location') && haveinput('confirmed') && haveinput('comments') && haveinput('attire')) {
       $curdate = date("Y-m-d");
       if ($input['date'] < $curdate) {
 	echo "Error: Date has already passed!";
       }
-      else if (mysql_query("INSERT INTO gigs (name, comments, date, loadtime, starttime, endtime, location, confirmed)
+      else if (mysql_query("INSERT INTO gigs (name, comments, date, loadtime, starttime, endtime, location, confirmed, attire)
         VALUES
-        ('$input[name]','$input[comments]','$input[date]','$input[loadtime]','$input[starttime]','$input[endtime]','$input[location]','$input[confirmed]')")) {
+        ('$input[name]','$input[comments]','$input[date]','$input[loadtime]','$input[starttime]','$input[endtime]','$input[location]','$input[confirmed]','$input[attire]')")) {
 	$result = mysql_query("SELECT gigid FROM gigs WHERE name = '$input[name]' AND date = '$input[date]' AND starttime = '$input[starttime]'");
 	if ($result && $row = mysql_fetch_array($result)) {
 	  $url = "https://www.stanford.edu/group/calypso/cgi-bin/members/?action=respond&gigid=" . $row['gigid'];
@@ -189,7 +189,7 @@ else if ($action == "addgig") {
 }
 else if ($action == "editgig") {
   deleteoldgigs();
-  if (haveinput("gigid") && haveinput('name') && haveinput('date') && haveinput('loadtime') && haveinput('starttime') && haveinput('endtime') && haveinput('location') && haveinput('confirmed') && haveinput('comments')) {
+  if (haveinput("gigid") && haveinput('name') && haveinput('date') && haveinput('loadtime') && haveinput('starttime') && haveinput('endtime') && haveinput('location') && haveinput('confirmed') && haveinput('comments') && haveinput('attire')) {
     $curdate = date("Y-m-d");
     if ($input['date'] < $curdate) {
       echo "Error: Date has already passed!";
@@ -201,9 +201,9 @@ else if ($action == "editgig") {
 	$origconfirmed = $row['confirmed'];
       }
       
-      if (mysql_query("REPLACE INTO gigs (gigid, name, comments, date, loadtime, starttime, endtime, location, confirmed)
+      if (mysql_query("REPLACE INTO gigs (gigid, name, comments, date, loadtime, starttime, endtime, location, confirmed, attire)
         VALUES
-        ('$input[gigid]','$input[name]','$input[comments]','$input[date]','$input[loadtime]','$input[starttime]','$input[endtime]','$input[location]','$input[confirmed]')")) {
+        ('$input[gigid]','$input[name]','$input[comments]','$input[date]','$input[loadtime]','$input[starttime]','$input[endtime]','$input[location]','$input[confirmed]','$input[attire]')")) {
 	if ($origconfirmed == 0 && $input['confirmed'] == 1) {
 	  send_to_members("emailconfirm = 1", "Gig Confirmation: " . $input['name'], $input['name'] . " has been confirmed!");
 	  echo "Confirmation emails sent.<br />&nbsp;<br />";

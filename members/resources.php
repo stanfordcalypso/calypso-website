@@ -17,7 +17,7 @@
     </ul>
     <h1>Learn Our Pans</h1>
      <ul>
-    	<li><a href="pan_layout.pdf">Pan Layouts</a></li>
+    	<li><a href="layouts.png">Pan Layouts</a></li>
         <li><a href="soloing.html">Akwasi's Guide to Soloing</a></li>
     	<li><a href="http://cardinalcalypso.stanford.edu/vis">JP's Song Visualizer</a></li>
     </ul>

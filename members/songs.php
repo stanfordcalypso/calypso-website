@@ -1,4 +1,4 @@
-<tr><td class='half'>
+<tr><td class='third'>
 <h1>Songs</h1>
 <br />
 <div id="allsongs">Loading...</div>
@@ -72,7 +72,7 @@ function showsongparts(x) {
 </script>
 
 
-</td><td class='half'>
+</td><td class='two-thirds'>
 <div id="singlesong"></div>
 
 </td></tr>

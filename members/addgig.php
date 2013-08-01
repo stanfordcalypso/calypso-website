@@ -10,9 +10,16 @@
 <tr><td><div style='width:100px'>End time:</div></td><td><div id="endtime"></div></td>
 <td style='padding-left:20px'><div style='width:100px'>Location:</div></td><td><input size='20' id='giglocation'></td></tr>
 
-<tr><td colspan=2>Attire and Comments:<br /><textarea id='gigcomments' row='3' cols='25'></textarea></td>
-<td style='padding-left:20px'><div style='width:100px'>Confirmed:</div></td><td><input type='checkbox' id='gigconfirmed'></td>
-</tr></table>
+<tr>
+	<td colspan=2>Attire:<br /><textarea id='gigattire' row='3' cols='25'></textarea></td>
+	<td style='padding-left:20px'><div style='width:100px'>Confirmed:</div></td><td><input type='checkbox' id='gigconfirmed'></td>
+</tr>
+<tr>
+	<td colspan=2>Comments:<br /><textarea id='gigcomments' row='3' cols='25'></textarea></td>
+	<!-- <td style='padding-left:20px'><div style='width:100px'>Post to Calendar?:</div></td><td><input type='checkbox' id='gigposted'></td> -->
+	
+</tr>
+</table>
 
 <br />
 
@@ -33,8 +40,15 @@ function addgig() {
     var endtime = gettime("endtime");
     var location = id("giglocation").value;
     var confirmed = id("gigconfirmed").checked ? 1 : 0;
+    var posted = id("gigposted").checked ? 1 : 0;
     var comments = id("gigcomments").value;
-    var sendstr = "addgig&name="+name+"&date="+date+"&loadtime="+loadtime+"&starttime="+starttime+"&endtime="+endtime+"&location="+location+"&confirmed="+confirmed+"&comments="+comments;
+    var attire = id("gigattire").value;
+    
+    if (posted == 1) {
+    	
+    }
+    
+    var sendstr = "addgig&name="+name+"&date="+date+"&loadtime="+loadtime+"&starttime="+starttime+"&endtime="+endtime+"&location="+location+"&confirmed="+confirmed+"&comments="+comments+"&attire="+attire;
     dopostajax(sendstr, addgigresponse);
     id("newgigdiv").innerHTML = "Processing...";
 }
