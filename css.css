@@ -40,6 +40,6 @@ blockquote {margin: 0 0 14px 14px; color:#558; font-size:10pt;}
 span.caption {padding:4px; font-style:italic;}
 ul {margin:0}
 ul li {line-height:1.4em; color:#666; font-size:10pt;}
-div.notice {background-color:rgba(255, 204, 255, 0.5); color:#CA0; border:1px solid #A80;}
+div.notice {background-color:rgba(255, 255, 102, 0.5); color:#CA0; border:1px solid #A80;}
 div.notice h1 {font-weight:bold;}
 div.notice p {border:0 !important; margin:0; color:#FFF;}

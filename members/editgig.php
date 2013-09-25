@@ -57,6 +57,12 @@ if (isset($_GET['gigid'])) {
 </div>
 
 <script type="text/javascript">
+/*
+var clientId = '1072266037494'
+var apiKey = 'AIzaSyCGzO_yilbkluevZgy4q_4nOdMxkj7OYkk';
+var scopes = 'https://www.googleapis.com/auth/calendar';
+*/
+
 id("dateselect").innerHTML = dateselectedit("gigdate", "<?php echo $gigdate; ?>");
 id("loadtime").innerHTML = timeselectedit("loadtime", "<?php echo $gigloadtime; ?>");
 id("starttime").innerHTML = timeselectedit("starttime", "<?php echo $gigstarttime; ?>");
@@ -70,18 +76,9 @@ function editgig() {
     var endtime = gettime("endtime");
     var location = id("giglocation").value;
     var confirmed = id("gigconfirmed").checked ? 1 : 0;
-    var posted = id("gigposted").checked ? 1 : 0;
     var comments = id("gigcomments").value;
     var attire = id("gigattire").value;
     var sendstr = "editgig&gigid=<?php echo $gigid; ?>&name="+name+"&date="+date+"&loadtime="+loadtime+"&starttime="+starttime+"&endtime="+endtime+"&location="+location+"&confirmed="+confirmed+"&comments="+comments+"&attire="+attire;
-    
-    if (posted == 1) {
-    	var myService;
-		var feedUrl = "https://www.google.com/calendar/feeds/stanfordcalypso@gmail.com/private/full";
-		var myService = new google.gdata.calendar.CalendarService('Calypso-Event');
-		var scope = "https://www.google.com/calendar/feeds/";
-  		var token = google.accounts.user.login(scope);
-    }
     
     dopostajax(sendstr, editgigresponse);
     id("editgigdiv").innerHTML = "Processing...";
@@ -99,6 +96,44 @@ if (confirm("Are you sure? This will delete the gig permanently, along with all 
 }
 }
 
+/*
+function checkAuth() {
+    gapi.auth.authorize({client_id: clientId, scope: scopes, immediate: true}, handleAuthResult);
+}
+
+
+function handleAuthResult(authResult) {
+        if (authResult && !authResult.error) {
+          makeApiCall();
+        } else {
+        	gapi.auth.authorize({client_id: clientId, scope: scopes, immediate: false}, handleAuthResult);
+        	return false;
+        }
+}
+
+// Load the API and make an API call.  Display the results on the screen.
+      function makeApiCall() {
+        gapi.client.load('calendar', 'v3', function() {
+          var resource = {
+  			"summary": "FACES",
+  			"location": "Memorial Auditorium",
+  			"start": {
+    			"dateTime": "2013-09-18T10:00:00.000-07:00"
+  			},
+  			"end": {
+    			"dateTime": "2013-09-18T10:25:00.000-07:00"
+  			}
+		};
+		var request = gapi.client.calendar.events.insert({
+  			'calendarId': 'tuleai9qf617ins2h47jfeiqac@group.calendar.google.com',
+  			'resource': resource
+		});
+		request.execute(function(resp) {
+  			console.log(resp);
+		});
+        });
+      }
+      */
 </script>
 
 </td></tr>

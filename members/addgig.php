@@ -40,13 +40,8 @@ function addgig() {
     var endtime = gettime("endtime");
     var location = id("giglocation").value;
     var confirmed = id("gigconfirmed").checked ? 1 : 0;
-    var posted = id("gigposted").checked ? 1 : 0;
     var comments = id("gigcomments").value;
     var attire = id("gigattire").value;
-    
-    if (posted == 1) {
-    	
-    }
     
     var sendstr = "addgig&name="+name+"&date="+date+"&loadtime="+loadtime+"&starttime="+starttime+"&endtime="+endtime+"&location="+location+"&confirmed="+confirmed+"&comments="+comments+"&attire="+attire;
     dopostajax(sendstr, addgigresponse);

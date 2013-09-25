@@ -20,9 +20,34 @@ else if (isset($_POST[action]) && !empty($_POST[action])) {
     select {border:2px solid #ccc};
   </style>
 <script type="text/javascript" src="jessejs.js"></script>
-<script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
+<!-- <script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script> -->
 </head>
 <body><div align='center'><table id='wrapper' cellspacing='0' cellpadding='0'>
+<!--
+<script type="text/javascript">
+	// Enter a client ID for a web application from the Google Developer Console.
+      // The provided clientId will only work if the sample is run directly from
+      // https://google-api-javascript-client.googlecode.com/hg/samples/authSample.html
+      // In your Developer Console project, add a JavaScript origin that corresponds to the domain
+      // where you will be running the script.
+      var clientId = '1072266037494';
+
+      // Enter the API key from the Google Develoepr Console - to handle any unauthenticated
+      // requests in the code.
+      // The provided key works for this sample only when run from
+      // https://google-api-javascript-client.googlecode.com/hg/samples/authSample.html
+      // To use in your own application, replace this API key with your own.
+      var apiKey = 'AIzaSyCGzO_yilbkluevZgy4q_4nOdMxkj7OYkk';
+
+      // To enter one or more authentication scopes, refer to the documentation for the API.
+      var scopes = 'https://www.googleapis.com/auth/calendar';
+
+      // Use a button to handle authentication the first time.
+      function handleClientLoad() {
+        gapi.client.setApiKey(apiKey);
+      }
+</script>
+-->
   <tr>
     <td id='left' colspan='2'>
       <div id='logo'></div>

@@ -3,7 +3,13 @@
     <td class='full' colspan='2'>
     <div class='notice'>
       <h1>Join Calypso</h1>
-      <p>Looking to perform with a group of friendly people? <a href='?p=recruiting'>Calypso is interested in you</a>.</p>
+      <p>Looking to perform with a group of friendly people? <a href="https://docs.google.com/document/d/1upf8PMQGKC9o2VpGCPPxlyS6H79pV7q3lV8fDRcfZq0/edit?usp=sharing">Sign up to AUDITION FOR CALYPSO!</a></br>
+      We are looking for:
+      <ul>
+      <li>Steelpan players! Whether you played your whole life or have never played before, WE WANT YOU!</li>
+      <li>An experienced drum set player. We play a diverse repertoire, so we want someone who can take charge of the rhythm section and learn any style!</li>
+      </ul></p>
+      <p>Want more info?<a href='?p=recruiting'>Click here!</a></p>
     </div>
     </td>
   </tr>

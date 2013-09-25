@@ -9,17 +9,22 @@
       <li>We put on a rocking spring show every year featuring original music and crazy costumes.</li>
     </ul>
     </p>
-  </td>
-  <td class='half'>
-  	<h1>Want More Info?</h1>
-    <p>
+    <h1>Want More Info?</h1>
     <ul>
-      <li>Come find us at the Activities Fair this fall. Date and time TBA.</li>
+      <li>Come find us at the Activities Fair from <b>1-4pm</b> on <b>Friday, September 27, 2013</b> in White Plaza!. We can answer whatever questions you have, including any about auditions!</li>
+      <li>There will be an <b>Information Session</b> (tentatively on <b>Saturday, September 28 in Manzanita Dining</b>) where you can come and ask questions if you didn't catch us at the Activities Fair.</li>
       <li>Feel free to email us at <b><a href="mailto:stanfordcalypso@gmail.com">stanfordcalypso@gmail.com</a></b>.</li>
     </ul>
-    </p>
+  </td>
+  <td class='half'>
+  <a title='See more photos' href='?p=media'><img width="100%" src='photos/calypso05.jpg' alt='Cardinal Calypso' /></a>
     <h1>Fall 2013 Auditions</h1>
-    <p>Check back at the beginning of fall quarter for dates and times!</p>
-  </td></tr>
-  <tr><td class='full' colspan='2'><a title='See more photos' href='?p=media'><img src='photos/calypso05.jpg' alt='Cardinal Calypso' /></a></td></tr>
+    <ul>
+    <li>Auditions will be held on <b>Sunday, September 29</b> and <b>Monday, September 30.</b></li>
+    <li>Sign up to AUDITION at <a href="https://docs.google.com/document/d/1upf8PMQGKC9o2VpGCPPxlyS6H79pV7q3lV8fDRcfZq0/edit?usp=sharing">THIS LINK!</a></li>
+    <li>During the actual audition, we'll interview you (just an informal get-to-know-you) and then teach you a song on pan.</li>
+    <li>We will let you know about callbacks a few days after auditions.</li>
+    </ul>
+    </td></tr>
+  <tr><td class='full' colspan='2'></td></tr>
 </table>
