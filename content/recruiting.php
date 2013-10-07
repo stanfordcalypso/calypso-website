@@ -20,8 +20,8 @@
   <a title='See more photos' href='?p=media'><img width="100%" src='photos/calypso05.jpg' alt='Cardinal Calypso' /></a>
     <h1>Fall 2013 Auditions</h1>
     <ul>
-    <li>Auditions will be held on <b>Sunday, September 29</b> and <b>Monday, September 30.</b></li>
-    <li>Sign up to AUDITION at <a href="https://docs.google.com/document/d/1upf8PMQGKC9o2VpGCPPxlyS6H79pV7q3lV8fDRcfZq0/edit?usp=sharing">THIS LINK!</a></li>
+    <li>Auditions will be held on <b>Sunday, September 29</b> and <b>Tuesday, October 1 from 6-10 PM</b>.</li>
+    <li>Sign up to AUDITION at <a href="https://docs.google.com/document/d/1upf8PMQGKC9o2VpGCPPxlyS6H79pV7q3lV8fDRcfZq0/edit?usp=sharing">THIS LINK!</a> Please only sign up for one slot.</li>
     <li>During the actual audition, we'll interview you (just an informal get-to-know-you) and then teach you a song on pan.</li>
     <li>We will let you know about callbacks a few days after auditions.</li>
     </ul>
