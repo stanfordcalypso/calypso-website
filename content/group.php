@@ -15,7 +15,7 @@
 				<strong>'14</strong> Henry Biermann, Emma Sagan<br />
 				<strong>'15</strong> Lauryn Isford, Amy Kim, Clara McCreery, Amanda McNary, Prithvi Ramakrishnan<br />
                 <strong>'16</strong> Gio Jacuzzi, Alan Propp, Amanda Quay, Leopold Wambersie<br />
-				<strong>'16</strong> J Evans, Tucker Leavitt, Carla Lewis, Meghan Shea, Camille Townshend
+				<strong>'17</strong> J Evans, Tucker Leavitt, Carla Lewis, Meghan Shea, Camille Townshend
 			</p>
 			<h1>Alumni</h1>
    <p>Akwasi Abrefah ('12), Aaron Acosta ('13), Josh Archibald-Seiffer, Alexis Arnold ('11), Chris Balane, David Brown, Arielle Craig, Kevin Danna, Mike Demmitt, Nancy Falxa-Raymond, Allison Fink ('12), David Germain, Maxine Holland ('11), Sally Hudson, <a target='_blank' href='http://www.lucaswilljohnson.com'>Lucas Johnson ('11)</a>, Dana Katz ('12), Binna Kim ('13), Monique King, Liezel Labios, David Miller, Bri Mostoller ('16), Kai Neo ('14), Jonathan Potter ('12), <a target='_blank' href='http://terribleben.com'>Ben Roth ('11), </a>, Jesse Ruder ('12), Flip Tanedo, Art Tosborvorn, Will Tucker ('13), Justin Wiguna ('15), Alex Williamson, Cathy Ye, Nate Zwerdling ('11)</p>
