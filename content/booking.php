@@ -12,7 +12,7 @@
         <p><b>During the School Year</b><br />
 		Although we try to fit in as many shows as possible, all the members of the group are full-time students with rigorous schedules. Sometimes, despite our best efforts, we can't book an event because too much of the group is busy.</p>
         <p><b>During the Summer</b><br />
-        Our summer availability depends on the number of members staying in the Bay Area. Unfortunately, we are not performing during Summer 2012. If you feel that your request is unrelated to the number of players, please feel free to contact us.</p>
+        We are accepting performance requests for the summer of 2014. Our summer availability, however, depends on the varying schedules of our members, so availability is not guaranteed. Please contact us for more information! <!--Unfortunately, we are not performing during Summer 2014. If you feel that your request is unrelated to the number of players, please feel free to contact us.--></p>
         <p><b>About Location</b><br />
 		We'll be happy to play wherever you put us, but it is good to know the closest place to unload a car, since this affects how long it takes us to set up all our equipment.</p>
 
