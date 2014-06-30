@@ -4,6 +4,8 @@
 		<p>
 			<a href='music/pan.mp3'>Kitchener - Pan in A Minor</a> (160kbps mp3, 3:11)<br />
 			<a href='music/ipanema.mp3'>Antonio Carlos Jobim - The Girl from Ipanema</a> (160kbps mp3, 3:05)<br />
+			<a href='music/bohemian_rhapsody.mp3'>Queen - Bohemian Rhapsody</a> (160kbps mp3, 3:00)<br />
+			<a href='music/jump.mp3'>Harry Belafonte - Jump in the Line</a> (320kbps mp3, 2:29)<br />
 			<a href='music/flathead.mp3'>The Fratellis - Flathead</a> (160kbps mp3, 3:00)
 		</p>
         </td></tr>
