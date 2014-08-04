@@ -19,18 +19,18 @@
    $service = new Google_CalendarService($client);
    //
    $event = new Google_Event();
-   $event->setSummary('Event 1');
-   $event->setLocation('Somewhere');
+   $event->setSummary('TestGig');
+   $event->setLocation('The White House');
    $start = new Google_EventDateTime();
-   $start->setDateTime('2013-10-22T19:00:00.000+01:00');
-   $start->setTimeZone('Europe/London');
+   $start->setDateTime('2014-08-04T19:00:00.000+01:00');
+   $start->setTimeZone('America/Los_Angeles');
    $event->setStart($start);
    $end = new Google_EventDateTime();
-   $end->setDateTime('2013-10-22T19:25:00.000+01:00');
-   $end->setTimeZone('Europe/London');
+   $end->setDateTime('2013-10-22T19:30:00.000+01:00');
+   $end->setTimeZone('America/Los_Angeles');
    $event->setEnd($end);
    //
-   $calendar_id = "sd7h90sdja97sdg9ahd0sa8bd@group.calendar.google.com";
+   $calendar_id = "tuleai9qf617ins2h47jfeiqac@group.calendar.google.com";
    //
    $new_event = null;
    //
