@@ -1,8 +1,11 @@
 <?php
-   require_once "../google-api-php-client/src/Google_Client.php";
-   require_once "../google-api-php-client/src/contrib/Google_CalendarService.php";
+   echo "Page loading";
+   require_once 'google-api-php-client/src/Google/Client.php';
+   require_once 'google-api-php-client/src/Google/Service/Calendar.php';
    //
+   echo "After requires";
    $client = new Google_Client();
+   echo "After Google Client";
    $client->setUseObjects(true);
    $client->setApplicationName("calypsogigs");
    $client->setClientId("1072266037494-6oj77gc3stot6ejofvdmu51a5kdvs557.apps.googleusercontent.com");
@@ -34,11 +37,14 @@
    //
    $new_event = null;
    //
+   echo "Pre-try";
    try {
+        echo "Try";
        $new_event = $service->events->insert($calendar_id, $event);
        //
        $new_event_id= $new_event->getId();
    } catch (Google_ServiceException $e) {
+       echo "ERROR";
        syslog(LOG_ERR, $e->getMessage());
    }
    //
@@ -50,4 +56,5 @@
        echo "Summary=".$event->getSummary();
        echo "Status=".$event->getStatus();
    }
+
    ?>
