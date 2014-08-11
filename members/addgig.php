@@ -16,7 +16,7 @@
 </tr>
 <tr>
 	<td colspan=2>Comments:<br /><textarea id='gigcomments' row='3' cols='25'></textarea></td>
-	<!-- <td style='padding-left:20px'><div style='width:100px'>Post to Calendar?:</div></td><td><input type='checkbox' id='gigposted'></td> -->
+	<td style='padding-left:20px'><div style='width:100px'>Post to Calendar?:</div></td><td><input type='checkbox' id='isInGoogleCalendar'></td>
 	
 </tr>
 </table>
@@ -42,8 +42,9 @@ function addgig() {
     var confirmed = id("gigconfirmed").checked ? 1 : 0;
     var comments = id("gigcomments").value;
     var attire = id("gigattire").value;
+    var isInGoogleCalendar = id("isInGoogleCalendar").checked ? 1 : 0;
     
-    var sendstr = "addgig&name="+name+"&date="+date+"&loadtime="+loadtime+"&starttime="+starttime+"&endtime="+endtime+"&location="+location+"&confirmed="+confirmed+"&comments="+comments+"&attire="+attire;
+    var sendstr = "addgig&name="+name+"&date="+date+"&loadtime="+loadtime+"&starttime="+starttime+"&endtime="+endtime+"&location="+location+"&confirmed="+confirmed+"&comments="+comments+"&attire="+attire+"&isInGoogleCalendar="+isInGoogleCalendar;
     dopostajax(sendstr, addgigresponse);
     id("newgigdiv").innerHTML = "Processing...";
 }

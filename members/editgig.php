@@ -11,12 +11,13 @@ $giglocation = "";
 $gigcomments = "";
 $gigconfirmed = "";
 $gigattire = "";
+$isInGoogleCalendar = "";
 
 if (isset($_GET['gigid'])) {
   $newsong = 0;
   $gigid = $_GET['gigid'];
 
-  $result = mysql_query("SELECT name, date, loadtime, starttime, endtime, location, comments, confirmed, attire FROM gigs WHERE gigid = '$gigid'");
+  $result = mysql_query("SELECT name, date, loadtime, starttime, endtime, location, comments, confirmed, attire, isInGoogleCalendar FROM gigs WHERE gigid = '$gigid'");
   if ($row = mysql_fetch_array($result)) {
     $gigname = $row['name'];
     $gigdate = $row['date'];
@@ -28,6 +29,7 @@ if (isset($_GET['gigid'])) {
     $gigconfirmed = $row['confirmed'];
     $gigposted;
     $gigattire = $row['attire'];
+    $isInGoogleCalendar = $row['isInGoogleCalendar'];
   }
 }
 
@@ -47,7 +49,7 @@ if (isset($_GET['gigid'])) {
 	</tr>
   	<tr>
   		<td colspan=2>Comments:<br /><textarea id='gigcomments' row='3' cols='25'><?php echo $gigcomments; ?></textarea></td>
-  		<!-- <td style='padding-left:20px'><div style='width:100px'>Post to Calendar?:</div></td><td><input type='checkbox' id='gigposted'<?php if ($gigposted == 1){echo " checked";} ?>></td> -->
+  		<td style='padding-left:20px'><div style='width:100px'>Post to Calendar?:</div></td><td><input type='checkbox' id='isInGoogleCalendar'<?php if ($isInGoogleCalendar == 1){echo " checked";} ?>></td>
   </tr></table>
 
 <br />
@@ -57,11 +59,6 @@ if (isset($_GET['gigid'])) {
 </div>
 
 <script type="text/javascript">
-/*
-var clientId = '1072266037494'
-var apiKey = 'AIzaSyCGzO_yilbkluevZgy4q_4nOdMxkj7OYkk';
-var scopes = 'https://www.googleapis.com/auth/calendar';
-*/
 
 id("dateselect").innerHTML = dateselectedit("gigdate", "<?php echo $gigdate; ?>");
 id("loadtime").innerHTML = timeselectedit("loadtime", "<?php echo $gigloadtime; ?>");
@@ -78,7 +75,9 @@ function editgig() {
     var confirmed = id("gigconfirmed").checked ? 1 : 0;
     var comments = id("gigcomments").value;
     var attire = id("gigattire").value;
-    var sendstr = "editgig&gigid=<?php echo $gigid; ?>&name="+name+"&date="+date+"&loadtime="+loadtime+"&starttime="+starttime+"&endtime="+endtime+"&location="+location+"&confirmed="+confirmed+"&comments="+comments+"&attire="+attire;
+    var isInGoogleCalendar = id("isInGoogleCalendar").checked ? 1 : 0;
+
+    var sendstr = "editgig&gigid=<?php echo $gigid; ?>&name="+name+"&date="+date+"&loadtime="+loadtime+"&starttime="+starttime+"&endtime="+endtime+"&location="+location+"&confirmed="+confirmed+"&comments="+comments+"&attire="+attire+"&isInGoogleCalendar="+isInGoogleCalendar;
     
     dopostajax(sendstr, editgigresponse);
     id("editgigdiv").innerHTML = "Processing...";
@@ -89,51 +88,13 @@ function editgigresponse(x) {
 }
 
 function deletegig() {
-if (confirm("Are you sure? This will delete the gig permanently, along with all responses associated with it.")) {
-   var sendstr = 'deletegig&gigid=<?php echo $gigid; ?>';
-   dopostajax(sendstr, editgigresponse);
-   id("editgigdiv").innerHTML = "Processing...";
-}
-}
-
-/*
-function checkAuth() {
-    gapi.auth.authorize({client_id: clientId, scope: scopes, immediate: true}, handleAuthResult);
+  if (confirm("Are you sure? This will delete the gig permanently, along with all responses associated with it.")) {
+     var sendstr = 'deletegig&gigid=<?php echo $gigid; ?>';
+     dopostajax(sendstr, editgigresponse);
+     id("editgigdiv").innerHTML = "Processing...";
+  }
 }
 
-
-function handleAuthResult(authResult) {
-        if (authResult && !authResult.error) {
-          makeApiCall();
-        } else {
-        	gapi.auth.authorize({client_id: clientId, scope: scopes, immediate: false}, handleAuthResult);
-        	return false;
-        }
-}
-
-// Load the API and make an API call.  Display the results on the screen.
-      function makeApiCall() {
-        gapi.client.load('calendar', 'v3', function() {
-          var resource = {
-  			"summary": "FACES",
-  			"location": "Memorial Auditorium",
-  			"start": {
-    			"dateTime": "2013-09-18T10:00:00.000-07:00"
-  			},
-  			"end": {
-    			"dateTime": "2013-09-18T10:25:00.000-07:00"
-  			}
-		};
-		var request = gapi.client.calendar.events.insert({
-  			'calendarId': 'tuleai9qf617ins2h47jfeiqac@group.calendar.google.com',
-  			'resource': resource
-		});
-		request.execute(function(resp) {
-  			console.log(resp);
-		});
-        });
-      }
-      */
 </script>
 
 </td></tr>
