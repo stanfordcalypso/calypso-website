@@ -225,14 +225,14 @@ else if ($action == "addgig") {
           /*send_to_members("emailnew = 1", "New Gig: " . $input['name'],
           "Click here to respond to this gig:<br />
           <a href='" . $url . "'>" . $url . "</a>"); */
-          echo "New gig emails sent.<br />&nbsp;<br />";
-        }
-        echo "Gig added successfully!<br />&nbsp;<br /><a href='?action=gigs'>Back to gigs</a>";
-      }
-    }
-  } else {
-    echo "Error: Please try again";
-  }
+echo "New gig emails sent.<br />&nbsp;<br />";
+}
+echo "Gig added successfully!<br />&nbsp;<br /><a href='?action=gigs'>Back to gigs</a>";
+}
+}
+} else {
+  echo "Error: Please try again";
+}
 }
 
 else if ($action == "editgig") {
@@ -241,33 +241,154 @@ else if ($action == "editgig") {
     $curdate = date("Y-m-d");
     if ($input['date'] < $curdate) {
       echo "Error: Date has already passed!";
-    }
-    else {
+    } else if ($input['starttime'] < $input['loadtime']) {
+      echo "Error: Start time cannot be before load time.";
+    } else if ($input['endtime'] < $input['starttime']) {
+      echo "Error: End time cannot be before start time";
+    } else {
       $origconfirmed = 1;
       $original = mysql_query("SELECT confirmed FROM gigs WHERE gigid = '$input[gigid]'");
       if ($row = mysql_fetch_array($original)) {
-       $origconfirmed = $row['confirmed'];
-     }
+        $origconfirmed = $row['confirmed'];
+      }
 
-     if (mysql_query("REPLACE INTO gigs (gigid, name, comments, date, loadtime, starttime, endtime, location, confirmed, attire, isInGoogleCalendar)
-      VALUES
-      ('$input[gigid]','$input[name]','$input[comments]','$input[date]','$input[loadtime]','$input[starttime]','$input[endtime]','$input[location]','$input[confirmed]','$input[attire]', '$input[isInGoogleCalendar]')")) {
+      $origIsInGoogleCalendar = 1;
+      $original = mysql_query("SELECT isInGoogleCalendar FROM gigs WHERE gigid = '$input[gigid]'");
+      if ($row = mysql_fetch_array($original)) {
+        $origIsInGoogleCalendar = $row['isInGoogleCalendar'];
+      }
+
+      $googleCalendarId = '';
+      // get the current event's Google Calendar Id from the database
+      $original = mysql_query("SELECT googleCalendarId FROM gigs WHERE gigid = '$input[gigid]'");
+      if ($row = mysql_fetch_array($original)) {
+        $googleCalendarId = $row['googleCalendarId'];
+      }
+
+      if (mysql_query("REPLACE INTO gigs (gigid, name, comments, date, loadtime, starttime, endtime, location, confirmed, attire, isInGoogleCalendar, googleCalendarId)
+        VALUES
+        ('$input[gigid]','$input[name]','$input[comments]','$input[date]','$input[loadtime]','$input[starttime]','$input[endtime]','$input[location]','$input[confirmed]','$input[attire]', '$input[isInGoogleCalendar]', '$googleCalendarId')")) {
        if ($origconfirmed == 0 && $input['confirmed'] == 1) {
          send_to_members("emailconfirm = 1", "Gig Confirmation: " . $input['name'], $input['name'] . " has been confirmed!");
          echo "Confirmation emails sent.<br />&nbsp;<br />";
        }
 
-       echo "Gig edited successfully!<br />&nbsp;<br /><a href='?action=gigs'>Back to gigs</a>";
-     }
-     else {
-       echo "Error: Please try again";
-     }
+       // if we previously did not have an event in the calendar and want to put one in now
+       if ($origIsInGoogleCalendar == 0 && $input['isInGoogleCalendar'] == 1) {
+        // create a new event
+        $event = new Google_Service_Calendar_Event();
+        $event->setSummary($input['name']);
+        $event->setLocation($input['location']);
+        $start = new Google_Service_Calendar_EventDateTime();
+        $start->setDateTime($input['date'].'T'.$input['starttime'].':00');
+        $start->setTimeZone('America/Los_Angeles');
+        $event->setStart($start);
+        $end = new Google_Service_Calendar_EventDateTime();
+        $end->setDateTime($input['date'].'T'.$input['endtime'].':00');
+        $end->setTimeZone('America/Los_Angeles');
+        $event->setEnd($end);
+        
+        // try to put the event in the calendar
+        try {
+          $new_event = $service->events->insert($calendar_id, $event);
+        //
+          $new_event_id = $new_event->getId();
+        } catch (Google_Service_Exception $e) {
+          echo "ERROR \n";
+          syslog(LOG_ERR, $e->getMessage());
+          echo $e->getMessage();
+        }
+      } 
+
+      // if we previously had an event in the calendar and want to take it down
+      else if ($origIsInGoogleCalendar == 1 && $input['isInGoogleCalendar'] == 0) {
+
+        // try to delete the event from the Google Calendar
+        try {
+          $event = $service->events->delete($calendar_id, $googleCalendarId);
+        } catch (Google_Service_Exception $e) {
+          echo "ERROR \n";
+          syslog(LOG_ERR, $e->getMessage());
+          echo $e->getMessage();
+          echo "GCalId: " . $googleCalendarId;
+        }
+      } 
+
+      // if we previously had an event in the calendar and want to update it
+      else if ($origIsInGoogleCalendar == 1 && $input['isInGoogleCalendar'] == 1) {
+
+        // try to get the event from the calendar
+        try {
+          $event = $service->events->get($calendar_id, $googleCalendarId);
+        } catch (Google_Service_Exception $e) {
+          echo "ERROR \n";
+          syslog(LOG_ERR, $e->getMessage());
+          echo $e->getMessage();
+        }
+
+        // update the calendar's information
+        $event->setSummary($input['name']);
+        $event->setLocation($input['location']);
+        $start = new Google_Service_Calendar_EventDateTime();
+        $start->setDateTime($input['date'].'T'.$input['starttime'].':00');
+        $start->setTimeZone('America/Los_Angeles');
+        $event->setStart($start);
+        $end = new Google_Service_Calendar_EventDateTime();
+        $end->setDateTime($input['date'].'T'.$input['endtime'].':00');
+        $end->setTimeZone('America/Los_Angeles');
+        $event->setEnd($end);
+
+        // try to update the event
+        try {
+          $updatedEvent = $service->events->update($calendar_id, $event->getId(), $event);
+        } catch (Google_Service_Exception $e) {
+          echo "ERROR \n";
+          syslog(LOG_ERR, $e->getMessage());
+          echo $e->getMessage();
+        }
+      }
+
+      echo "Gig edited successfully!<br />&nbsp;<br /><a href='?action=gigs'>Back to gigs</a>";
+    } else {
+     echo "Error: Please try again";
    }
  }
 }
+}
+
 else if ($action == "deletegig") {
   deleteoldgigs();
   if (haveinput('gigid')) {
+    
+    // see if we have posted the event to the Google Calendar
+    $origIsInGoogleCalendar = 1;
+    $original = mysql_query("SELECT isInGoogleCalendar FROM gigs WHERE gigid = '$input[gigid]'");
+    if ($row = mysql_fetch_array($original)) {
+      $origIsInGoogleCalendar = $row['isInGoogleCalendar'];
+    }
+
+    // if the event is in the Google Calendar, we want to take it down
+    if ($origIsInGoogleCalendar == 1) {
+      $googleCalendarId = '';
+
+      // get the current event's Google Calendar Id from the database
+      $original = mysql_query("SELECT googleCalendarId FROM gigs WHERE gigid = '$input[gigid]'");
+      if ($row = mysql_fetch_array($original)) {
+        $googleCalendarId = $row['googleCalendarId'];
+      }
+
+      // try to delete the event from the Google Calendar
+      try {
+        $event = $service->events->delete($calendar_id, $googleCalendarId);
+      } catch (Google_Service_Exception $e) {
+        echo "ERROR \n";
+        syslog(LOG_ERR, $e->getMessage());
+        echo $e->getMessage();
+        echo "GCalId: " . $googleCalendarId;
+      }
+
+    }
+
     mysql_query("DELETE FROM gigs WHERE gigid = '$input[gigid]'");
     mysql_query("DELETE FROM responses WHERE gigid = '$input[gigid]'");
     echo "Deleted gig successfully.<br />&nbsp;<br /><a href='?action=gigs'>Back to gigs</a>";
