@@ -17,7 +17,7 @@ if (isset($_GET['gigid'])) {
   $newsong = 0;
   $gigid = $_GET['gigid'];
 
-  $result = mysql_query("SELECT name, date, loadtime, starttime, endtime, location, comments, confirmed, attire, isInGoogleCalendar FROM gigs WHERE gigid = '$gigid'");
+  $result = mysql_query("SELECT name, date, loadtime, starttime, endtime, location, comments, confirmed, attire, isInGoogleCalendar, googleCalendarId FROM gigs WHERE gigid = '$gigid'");
   if ($row = mysql_fetch_array($result)) {
     $gigname = $row['name'];
     $gigdate = $row['date'];
@@ -30,6 +30,7 @@ if (isset($_GET['gigid'])) {
     $gigposted;
     $gigattire = $row['attire'];
     $isInGoogleCalendar = $row['isInGoogleCalendar'];
+    $googleCalendarId = $row['googleCalendarId'];
   }
 }
 

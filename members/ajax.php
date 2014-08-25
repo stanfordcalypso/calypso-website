@@ -222,9 +222,9 @@ else if ($action == "addgig") {
         $result = mysql_query("SELECT gigid FROM gigs WHERE name = '$input[name]' AND date = '$input[date]' AND starttime = '$input[starttime]'");
         if ($result && $row = mysql_fetch_array($result)) {
           $url = "https://www.stanford.edu/group/calypso/cgi-bin/members/?action=respond&gigid=" . $row['gigid'];
-          /*send_to_members("emailnew = 1", "New Gig: " . $input['name'],
+          send_to_members("emailnew = 1", "New Gig: " . $input['name'],
           "Click here to respond to this gig:<br />
-          <a href='" . $url . "'>" . $url . "</a>"); */
+          <a href='" . $url . "'>" . $url . "</a>"); 
 echo "New gig emails sent.<br />&nbsp;<br />";
 }
 echo "Gig added successfully!<br />&nbsp;<br /><a href='?action=gigs'>Back to gigs</a>";
