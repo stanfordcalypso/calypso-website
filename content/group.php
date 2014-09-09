@@ -11,14 +11,12 @@
 			<p>Auditions are held at the beginning of every fall quarter. Auditions for the 2013-14 school year are already complete. If you think you should fall outside of this schedule, or if you have any other questions, we encourage you to <a href='?p=booking'>contact</a> a leader of the group.</p>
 			<h1>Current Lineup</h1>
 			<p>
-				<strong>'13</strong> Adam Genecov<br />
-				<strong>'14</strong> Henry Biermann, Emma Sagan<br />
 				<strong>'15</strong> Lauryn Isford, Amy Kim, Clara McCreery, Amanda McNary, Prithvi Ramakrishnan<br />
                 <strong>'16</strong> Gio Jacuzzi, Alan Propp, Amanda Quay, Leopold Wambersie<br />
 				<strong>'17</strong> J Evans, Tucker Leavitt, Carla Lewis, Meghan Shea, Camille Townshend
 			</p>
 			<h1>Alumni</h1>
-   <p>Akwasi Abrefah ('12), Aaron Acosta ('13), Josh Archibald-Seiffer, Alexis Arnold ('11), Chris Balane, David Brown, Arielle Craig, Kevin Danna, Mike Demmitt, Nancy Falxa-Raymond, Allison Fink ('12), David Germain, Maxine Holland ('11), Sally Hudson, <a target='_blank' href='http://www.lucaswilljohnson.com'>Lucas Johnson ('11)</a>, Dana Katz ('12), Binna Kim ('13), Monique King, Liezel Labios, David Miller, Bri Mostoller ('16), Kai Neo ('14), Jonathan Potter ('12), <a target='_blank' href='http://terribleben.com'>Ben Roth ('11), </a>, Jesse Ruder ('12), Flip Tanedo, Art Tosborvorn, Will Tucker ('13), Justin Wiguna ('15), Alex Williamson, Cathy Ye, Nate Zwerdling ('11)</p>
+   <p>Akwasi Abrefah ('12), Aaron Acosta ('13), Josh Archibald-Seiffer, Alexis Arnold ('11), Chris Balane, Henry Biermann ('14), David Brown, Arielle Craig, Kevin Danna, Mike Demmitt, Nancy Falxa-Raymond, Allison Fink ('12), <a target="_blank" href="http://adamgenecov.com">Adam Genecov ('13)</a>, David Germain, Maxine Holland ('11), Sally Hudson, <a target='_blank' href='http://www.lucaswilljohnson.com'>Lucas Johnson ('11)</a>, Dana Katz ('12), Binna Kim ('13), Monique King, Liezel Labios, David Miller, Bri Mostoller ('16), Kai Neo ('14), Jonathan Potter ('12), <a target='_blank' href='http://terribleben.com'>Ben Roth ('11), </a>, Jesse Ruder ('12), Emma Sagan ('14), Flip Tanedo, Art Tosborvorn, Will Tucker ('13), Justin Wiguna ('15), Alex Williamson, Cathy Ye, Nate Zwerdling ('11)</p>
 		</td>
   </tr>
 </table>
