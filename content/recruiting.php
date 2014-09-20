@@ -21,7 +21,7 @@
     <h1>Fall 2014 Auditions</h1>
     <ul>
     <li>Auditions will be held on <b>Sunday, September 28 from noon to 6pm</b> and <b>Tuesday, September 30 from 7:30 to 10:30pm</b>.</li>
-    <li>Sign up to AUDITION at <a href="https://docs.google.com/a/stanford.edu/spreadsheets/d/1ppFCoAdJZ2JiDyeKjPr36zrGThqskTnmjygOsHRRJdU/edit#gid=0">THIS LINK!</a> Please only sign up for one slot. You need to use your Stanford account to access the link.</li>
+    <li>Sign up to AUDITION at <a href="https://docs.google.com/a/stanford.edu/spreadsheets/d/1ppFCoAdJZ2JiDyeKjPr36zrGThqskTnmjygOsHRRJdU/edit#gid=0">THIS LINK!</a> Please only sign up for one slot.</li>
     <li>During the actual audition, we'll interview you (just an informal get-to-know-you) and teach you a song on pan.</li>
     <li>We will let you know about callbacks a few days after auditions.</li>
     </ul>
