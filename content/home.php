@@ -1,18 +1,18 @@
 <table cellspacing='0' cellpadding='0'>
   <tr>
     <td class='full' colspan='2'>
-    <!-- 
+    
     <div class='notice'>
       <h1>Join Calypso</h1>
-      <p>Looking to perform with a group of friendly people? <a href="https://docs.google.com/document/d/1upf8PMQGKC9o2VpGCPPxlyS6H79pV7q3lV8fDRcfZq0/edit?usp=sharing">Sign up to AUDITION FOR CALYPSO!</a></br>
+      <p>Looking to perform with a group of friendly people? <a href="https://docs.google.com/a/stanford.edu/spreadsheets/d/1ppFCoAdJZ2JiDyeKjPr36zrGThqskTnmjygOsHRRJdU/edit#gid=0">Sign up to AUDITION FOR CALYPSO!</a></br>
       We are looking for:
       <ul>
       <li><b>Steelpan players</b> - NO EXPERIENCE NECESSARY! Whether you have never played before or have played your whole life, WE WANT YOU!</li>
-      <li>An <b>experienced drum set player</b>. We want someone who can take charge of the rhythm section and learn any style!</li>
+      <!-- <li>An <b>experienced drum set player</b>. We want someone who can take charge of the rhythm section and learn any style!</li> -->
       </ul></p>
       <p>Want more info?<a href='?p=recruiting'>Click here!</a></p>
     </div>
-    -->
+   
     </td>
   </tr>
   <tr>
