@@ -8,7 +8,7 @@
     <td id='left'>
       <div id='logo'></div>
       <table id='nav' cellspacing='0' cellpadding='0'><tr><?php
-   $actions = array('home' => 'Home', 'group' => 'The Group', 'pans' => 'The Pans', 'booking' => 'Booking', 'media' => 'Media', 'premieres' => 'Premieres', 'requestgig' => 'Request Gig', 'requestgig2' => 'Request Gig',  'recruiting' => 'Auditions' );
+   $actions = array('home' => 'Home', 'group' => 'The Group', 'pans' => 'The Pans', 'booking' => 'Booking', 'media' => 'Media', 'premieres' => 'Premieres', 'requestgig' => 'Request Gig', 'requestgig2' => 'Request Gig'/*,  'recruiting' => 'Auditions'*/ );
 	$p = (isset($_GET['p']) && in_array($_GET['p'], array_keys($actions))) ? $_GET['p'] : 'home';
 	foreach ($actions as $key => $label) {
 	  if ($key == "requestgig" || $key == "requestgig2") {
@@ -21,13 +21,14 @@
 	}
       ?></tr></table>
     </td>
-    <td id='right' rowspan='2'><div class='cal_container'>
+<!--    <td id='right' rowspan='2'><div class='cal_container'>
       <h1>Calendar</h1>
       <div id='calendar'>
         <iframe id='calembed' src="http://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showTabs=0&amp;showCalendars=0&amp;mode=AGENDA&amp;wkst=1&amp;bgcolor=%23eeeeff&amp;src=tuleai9qf617ins2h47jfeiqac%40group.calendar.google.com" frameborder="0" scrolling="no"></iframe>
       </div>
     </div></td>
-  </tr><tr>
+  </tr> -->
+  <tr>
     <td id='content'><?
       include_once "content/{$p}.php";
     ?></td>

@@ -1,11 +1,11 @@
 <table cellspacing='0' cellpadding='0'><tr>
   <td class='half'>
-     <div class='notice'>
+<!--     <div class='notice'>
       <h1>We Want to Meet You!</h1>
       <p>Interested in auditioning?<a href="https://docs.google.com/spreadsheets/d/1d5lnwMIJSgTMbl5avicPnsqJHDgb5t8qf0AvnV_Hw94/edit">SIGN UP HERE!</a> Or, to learn more about the group:</p>
       <p> Find us at the Activities Fair from <b>noon to 4pm</b> on <b>Friday, September 25, 2015</b> in White Plaza!</p>
       <p> Come to our Picnic and Pan meet-and-greet with other prospective Calypsonians from <b>2 to 5pm</b> on <b>Saturday, September 26, 2015</b> at the Oval!</p>
-    </div> 
+    </div> -->
   <h1>Join Cardinal Calypso</h1>
     <p>Cardinal Calypso holds auditions once per year at the beginning of fall quarter. If you love music and sunshine and want to be a part of a friendly and exciting student group, we would love for you to try out.
     <ul>
