@@ -1,20 +1,20 @@
 function id(ids) {return document.getElementById(ids);};
 
 function doajax(myrequest, myaction) {
-var xmlhttp;
-if (window.XMLHttpRequest) {
-xmlhttp=new XMLHttpRequest();
-}
-else {
-xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-}
-xmlhttp.onreadystatechange=function() {
-if (xmlhttp.readyState==4 && xmlhttp.status==200) {
-myaction(xmlhttp.responseText);
-}
-};
-xmlhttp.open("GET","ajax.php?action="+myrequest,true);
-xmlhttp.send();
+  var xmlhttp;
+  if (window.XMLHttpRequest) {
+    xmlhttp=new XMLHttpRequest();
+  }
+  else {
+    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  xmlhttp.onreadystatechange=function() {
+    if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+      myaction(xmlhttp.responseText);
+    }
+  };
+  xmlhttp.open("GET","ajax.php?action="+myrequest,true);
+  xmlhttp.send();
 }
 
 function dopostajax(myrequest, myaction) {

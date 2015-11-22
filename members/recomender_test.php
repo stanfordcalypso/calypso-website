@@ -1,5 +1,7 @@
-<?php
+<tr>
+<td colspan = '2'>
 
+<?php
 function splicearr($arr, $pos) {
   $newarr = array();
   $found = false;
@@ -12,10 +14,10 @@ function splicearr($arr, $pos) {
   return $newarr;
 }
 
-function get_recommended_songs($tgigid) {
+function get_recommended_songs() {
 $result = mysql_query("SELECT members.sunetid, members.name, parts.instrumentid, instruments.name, songs.songid, songs.name, parts.skillid
 FROM parts, responses, members, songs, instruments
-WHERE responses.gigid = '" . $tgigid . "' AND responses.sunetid = members.sunetid AND responses.playing = '1'
+WHERE responses.gigid = '$_GET[gigid]' AND responses.sunetid = members.sunetid AND responses.playing = '1'
 AND parts.sunetid = members.sunetid AND parts.songid = songs.songid AND parts.instrumentid = instruments.instrumentid
 ORDER BY songs.songid, instruments.instrumentid, members.name");
 
@@ -409,11 +411,17 @@ for ($i = 0; $i < count($assign); $i++) {
       if ($k < count($assign[$i]["parts"][$j]["people"]) - 1)
 	$txt = $txt . ", ";
     }
-    $txt = $txt . "</div></td></tr>\n";
+    $txt = $txt . "</div></td>";
   }
-  $txt = $txt . "</table></div><br />\n\n";
+  $txt = $txt . "</table></div><br />";
 }
 return $txt;
 }
 
+echo get_recommended_songs();
+
 ?>
+
+
+</td>
+</tr>

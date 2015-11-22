@@ -164,8 +164,8 @@ I learned a new part!
 &nbsp;<br />
 Parts I know:<br >
 Sort by: <select id="partsort" onchange="refreshpartsiknow()">
-<option value="0" selected>Song</option>
-<option value="1">Instrument</option>
+<option value="0">Song</option>
+<option value="1" selected>Instrument</option>
 </select>
 <br />
 <div id="partsiknow"></div>

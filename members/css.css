@@ -22,12 +22,14 @@ td#content h1 {font-size:12pt; color:#69C; margin:4px 0 0
 6px; background:url('../calypso_icon.png') no-repeat 0px 2px; padding-left:22px;}
 td#content p {line-height:1.4em; color:#666; font-size:10pt; margin:2px 0 14px 2px; border-left:1px solid #C99; padding:0 4px 0 6px;}
 td#content table {width:100%;}
-td#content table td,td#content table td.full {width:100%; vertical-align:top;}
 td#content table td.half {width:50%;}
 td#content table td.third {width:33%;}
 td#content table td.two-thirds {width:67%;}
 td#content a {color:#58B; text-decoration:none; padding:0 2px 0 2px;}
 td#content a:hover {background-color:#FF9; color:#CA0;}
+td#content table td.row-header, td#content table td.column-header {text-align:center; font-weight:bold; vertical-align:middle;}
+td#content table td span.table-entry {text-align:center;}
+td#content table td,td#content table td.full {width:100%; vertical-align:top;}
 div.green {margin:0; height:100%; padding:10px 4px 10px 14px; background-color:#AEA;}
 div.green h1 {margin:0 0 6px 0; font-size:16pt;}
 div#calendar {background-color:#EEE;}

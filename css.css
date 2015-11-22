@@ -22,13 +22,13 @@ td#content h1 {font-size:12pt; color:#69C; margin:4px 0 0
 6px; background:url('calypso_icon.png') no-repeat 0px 2px; padding-left:22px;}
 td#content p {line-height:1.4em; color:#666; font-size:10pt; margin:2px 0 14px 2px; border-left:1px solid #C99; padding:0 4px 0 6px;}
 td#content table {width:100%;}
-td#content table td,td#content table td.full {width:100%; vertical-align:top;}
 td#content table td.half {width:50%;}
 td#content table td.third {width:33%;}
 td#content table td.two_fifths {width:40%;}
 td#content table td.fifth {width:20%;}
 td#content a {color:#58B; text-decoration:none; padding:0 2px 0 2px;}
 td#content a:hover {color:#58B; text-decoration: underline;}
+td#content table td,td#content table td.full {width:100%; vertical-align:top;}
 div.cal_container {margin:0; height:100%; padding:10px 4px 10px 14px; background-color:#C33;}
 div.cal_container h1 {margin:0 0 6px 0; font-size:16pt; color: #FFF;}
 div#calendar {background-color:#EEE;}
