@@ -164,8 +164,8 @@ I learned a new part!
 &nbsp;<br />
 Parts I know:<br >
 Sort by: <select id="partsort" onchange="refreshpartsiknow()">
-<option value="0">Song</option>
-<option value="1" selected>Instrument</option>
+<option value="0" selected>Instrument</option>
+<option value="1">Song</option>
 </select>
 <br />
 <div id="partsiknow"></div>
@@ -186,9 +186,9 @@ function addnewpart() {
 
 function refreshpartsiknow(x) {
    if (id("partsort").value == 0)
-      doajax("partsbysong&id=<?php echo $SUNETID ?>", getpartsiknow);
-   else
       doajax("partsbyinst&id=<?php echo $SUNETID ?>", getpartsiknow);
+   else
+      doajax("partsbysong&id=<?php echo $SUNETID ?>", getpartsiknow);
 }
 
 function getpartsiknow(x) {

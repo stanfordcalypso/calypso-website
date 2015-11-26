@@ -1,6 +1,6 @@
 <tr>
 <td colspan='2'>
-<p>Recommended songs for 
+<p>View Songs by part and player
 <?php
 ////$link_identifier = mysqli_connect();
 ////$result = mysqli_query($link_identifier, "SELECT members.sunetid, members.name, parts.instrumentid, instruments.name, songs.songid, songs.name, parts.skillid FROM parts, members, songs, instruments");
@@ -41,21 +41,30 @@
 
 ?>
 </p>
-<select size="1" id="tableselect" style="width:140px" onChange="updateTable(this)">
+<select size="1" id="typeselect" style="width:140px" onChange="updateTable(this)">
   <option value="playerVpart" selected>Player vs. Part</option>
   <option value="songVpart">Songs vs. Part</option>
 </select>
+
+<div id='gigselectoptions'></div>
+<!-- <select size="1" id="gigselect" style="width:140px" onChange="updateMembers(this)">
+  <span id="gigselectoptions"></span>
+</select> -->
+
 <div id='javascript_test'></div>
 </td></tr>
 
 <script type="text/javascript">
- "use strict"; 
+  "use strict";
+  var null_gigid = "none";
+  var gig_ajax_done = false;
+  var song_ajax_done = false;
   function dumpsqlresult(sql_result) {
-    var rows = sql_result.split(bigdivider);  
+    var rows = sql_result.split(bigdivider);
     var txt = "<ul>\n";
     for (var i = 0, sz = rows.length - 1; i < sz; ++i) {
       txt += "<li>" + rows[i] + "</li>\n";
-    } 
+    }
    txt += "</ul>";
    id("javascript_test").innerHTML = txt;
   }
@@ -64,31 +73,69 @@
     var txt = "<ul>\n";
     for (var i = 0, sz = results.length; i < sz; ++i) {
       txt += "<li>" + JSON.stringify(results[i]) + "</li>\n";
-    } 
+    }
    txt += "</ul>";
    id("javascript_test").innerHTML = txt;
   }
 
-  function saveResults(sql_result) {
-    window.results = [];
-    var rows = sql_result.split(bigdivider);  
+  function addResponsesForGig(sql_result) {
+    var members = {}
+    var rows = sql_result.split(bigdivider);
+    if (rows.length < 1) return;
+    var curgig = rows[0].split(smalldivider).slice(7, 9); //id, name
+    for (var i = 0, sz = rows.length - 1; i < sz; ++i) {
+      var row = rows[i].split(smalldivider);
+      members[row[0]] = true;
+    }
+    window.responses[curgig[0]] = {
+      "name": curgig[1],
+      "members": members
+    };
+  }
+
+  function findMembersForResponses(sql_result) {
+    window.responses = {};
+    var rows = sql_result.split(bigdivider);
+    for (var i = 0, sz = rows.length - 1; i < sz; ++i) {
+      var row = rows[i].split(smalldivider);
+      // window.curgig = row; //id, name, comments
+      doajax("gigresponses&gigid=" + row[0], addResponsesForGig);
+      // delete window.curgig;
+    }
+    wait_for_members_ajax(rows.length - 1);
+  }
+
+  function wait_for_members_ajax(size) {
+    if (Object.keys(window.responses).length < size) {
+      window.setTimeout(wait_for_members_ajax, 10, size);
+    } else {
+      gig_ajax_done = true;
+    }
+  }
+
+
+  function setAllSongs(sql_result) {
+    window.allSongs = [];
+    var rows = sql_result.split(bigdivider);
     for (var i = 0, sz = rows.length - 1; i < sz; ++i) {
       var row = rows[i].split(smalldivider);
       var elem = {
         "song": row[0],
         "instrument": row[1],
         "member": row[2],
+        "sunetid": row[6],
         "skill": row[3]
       }
-      window.results.push(elem);
+      window.allSongs.push(elem);
     }
+    song_ajax_done = true;
   }
 
-  function parseResultAsSongVPart(results) {
+  function parseResultAsSongVPart(songs) {
     var colnames = {};
     var rows = {};
-    results.forEach(function(elem) {
-      colnames[elem.instrument] = true;  
+    songs.forEach(function(elem) {
+      colnames[elem.instrument] = true;
       if (rows.hasOwnProperty(elem.song)) {
         if (rows[elem.song].hasOwnProperty(elem.instrument)) {
           rows[elem.song][elem.instrument].push(getTableObject(elem.member, elem.skill));
@@ -101,12 +148,12 @@
       }
     });
     return [Object.keys(colnames).sort(), rows];
-  }  
-  function parseResultAsPlayerVPart(results) {
+  }
+  function parseResultAsPlayerVPart(songs) {
     var colnames = {};
     var rows = {};
-    results.forEach(function(elem) {
-      colnames[elem.instrument] = true;  
+    songs.forEach(function(elem) {
+      colnames[elem.instrument] = true;
       if (rows.hasOwnProperty(elem.member)) {
         if (rows[elem.member].hasOwnProperty(elem.instrument)) {
           rows[elem.member][elem.instrument].push(getTableObject(elem.song, elem.skill));
@@ -121,7 +168,7 @@
     colnames = Object.keys(colnames);
     colnames.sort();
     return [colnames, rows];
-  }  
+  }
 
   function getTableHtml(colnames, rows, rowsName) {
     var txt = "<table border=1>";
@@ -135,11 +182,11 @@
     txt += "</tr>";
     Object.keys(rows).forEach(function(rowname) {
       txt += "<tr>";
-      txt += '<td style="width:' + colwidth + '%;" class="row-header"><span class="row-name">' + rowname + '</span></td>';  
+      txt += '<td style="width:' + colwidth + '%;" class="row-header"><span class="row-name">' + rowname + '</span></td>';
       console.log(rowname, rows[rowname]);
       var row = rows[rowname];
       colnames.forEach(function(colname) {
-        txt += '<td style="width:' + colwidth + '%;"><span class="table-entry">';   
+        txt += '<td style="width:' + colwidth + '%;"><span class="table-entry">';
         if (colname in row) {
           for (var i = 0, sz = row[colname].length; i < sz; ++i) {
             var elem = row[colname][i];
@@ -150,7 +197,7 @@
           }
         }
         txt += '</span></td>';
-      }); 
+      });
       txt += "</tr>";
     });
     txt += "</table>";
@@ -178,24 +225,26 @@
     /*id("partsiknow").innerHTML = txt;*/
   }
 
-  function makePartTable(results, resultsParser, rowsName) {
+  function makePartTable(songs, resultsParser, rowsName) {
     //grrrr need destructuring assignment
-    var parsedResults = resultsParser(results);
+    var parsedResults = resultsParser(songs);
     Object.keys(parsedResults[0]).forEach(function(colname) { console.log(colname);});
     var content = getTableHtml(parsedResults[0], parsedResults[1], rowsName);
     id("javascript_test").innerHTML = content;
   }
 
-  function makePlayerVPartTable(results) {
+  function makePlayerVPartTable(songs) {
     console.log("playerVPart");
-    dumpresults(results);
+    dumpresults(songs);
   }
   function getTableObject(name, skill) {
     return {"name": name, "skill": skill};
   }
-  
+
   function onPageLoad() {
-    doajax("allpartsforactivemembers", initializePage);
+    doajax("allgigs", findMembersForResponses);
+    doajax("allpartsforactivemembers", setAllSongs);
+    tryInitializePage();
   }
 
   function sayHi(dropdown) {
@@ -204,31 +253,70 @@
   }
 
   function updateTable(dropdown) {
-    if (!window.results) {
-      console.error("SQL results not found");
+    if (!window.playableSongs) {
+      console.error("SQL songs not found");
       return;
     }
     switch(dropdown.options[dropdown.selectedIndex].value) {
     case "songVpart":
-      makePartTable(window.results, parseResultAsSongVPart, "Song");
+      makePartTable(window.playableSongs, parseResultAsSongVPart, "Song");
       break;
     case "playerVpart":
-      makePartTable(window.results, parseResultAsPlayerVPart, "Player");
+      makePartTable(window.playableSongs, parseResultAsPlayerVPart, "Player");
       break;
     default:
       console.error("Unknown dropdown value: " + dropdown.options[dropdown.selectedIndex].value);
     }
   }
 
-  function initializePage(sql_result) {
-    saveResults(sql_result);
-    //alert(window.results.length);
-    //dumpresults(window.results);
-    updateTable(document.getElementById("tableselect"));
+  function setGigDropDown(gigs_and_members) {
+    var dropdownHtml = '<select size="1" id="gigselect" style="width:140px" onChange="updateMembers(this)">'
+    dropdownHtml += '<option value="' + null_gigid + '" selected>--</option>\n';
+    for (var gigid in gigs_and_members) {
+      if (gigs_and_members.hasOwnProperty(gigid)) {
+        dropdownHtml += '<option value="' + gigid + '">' + gigs_and_members[gigid].name + '</option>\n';
+      }
+    }
+    id("gigselectoptions").innerHTML = dropdownHtml;
+  }
+
+  function setPlayableSongs(allsongs, dropdown) {
+    window.playableSongs = [];
+    var gigid = dropdown.options[dropdown.selectedIndex].value;
+    if (gigid === null_gigid) {
+      window.playableSongs = allsongs;
+      return;
+    } else {
+      var giggingMembers = window.responses[gigid].members;
+      allsongs.forEach(function(song) {
+        if (giggingMembers.hasOwnProperty(song.sunetid)) {
+          window.playableSongs.push(song);
+        }
+      });
+    }
+  }
+
+  function updateMembers(dropdown) {
+    setPlayableSongs(window.allSongs, dropdown);
+    updateTable(document.getElementById("typeselect"));
+  }
+
+  function tryInitializePage() {
+    if (!(gig_ajax_done && song_ajax_done)) {
+      window.setTimeout(tryInitializePage, 10);
+    } else {
+      initializePage();
+    }
+  }
+
+  function initializePage() {
+    setGigDropDown(window.responses);
+    setPlayableSongs(window.allSongs, document.getElementById("gigselect"));
+    //alert(window.songs.length);
+    //dumpresults(window.songs);
+    updateTable(document.getElementById("typeselect"));
   }
 
   onPageLoad();
 
 </script>
-
-

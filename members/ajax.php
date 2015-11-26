@@ -43,14 +43,14 @@ foreach ($input as $key => $value) {
 function echorow($a) {
   global $smalldivider;
   global $bigdivider;
-  
+
   $count = count($a);
   for ($i = 0; $i < $count; $i++) {
     echo stripslashes($a[$i]);
     if ($i < $count - 1)
       echo $smalldivider;
   }
-  
+
   echo $bigdivider;
 }
 
@@ -99,26 +99,26 @@ if ($action != "none") {
       mysql_query("REPLACE INTO parts (sunetid, songid, instrumentid, skillid)
       VALUES
       ('$input[id]','$input[song]','$input[instrument]','$input[skill]')");
-      
+
       echo mysql_error();
     }
   } else if ($action == "partsbysong") {
     if (haveinput('id')) {
       $result = mysql_query("SELECT songs.name AS song, instruments.name AS inst, parts.skillid, parts.songid, parts.instrumentid AS skill FROM parts, songs, instruments WHERE parts.sunetid = '$input[id]' AND parts.songid = songs.songid AND parts.instrumentid = instruments.instrumentid ORDER BY songs.name, instruments.instrumentid");
-      
+
       echoresult($result);
     }
   } else if ($action == "partsbyinst") {
     if (haveinput('id')) {
       $result = mysql_query("SELECT instruments.name AS inst, songs.name AS song, parts.skillid, parts.songid, parts.instrumentid  AS skill FROM parts, songs, instruments WHERE parts.sunetid = '$input[id]' AND parts.songid = songs.songid AND parts.instrumentid = instruments.instrumentid ORDER BY instruments.instrumentid, songs.name");
-      
+
       echoresult($result);
     }
   } else if ($action == "responseneeded") {
     if (haveinput('id')) {
       deleteoldgigs();
       $result = mysql_query("SELECT name, date, starttime, gigid FROM gigs WHERE NOT EXISTS (SELECT * FROM responses WHERE responses.sunetid = '$input[id]' AND responses.gigid = gigs.gigid) ORDER BY gigs.date, gigs.gigid");
-      
+
       echoresult($result);
     }
   } else if ($action == "gigresponse") {
@@ -144,7 +144,7 @@ if ($action != "none") {
     }
   } else if ($action == "gigresponses") {
     if (haveinput('gigid')) {
-      $result = mysql_query("SELECT members.sunetid, members.name, responses.loading, responses.playing, responses.cleanup, responses.car, responses.comments FROM responses, members WHERE responses.gigid = '$input[gigid]' AND responses.sunetid = members.sunetid ORDER BY members.name");
+      $result = mysql_query("SELECT members.sunetid, members.name, responses.loading, responses.playing, responses.cleanup, responses.car, responses.comments, responses.gigid, gigs.name FROM responses, members, gigs WHERE responses.gigid = '$input[gigid]' AND responses.sunetid = members.sunetid AND responses.gigid = gigs.gigid ORDER BY members.name");
       echoresult($result);
     }
   } else if ($action == "savegig") {
@@ -195,7 +195,7 @@ if ($action != "none") {
             echo $e->getMessage();
           }
         }
-        
+
         if (mysql_query("INSERT INTO gigs (name, comments, date, loadtime, starttime, endtime, location, confirmed, attire, isInGoogleCalendar, googleCalendarId) VALUES ('$input[name]','$input[comments]','$input[date]','$input[loadtime]','$input[starttime]','$input[endtime]','$input[location]','$input[confirmed]','$input[attire]', '$input[isInGoogleCalendar]', '$new_event_id')")) {
           $result = mysql_query("SELECT gigid FROM gigs WHERE name = '$input[name]' AND date = '$input[date]' AND starttime = '$input[starttime]'");
           if ($result && $row = mysql_fetch_array($result)) {
@@ -211,7 +211,7 @@ if ($action != "none") {
       echo "Error: Please try again";
     }
   }
-  
+
   else if ($action == "editgig") {
     deleteoldgigs();
     if (haveinput("gigid") && haveinput('name') && haveinput('date') && haveinput('loadtime') && haveinput('starttime') && haveinput('endtime') && haveinput('location') && haveinput('confirmed') && haveinput('comments') && haveinput('attire') && haveinput('isInGoogleCalendar')) {
@@ -228,20 +228,20 @@ if ($action != "none") {
         if ($row = mysql_fetch_array($original)) {
           $origconfirmed = $row['confirmed'];
         }
-        
+
         $origIsInGoogleCalendar = 1;
         $original               = mysql_query("SELECT isInGoogleCalendar FROM gigs WHERE gigid = '$input[gigid]'");
         if ($row = mysql_fetch_array($original)) {
           $origIsInGoogleCalendar = $row['isInGoogleCalendar'];
         }
-        
+
         $googleCalendarId = '';
         // get the current event's Google Calendar Id from the database
         $original         = mysql_query("SELECT googleCalendarId FROM gigs WHERE gigid = '$input[gigid]'");
         if ($row = mysql_fetch_array($original)) {
           $googleCalendarId = $row['googleCalendarId'];
         }
-        
+
         if (mysql_query("REPLACE INTO gigs (gigid, name, comments, date, loadtime, starttime, endtime, location, confirmed, attire, isInGoogleCalendar, googleCalendarId)
         VALUES
         ('$input[gigid]','$input[name]','$input[comments]','$input[date]','$input[loadtime]','$input[starttime]','$input[endtime]','$input[location]','$input[confirmed]','$input[attire]', '$input[isInGoogleCalendar]', '$googleCalendarId')")) {
@@ -249,7 +249,7 @@ if ($action != "none") {
             send_to_members("emailconfirm = 1", "Gig Confirmation: " . $input['name'], $input['name'] . " has been confirmed!");
             echo "Confirmation emails sent.<br />&nbsp;<br />";
           }
-          
+
           // if we previously did not have an event in the calendar and want to put one in now
           if ($origIsInGoogleCalendar == 0 && $input['isInGoogleCalendar'] == 1) {
             // create a new event
@@ -264,7 +264,7 @@ if ($action != "none") {
             $end->setDateTime($input['date'] . 'T' . $input['endtime'] . ':00');
             $end->setTimeZone('America/Los_Angeles');
             $event->setEnd($end);
-            
+
             // try to put the event in the calendar
             try {
               $new_event    = $service->events->insert($calendar_id, $event);
@@ -277,10 +277,10 @@ if ($action != "none") {
               echo $e->getMessage();
             }
           }
-          
+
           // if we previously had an event in the calendar and want to take it down
           else if ($origIsInGoogleCalendar == 1 && $input['isInGoogleCalendar'] == 0) {
-            
+
             // try to delete the event from the Google Calendar
             try {
               $event = $service->events->delete($calendar_id, $googleCalendarId);
@@ -292,10 +292,10 @@ if ($action != "none") {
               echo "GCalId: " . $googleCalendarId;
             }
           }
-          
+
           // if we previously had an event in the calendar and want to update it
           else if ($origIsInGoogleCalendar == 1 && $input['isInGoogleCalendar'] == 1) {
-            
+
             // try to get the event from the calendar
             try {
               $event = $service->events->get($calendar_id, $googleCalendarId);
@@ -305,7 +305,7 @@ if ($action != "none") {
               syslog(LOG_ERR, $e->getMessage());
               echo $e->getMessage();
             }
-            
+
             // update the calendar's information
             $event->setSummary($input['name']);
             $event->setLocation($input['location']);
@@ -317,7 +317,7 @@ if ($action != "none") {
             $end->setDateTime($input['date'] . 'T' . $input['endtime'] . ':00');
             $end->setTimeZone('America/Los_Angeles');
             $event->setEnd($end);
-            
+
             // try to update the event
             try {
               $updatedEvent = $service->events->update($calendar_id, $event->getId(), $event);
@@ -328,7 +328,7 @@ if ($action != "none") {
               echo $e->getMessage();
             }
           }
-          
+
           echo "Gig edited successfully!<br />&nbsp;<br /><a href='?action=gigs'>Back to gigs</a>";
         } else {
           echo "Error: Please try again";
@@ -336,28 +336,28 @@ if ($action != "none") {
       }
     }
   }
-  
+
   else if ($action == "deletegig") {
     deleteoldgigs();
     if (haveinput('gigid')) {
-      
+
       // see if we have posted the event to the Google Calendar
       $origIsInGoogleCalendar = 1;
       $original               = mysql_query("SELECT isInGoogleCalendar FROM gigs WHERE gigid = '$input[gigid]'");
       if ($row = mysql_fetch_array($original)) {
         $origIsInGoogleCalendar = $row['isInGoogleCalendar'];
       }
-      
+
       // if the event is in the Google Calendar, we want to take it down
       if ($origIsInGoogleCalendar == 1) {
         $googleCalendarId = '';
-        
+
         // get the current event's Google Calendar Id from the database
         $original = mysql_query("SELECT googleCalendarId FROM gigs WHERE gigid = '$input[gigid]'");
         if ($row = mysql_fetch_array($original)) {
           $googleCalendarId = $row['googleCalendarId'];
         }
-        
+
         // try to delete the event from the Google Calendar
         try {
           $event = $service->events->delete($calendar_id, $googleCalendarId);
@@ -368,9 +368,9 @@ if ($action != "none") {
           echo $e->getMessage();
           echo "GCalId: " . $googleCalendarId;
         }
-        
+
       }
-      
+
       mysql_query("DELETE FROM gigs WHERE gigid = '$input[gigid]'");
       mysql_query("DELETE FROM responses WHERE gigid = '$input[gigid]'");
       echo "Deleted gig successfully.<br />&nbsp;<br /><a href='?action=gigs'>Back to gigs</a>";
@@ -379,7 +379,7 @@ if ($action != "none") {
     deleteoldgigs();
     if (haveinput('id')) {
       $result = mysql_query("SELECT gigs.name, gigs.date, gigs.starttime, gigs.gigid, responses.loading, responses.playing, responses.cleanup, responses.car, gigs.loadtime, responses.comments FROM gigs, responses WHERE responses.sunetid = '$input[id]' AND responses.gigid = gigs.gigid ORDER BY gigs.date, gigs.starttime");
-      
+
       echoresult($result);
     }
   } else if ($action == "allsongs") {
@@ -447,11 +447,11 @@ if ($action != "none") {
     }
   } else if ($action == "allpartsforallmembers") {
     $result = mysql_query("SELECT songs.name AS song, instruments.name AS inst, members.name AS player, parts.skillid, parts.songid, parts.instrumentid AS skill FROM parts, songs, members, instruments WHERE parts.sunetid = members.sunetid AND parts.songid = songs.songid AND parts.instrumentid = instruments.instrumentid ORDER BY songs.name, members.name, instruments.instrumentid");
-    
+
     echoresult($result);
   } else if ($action == "allpartsforactivemembers") {
-    $result = mysql_query("SELECT songs.name AS song, instruments.name AS inst, members.name AS player, parts.skillid, parts.songid, parts.instrumentid AS skill FROM parts, songs, members, instruments WHERE parts.sunetid = members.sunetid AND parts.songid = songs.songid AND parts.instrumentid = instruments.instrumentid AND members.active = 1 ORDER BY songs.name, members.name, instruments.instrumentid");
-    
+    $result = mysql_query("SELECT songs.name AS song, instruments.name AS inst, members.name AS player, parts.skillid, parts.songid, parts.instrumentid, members.sunetid AS skill FROM parts, songs, members, instruments WHERE parts.sunetid = members.sunetid AND parts.songid = songs.songid AND parts.instrumentid = instruments.instrumentid AND members.active = 1 ORDER BY songs.name, members.name, instruments.instrumentid");
+
     echoresult($result);
   } else if ($action == "test") {
     //$result = mysql_query("SELECT * FROM members");
