@@ -145,10 +145,12 @@ else if ($action == "help") {
 else if ($action == "resources") {
   include "resources.php";
 }
+else if ($action == "twiliotest") {
+  include "twiliotest.php";
+}
 else if ($action == "test") {
   include "test.php";
 }
-
 mysql_close($con);
 
 ?>

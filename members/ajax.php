@@ -70,7 +70,7 @@ function haveinput($v) {
 
 function deleteoldgigs() {
   $curdate = date("Y-m-d");
-  mysql_query("DELETE FROM gigs WHERE gigs.date < '$curdate'");
+  mysql_query("DELETE FROM gigs WHERE gigs.date < DATE_ADD('$curdate', INTERVAL 1 DAY)");
 }
 
 include "../email.php";
@@ -452,6 +452,9 @@ if ($action != "none") {
   } else if ($action == "allpartsforactivemembers") {
     $result = mysql_query("SELECT songs.name AS song, instruments.name AS inst, members.name AS player, parts.skillid, parts.songid, parts.instrumentid, members.sunetid AS skill FROM parts, songs, members, instruments WHERE parts.sunetid = members.sunetid AND parts.songid = songs.songid AND parts.instrumentid = instruments.instrumentid AND members.active = 1 ORDER BY songs.name, members.name, instruments.instrumentid");
 
+    echoresult($result);
+  } else if ($action == "activecellnumbers") {
+    $result = mysql_query("SELECT sunetid, cell FROM members WHERE active = 1");
     echoresult($result);
   } else if ($action == "test") {
     //$result = mysql_query("SELECT * FROM members");

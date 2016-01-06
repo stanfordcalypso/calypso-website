@@ -38,12 +38,12 @@
 
 //$result = mysql_query("SELECT * FROM members");
 //echoresult($result);
-
+include "../cron.php";
 ?>
 </p>
 <select size="1" id="typeselect" style="width:140px" onChange="updateTable(this)">
-  <option value="playerVpart" selected>Player vs. Part</option>
-  <option value="songVpart">Songs vs. Part</option>
+  <option value="playerVpart">Player vs. Part</option>
+  <option value="songVpart" selected>Songs vs. Part</option>
 </select>
 
 <div id='gigselectoptions'></div>

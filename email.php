@@ -44,7 +44,7 @@ function send_email_with_reply_to($name, $email, $subject, $message, $replytonam
 
 function send_to_members($condition, $subject, $message) {
   $message = $message . "<br />&nbsp;<br /><div style='font-size:80%'>Don't reply this email...<br />Click 
-<a href='https://www.stanford.edu/group/calypso/cgi-bin/members/?action=settings'>here</a> to change your email preferences.</div>";
+    <a href='https://www.stanford.edu/group/calypso/cgi-bin/members/?action=settings'>here</a> to change your email preferences.</div>";
   $result = mysql_query("SELECT name, email FROM members WHERE " . $condition);
   while ($row = mysql_fetch_array($result)) {
     $name = $row["name"];

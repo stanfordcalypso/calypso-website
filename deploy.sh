@@ -11,6 +11,6 @@ echo -n "Enter sunetid: "
 
 read sunetid
 
-rsync -trz --exclude 'deploy.sh' --exclude '*~' --exclude '.git/' --exclude '.gitignore' --exclude '.DS_STORE' --exclude 'README.md' --exclude '*.mp3' --exclude '*.jpg' --exclude '*.png' --exclude '*.pdf' --exclude '*.midi' --exclude '*.mid' . $sunetid@myth.stanford.edu:/afs/ir.stanford.edu/group/calypso/cgi-bin/
+rsync -trz --exclude 'members/.htaccess' --exclude 'deploy.sh' --exclude '*~' --exclude '.git/' --exclude '.gitignore' --exclude '.DS_STORE' --exclude 'README.md' --exclude '*.mp3' --exclude '*.jpg' --exclude '*.png' --exclude '*.pdf' --exclude '*.midi' --exclude '*.mid' . $sunetid@myth.stanford.edu:/afs/ir.stanford.edu/group/calypso/cgi-bin/
 
 echo "Completed"
