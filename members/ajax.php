@@ -25,7 +25,8 @@ else if (isset($_POST[action]) && !empty($_POST[action]))
 
 $input = array();
 
-include "connect.php";
+//include "connect.php";
+include(dirname(__FILE__) . "/../dbcon.php");
 
 foreach ($_POST as $key => $value)
   $input[$key] = mysql_real_escape_string($value);
@@ -73,7 +74,7 @@ function deleteoldgigs() {
   mysql_query("DELETE FROM gigs WHERE gigs.date < DATE_ADD('$curdate', INTERVAL 1 DAY)");
 }
 
-include "../email.php";
+include(dirname(__FILE__) . "/../email.php");
 
 if ($action != "none") {
   if ($action == "listall") {
@@ -196,15 +197,21 @@ if ($action != "none") {
           }
         }
 
+        foreach ($input as $p) {
+          echo "Term:" . $p . "~<br/>";
+        }
         if (mysql_query("INSERT INTO gigs (name, comments, date, loadtime, starttime, endtime, location, confirmed, attire, isInGoogleCalendar, googleCalendarId) VALUES ('$input[name]','$input[comments]','$input[date]','$input[loadtime]','$input[starttime]','$input[endtime]','$input[location]','$input[confirmed]','$input[attire]', '$input[isInGoogleCalendar]', '$new_event_id')")) {
           $result = mysql_query("SELECT gigid FROM gigs WHERE name = '$input[name]' AND date = '$input[date]' AND starttime = '$input[starttime]'");
           if ($result && $row = mysql_fetch_array($result)) {
             $url = "https://www.stanford.edu/group/calypso/cgi-bin/members/?action=respond&gigid=" . $row['gigid'];
-            send_to_members("emailnew = 1", "New Gig: " . $input['name'], "Click here to respond to this gig:<br />
+            //send_to_members("emailnew = 1", "New Gig: " . $input['name'], "Click here to respond to this gig:<br />
+           send_email("Tucker", "tuckerl@stanford.edu", "New Gig: " . $input['name'], "Click here to respond to this gig:<br />
           <a href='" . $url . "'>" . $url . "</a>");
             echo "New gig emails sent.<br />&nbsp;<br />";
           }
           echo "Gig added successfully!<br />&nbsp;<br /><a href='?action=gigs'>Back to gigs</a>";
+        } else {
+          echo "SQL INSERT failed.<br/>";
         }
       }
     } else {
@@ -246,7 +253,9 @@ if ($action != "none") {
         VALUES
         ('$input[gigid]','$input[name]','$input[comments]','$input[date]','$input[loadtime]','$input[starttime]','$input[endtime]','$input[location]','$input[confirmed]','$input[attire]', '$input[isInGoogleCalendar]', '$googleCalendarId')")) {
           if ($origconfirmed == 0 && $input['confirmed'] == 1) {
-            send_to_members("emailconfirm = 1", "Gig Confirmation: " . $input['name'], $input['name'] . " has been confirmed!");
+            //send_to_members("emailconfirm = 1", "Gig Confirmation: " . $input['name'], $input['name'] . " has been confirmed!");
+            send_email("Tucker", "tuckerl@stanford.edu", "Gig Confirmation: " . $input['name'], $input['name'] . " has been confirmed!");
+            //send_email("Tucker", "tuckerl@stanford.edu", "", $message) {
             echo "Confirmation emails sent.<br />&nbsp;<br />";
           }
 

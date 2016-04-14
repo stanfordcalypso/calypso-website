@@ -2,7 +2,43 @@
 <td colspan='2'>
 <p>View Songs by part and player
 <?php
-//include "../cron.php";
+////$link_identifier = mysqli_connect();
+////$result = mysqli_query($link_identifier, "SELECT members.sunetid, members.name, parts.instrumentid, instruments.name, songs.songid, songs.name, parts.skillid FROM parts, members, songs, instruments");
+////if ($row = mysqli_fetch_array($result))
+  ////echo $row[0];
+
+////$link_identifier = mysql_connect();
+////$result = mysql_query("SELECT members.sunetid, members.name, parts.instrumentid, instruments.name, songs.songid, songs.name, parts.skillid FROM parts, members, songs, instruments", $link_identifier);
+////echo $result;
+////if ($row = mysql_fetch_array($result))
+  ////echo $row[0];
+
+//$smalldivider = "^";
+//$bigdivider = "%";
+
+//function echorow($a) {
+  //global $smalldivider;
+  //global $bigdivider;
+
+  //$count = count($a);
+  //for ($i = 0; $i < $count; $i++) {
+    //echo stripslashes($a[$i]);
+    //if ($i < $count - 1)
+      //echo $smalldivider;
+  //}
+
+  //echo $bigdivider;
+//}
+
+//function echoresult($r) {
+  //while ($row = mysql_fetch_array($r)) {
+    //echorow($row);
+  //}
+//}
+
+//$result = mysql_query("SELECT * FROM members");
+//echoresult($result);
+//include "./dbcon.php";
 include(dirname(__FILE__) . "/../dbcon.php");
 ?>
 </p>
@@ -22,7 +58,6 @@ include(dirname(__FILE__) . "/../dbcon.php");
 <script type="text/javascript">
   "use strict";
   var null_gigid = "none";
-  var num_responses_processed = 0;
   var gig_ajax_done = false;
   var song_ajax_done = false;
   function dumpsqlresult(sql_result) {
@@ -45,11 +80,9 @@ include(dirname(__FILE__) . "/../dbcon.php");
   }
 
   function addResponsesForGig(sql_result) {
-    num_responses_processed++;
     var members = {}
     var rows = sql_result.split(bigdivider);
-    if (sql_result.length < 1 || rows.length < 1) //malformed gig
-      return;
+    if (rows.length < 1) return;
     var curgig = rows[0].split(smalldivider).slice(7, 9); //id, name
     for (var i = 0, sz = rows.length - 1; i < sz; ++i) {
       var row = rows[i].split(smalldivider);
@@ -74,7 +107,7 @@ include(dirname(__FILE__) . "/../dbcon.php");
   }
 
   function wait_for_members_ajax(size) {
-    if (num_responses_processed < size) {
+    if (Object.keys(window.responses).length < size) {
       window.setTimeout(wait_for_members_ajax, 10, size);
     } else {
       gig_ajax_done = true;

@@ -91,7 +91,7 @@ function post_is_valid($post) {
     && is_null($post['data']['link_flair_text'])
     && !is_null($post['data']['title'])
     && preg_match('/TMAF (.+)$/i', $post['data']['title']) > 0
-    && intval($post['data']['ups']) >= 40;
+    && intval($post['data']['ups']) >= 25;
 }
 
 function comment_is_valid($comment) {

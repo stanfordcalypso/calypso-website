@@ -14,7 +14,7 @@ $params = json_decode(file_get_contents('php://input'), true);
 foreach ($params as $name => $value) {
   $message .= "$name: $value<br/>";
 }
-send_email('Tucker', 'tuckerl@stanford.edu', 'POST body', $message);
+//send_email('Tucker', 'tuckerl@stanford.edu', 'POST body', $message);
 if (strcmp($params['name'], 'CalypsBot') != 0
   && preg_match("/(?<![A-z])CalypsBot(?![A-z])/i", $params['text']) > 0) {
   if (preg_match("/(?<![A-z])cat(?![A-z])/i", $params['text']) > 0 ) {
@@ -35,9 +35,9 @@ if (strcmp($params['name'], 'CalypsBot') != 0
       send_email('Tucker', 'tuckerl@stanford.edu', 'POST body', "RANDOM FACT");
       sendrandomfact();
     }
-  } else if (preg_match("/(?<![A-z])joke(?![A-z])/i", $params['text']) > 0) {
-    send_email('Tucker', 'tuckerl@stanford.edu', 'POST body', $message);
-    //sendjoke();
+  } else if (preg_match("/(?<![A-z])fact(?![A-z])/i", $params['text']) > 0) {
+    send_email('Tucker', 'tuckerl@stanford.edu', 'POST body', "RANDOM FACT");
+    sendrandomfact();
   }
 } else {
   echo "Nope.";

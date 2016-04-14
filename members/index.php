@@ -1,6 +1,8 @@
 <?php
 
-include "connect.php";
+//include "connect.php";
+//include "../dbcon.php";
+include(dirname(__FILE__) . "/../dbcon.php");
 
 $action = "profile";
 if (isset($_GET[action]) && !empty($_GET[action])) {

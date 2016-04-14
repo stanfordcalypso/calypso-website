@@ -134,7 +134,7 @@ doajax("upcominggigs&id=<?php echo $SUNETID ?>", showupcominggigs);
     <h1>My Songs</h1>
 <p>
 <table><tr><td>
-I learned a new part!
+ <?php echo $SUNETID ?> learned a new part!
 <br />
 &nbsp;<br />
 <table>
