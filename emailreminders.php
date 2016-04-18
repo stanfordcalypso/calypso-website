@@ -8,16 +8,22 @@
 
 include_once "dbcon.php";
 include_once "email.php";
-include_once "recommendedsongs.php";
 
 function emailtucker($subject, $message) {
   send_email("Tucker", "tuckerl@stanford.edu", $subject, $message);
 }
 
+function sqltohumantime($t) {
+  list($hour, $min, $sec) = split(':', $t);
+  $time = mktime($hour, $min, $sec);
+  return date('g', $time) . ":" . date('i', $time) . " " . date('A', $time);
+}
+
 function deleteoldgigs() {
   $curdate = date("Y-m-d");
-  mysql_query("DELETE FROM gigs WHERE gigs.date < DATE_SUB('$curdate', INTERVAL 1 DAY)");
+  mysql_query("DELETE FROM gigs WHERE gigs.date < '$curdate'");
 }
+
 function emailreminders() {
   date_default_timezone_set('America/Los_Angeles');
   $tomorrow = mktime(0,0,0,date("n"),date("j")+1,date("Y"));
@@ -38,11 +44,8 @@ function emailreminders() {
 	$message = $message . "<br />&nbsp;<br />Comments:";
 	$message = $message . "<br />" . $row['comments'];
       }
-      $recsongs = get_recommended_songs($row['gigid']);
-      if ($recsongs != "") {
-	$message = $message . "<br />&nbsp;<br />Recommended songs:<br />&nbsp;<br />";
-	$message = $message . $recsongs . "<br />";
-      }
+      $message = $message . "<br />&nbsp;<br />View recommended songs:<br />";
+      $message = $message . "http://web.stanford.edu/group/calypso/cgi-bin/recommendedsongs/?gigid=$row[gigid]" . "<br />";
     }
     if ($gotrow)
       //send_to_members("emailreminder = 1", "Gig Reminder", $message);

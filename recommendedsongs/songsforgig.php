@@ -1,13 +1,10 @@
 <tr>
 <td colspan='2'>
-<p>View Songs by part and player
 <?php
 //include "../cron.php";
 include_once(dirname(__FILE__) . "/ajax.php");
 ?>
-</p>
-<select size="1" id="typeselect" style="width:140px" onChange="updateTable(this)">
-  <option value="playerVpart">Player vs. Part</option>
+<select size="1" id="typeselect" style="width:140px" onChange="updateTable(this)" hidden>
   <option value="songVpart" selected>Songs vs. Part</option>
 </select>
 
@@ -57,13 +54,8 @@ include_once(dirname(__FILE__) . "/ajax.php");
   }
 
   function onPageLoad() {
-    doajax("partsforgig&gigid=" + <?php echo $_GET[gigid] ?>, addSongsForGig);
+    <?php echo 'doajax("partsforgig&gigid=' . $_GET[gigid] . '", addSongsForGig);' ?>
     tryInitializePage();
-  }
-
-  function sayHi(dropdown) {
-    console.log("Hello!");
-    console.log(dropdown.selectedIndex);
   }
 
   function tryInitializePage() {

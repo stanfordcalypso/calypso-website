@@ -21,6 +21,7 @@ else if (isset($_POST[action]) && !empty($_POST[action])) {
     select {border:2px solid #ccc};
   </style>
 <script type="text/javascript" src="jessejs.js"></script>
+<script type="text/javascript" src="songTable.js"></script>
 <!-- <script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script> -->
 </head>
 <body><div align='center'><table id='wrapper' cellspacing='0' cellpadding='0'>
@@ -69,7 +70,7 @@ if (!$firstvisit) {
    $profilestr = $membername . "'s Profile";
 }
 
-	    $actions = array('profile' => $profilestr, 'gigs' => 'Gigs', 'songs' => 'Songs', 'resources' => 'Resources', 'settings' => 'Settings', 'help' => 'Help');
+	    $actions = array('profile' => $profilestr, 'gigs' => 'Gigs', 'songsoverview' => 'Songs Overview', 'songs' => 'Song Details', 'resources' => 'Resources', 'settings' => 'Settings', 'help' => 'Help');
 foreach ($actions as $key => $label) {
    echo "<td";
    if ($action == $key) echo " id='here'";
@@ -121,6 +122,9 @@ else if ($action == "gigs") {
 }
 else if ($action == "addgig") {
     include "addgig.php";
+}
+else if ($action == "songsoverview") {
+    include "songsoverview.php";
 }
 else if ($action == "songs") {
     include "songs.php";
