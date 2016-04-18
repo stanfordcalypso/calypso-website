@@ -10,11 +10,16 @@ include_once "dbcon.php";
 include_once "email.php";
 include_once "recommendedsongs.php";
 
-function emailtucker() {
-  send_email("Tucker", "tuckerl@stanford.edu", "cron test", "this is a test");
+function emailtucker($subject, $message) {
+  send_email("Tucker", "tuckerl@stanford.edu", $subject, $message);
 }
 
+function deleteoldgigs() {
+  $curdate = date("Y-m-d");
+  mysql_query("DELETE FROM gigs WHERE gigs.date < DATE_SUB('$curdate', INTERVAL 1 DAY)");
+}
 function emailreminders() {
+  date_default_timezone_set('America/Los_Angeles');
   $tomorrow = mktime(0,0,0,date("n"),date("j")+1,date("Y"));
   $tomorrowstr = date("Y-m-d", $tomorrow);
   $gigs = mysql_query("SELECT name, loadtime, starttime, endtime, location, comments, gigid FROM gigs WHERE date = '$tomorrowstr'");
@@ -40,13 +45,16 @@ function emailreminders() {
       }
     }
     if ($gotrow)
-      send_to_members("emailreminder = 1", "Gig Reminder", $message);
+      //send_to_members("emailreminder = 1", "Gig Reminder", $message);
+      emailtucker("Gig Reminder", $message);
   }
 }
 
 emailreminders();
+deleteoldgigs();
 
 echo mysql_error();
 mysql_close($con);
 send_email("Tucker", "tuckerl@stanford.edu", "Email Reminders", "they're working");
+echo "Done.<br/>";
 ?>
