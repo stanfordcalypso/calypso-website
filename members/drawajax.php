@@ -1,7 +1,6 @@
 <?php
-//include "connect.php";
-//include "../dbcon.php";
-include(dirname(__FILE__) . "/../dbcon.php");
+include "connect.php";
+include_once(dirname(__FILE__) . "/../dbcon.php");
 
 function echorow($a) {
   $smalldivider='^';

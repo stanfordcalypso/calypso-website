@@ -6,9 +6,9 @@
    * day at 5 pm
    */
 
-include "dbcon.php";
-include "email.php";
-include "recommendedsongs.php";
+include_once "dbcon.php";
+include_once "email.php";
+include_once "recommendedsongs.php";
 
 function emailtucker() {
   send_email("Tucker", "tuckerl@stanford.edu", "cron test", "this is a test");
@@ -48,6 +48,5 @@ emailreminders();
 
 echo mysql_error();
 mysql_close($con);
-
-//send_email("Tucker", "tuckerl@stanford.edu", "cron test", "this is a test");
+send_email("Tucker", "tuckerl@stanford.edu", "Email Reminders", "they're working");
 ?>

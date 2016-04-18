@@ -1,8 +1,7 @@
 <?php
 
-//include "connect.php";
-//include "../dbcon.php";
-include(dirname(__FILE__) . "/../dbcon.php");
+include "connect.php";
+include_once(dirname(__FILE__) . "/../dbcon.php");
 
 $action = "profile";
 if (isset($_GET[action]) && !empty($_GET[action])) {
@@ -147,12 +146,10 @@ else if ($action == "help") {
 else if ($action == "resources") {
   include "resources.php";
 }
-else if ($action == "twiliotest") {
-  include "twiliotest.php";
-}
 else if ($action == "test") {
   include "test.php";
 }
+
 mysql_close($con);
 
 ?>

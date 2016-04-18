@@ -36,6 +36,7 @@ function get_fact(){
     return array($random_question['data']['title'], $random_answer['data']['body']);
   }
   //TODO: finish this, for the case that we run off the page
+  mysql_close($con);
   return false;
 }
 
