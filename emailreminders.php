@@ -48,8 +48,8 @@ function emailreminders() {
       $message = $message . "http://web.stanford.edu/group/calypso/cgi-bin/recommendedsongs/?gigid=$row[gigid]" . "<br />";
     }
     if ($gotrow)
-      //send_to_members("emailreminder = 1", "Gig Reminder", $message);
-      emailtucker("Gig Reminder", $message);
+      send_to_members("emailreminder = 1", "Gig Reminder", $message);
+      //emailtucker("Gig Reminder", $message);
   }
 }
 
@@ -58,6 +58,6 @@ deleteoldgigs();
 
 echo mysql_error();
 mysql_close($con);
-send_email("Tucker", "tuckerl@stanford.edu", "Email Reminders", "they're working");
+//send_email("Tucker", "tuckerl@stanford.edu", "Email Reminders", "they're working");
 echo "Done.<br/>";
 ?>

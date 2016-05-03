@@ -27,7 +27,7 @@ isset($_POST[human]) && !empty($_POST[human])) {
   "Location: " . $_POST[location] . "<br />" .
   "Comments: " . $_POST[comments] . "<br />";
   
-  send_email_with_reply_to($_POST[name], "jesseruder@gmail.com", "Cardinal Calypso Booking Request", $message, $_POST[name], $_POST[email]);
+  //send_email_with_reply_to($_POST[name], "jesseruder@gmail.com", "Cardinal Calypso Booking Request", $message, $_POST[name], $_POST[email]);
   send_email_with_reply_to($_POST[name], "stanfordcalypso@gmail.com", "Cardinal Calypso Booking Request", $message, $_POST[name], $_POST[email]);
   echo "Thank you for your request! We will contact you shortly.";
   }

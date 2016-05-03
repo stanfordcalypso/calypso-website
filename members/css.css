@@ -1,6 +1,6 @@
 body {margin:0; font-family:Arial,Tahoma,sans-serif; background:#FFF;}
 img {border:4px solid #BBB;}
-table#wrapper {margin:0 auto 0 auto; width:70%; border:1px solid #666; border-top:0; background:#FFF url('../backdrop.jpg') no-repeat scroll top left;}
+table#wrapper {margin:0 auto 0 auto; width:70%; border:1px solid #666; border-top:0; background:#FFF url('../images/backdrop.jpg') no-repeat scroll top left;}
 table#wrapper td#left {width:70%; vertical-align:bottom; height:10px}
 table#wrapper td#right {vertical-align:top; width:30%; height:100%;}
 table#nav {margin:0 4px 0 4px;}
@@ -12,14 +12,14 @@ table#nav td#here a {color:#FFF;}
 div#logo {
   height:130px;
   vertical-align:middle;
-  background:transparent url('../calypso_logo.png') no-repeat scroll 25px 10px;
+  background:transparent url('../images/calypso_logo.png') no-repeat scroll 25px 10px;
   color:#C33;
   padding:20px 0 0 130px;
   font:small-caps bold 32pt Arial,Tahoma,sans-serif;
 }
-td#content {vertical-align:top; border-top:6px solid #C33; background:#FFF url('../back_pan.jpg') no-repeat scroll bottom right; padding:12px;}
+td#content {vertical-align:top; border-top:6px solid #C33; background:#FFF url('../images/back_pan.jpg') no-repeat scroll bottom right; padding:12px;}
 td#content h1 {font-size:12pt; color:#69C; margin:4px 0 0
-6px; background:url('../calypso_icon.png') no-repeat 0px 2px; padding-left:22px;}
+6px; background:url('../images/calypso_icon.png') no-repeat 0px 2px; padding-left:22px;}
 td#content p {line-height:1.4em; color:#666; font-size:10pt; margin:2px 0 14px 2px; border-left:1px solid #C99; padding:0 4px 0 6px;}
 td#content table {width:100%;}
 td#content table td.half {width:50%;}
