@@ -92,7 +92,7 @@ function score(song) {
         score++;
         break;
       case "2":
-        score++;
+        score += 0.5;
         break;
       default:
         break;

@@ -6,7 +6,7 @@ include_once(dirname(__FILE__) . "/../dbcon.php");
 <html>
 <head>
   <title>Cardinal Calypso</title>
-  <link rel='stylesheet' type='text/css' href='../css.css' />
+  <link rel='stylesheet' type='text/css' href='../css/css.css' />
   <style type='text/css'>
     input {border:2px solid #ccc};
     select {border:2px solid #ccc};

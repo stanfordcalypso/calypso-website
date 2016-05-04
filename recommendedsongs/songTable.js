@@ -79,30 +79,79 @@ function getTableHtml(colnames, rowNames, rows, rowsName) {
   return txt;
 }
 
-//naive, does not account for the fact that one player can only play one part
-function score(song) {
-  var score = 0;
+function build_parts_players_objects(parts_names, players_for_parts, parts_assignments, song) {
+  var numPlayers = 0;
   for (const part in song) {
     if (!song.hasOwnProperty(part)) continue;
-    var numGoodPlayers = 0;
+    parts_names.push(part);
+    players_for_parts[part] = [];
+    parts_assignments[part] = [];
     song[part].forEach(function(player) {
-      switch (player.skill) {
-      case "1":
-        numGoodPlayers++;
-        score++;
-        break;
-      case "2":
-        score++;
-        break;
-      default:
+      players_for_parts[part].push(player);
+      numPlayers++;
+    });
+    players_for_parts[part].sort(function (playera, playerb) {
+      return parseInt(playera.skill) - parseInt(playerb.skill);
+    });
+  }
+  return numPlayers;
+}
+
+function remove_player(player, players_for_parts) {
+  var numRemoved = 0;
+  for (const part in players_for_parts) {
+    if (!players_for_parts.hasOwnProperty(part)) continue;
+    var cur_players = players_for_parts[part];
+    for (var i = 0; i < cur_players.length; i++) {
+      if (cur_players[i].name == player.name) {
+        cur_players.splice(i, 1);
+        numRemoved++;
         break;
       }
-    });
-    //at least one good player most important
-    if (numGoodPlayers > 0)
-      score += 10;
+    }
   }
+  return numRemoved;
+}
+
+function score(song) {
+  var score = 0;
+  var parts_names = [];
+  var players_for_parts = {};
+  var parts_assignments = {};
+
+  const kNumPlayers = build_parts_players_objects(parts_names, players_for_parts, parts_assignments, song);
+  var numPlayersProcessed = 0;
+  while (numPlayersProcessed < kNumPlayers) {
+    parts_names.sort(getPartsSorter(players_for_parts)); 
+    var next_part = "";
+    var next_player = {};
+    for (var j = 0; j < parts_names.length; j++) {
+      if (players_for_parts[parts_names[j]].length > 0) {
+        next_player = players_for_parts[parts_names[j]][0]; 
+        next_part = parts_names[j];
+        break;
+      }
+    }
+
+    numPlayersProcessed += remove_player(next_player, players_for_parts);
+    
+    if (parts_assignments[next_part].length == 0 && next_player.skill == "1")
+      score += 10;
+    if (next_player.skill == "1") score += 1;
+    if (next_player.skill == "2") score += 0.5;
+    if (next_player.skill == "3") score += 0;
+
+    parts_assignments[next_part].push(next_player);
+  }
+  
   return score;
+}
+
+function getPartsSorter(players_for_parts) {
+  const comp = function(parta, partb) {
+    return players_for_parts[parta].length - players_for_parts[partb].length;
+  }
+  return comp;
 }
 
 function getRowOrderer(rows) {
