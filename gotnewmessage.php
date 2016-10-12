@@ -16,8 +16,8 @@ foreach ($params as $name => $value) {
 }
 //send_email('Tucker', 'tuckerl@stanford.edu', 'POST body', $message);
 if (strcmp($params['name'], 'CalypsBot') != 0
-  && preg_match("/(?<![A-z])CalypsBot(?![A-z])/i", $params['text']) > 0) {
-  if (preg_match("/(?<![A-z])cat(?![A-z])/i", $params['text']) > 0 ) {
+  && preg_match("/CalypsBot/i", $params['text']) > 0) {
+  if (preg_match("/cat/i", $params['text']) > 0 ) {
     send_email('Tucker', 'tuckerl@stanford.edu', 'POST body', "CAT");
     //$new_msg = $_POST['text'];  
     //if (preg_match('/.*CalypsBot.*/i', $new_msg) && preg_match('/.*cat.*/i', $new_msg)) {
