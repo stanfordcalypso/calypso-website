@@ -171,7 +171,7 @@
 			<strong>'17</strong> Jim Andress, J Evans, Tucker Leavitt, Meghan Shea, Camille Townshend<br/>
 			<strong>'18</strong> Eisa Al-Shamma, Nathan Chael, Zach Birnholz, Elisa Lupin-Jimenez, Kijung Park, Kelsey Reardon<br/>
 			<strong>'19</strong> Caroline Young, Carlos Fresnillo, Astrid Casimire, Prasanna Ramakrishnan, Dorian Lumarque, Connor Gunn<br/>
-			<strong>'20</strong> Hank Tian, AJ Phillips, Maxwell Menzies, Jabari Hastings, Tristan Wagner, Cassandra Lin<br/>
+			<strong>'20</strong> Hank Tian, Jabari Hastings, Tristan Wagner, Cassandra Lin<br/>
 			</p>
 					<h1>Alumni</h1>
 				 <p>Marie-Jossee Mont-Reynaud, Chris Fajardo, Doreen Hoang, Lauryn Isford, Amy Kim, Clara McCreery, Amanda McNary, Prithvi Ramakrishnan, Carla Lewis, Paulina Chamely, Gio Jacuzzi, Akwasi Abrefah ('12), Aaron Acosta ('13), Josh Archibald-Seiffer, Alexis Arnold ('11), Chris Balane, Henry Biermann ('14), David Brown, Arielle Craig, Kevin Danna, Mike Demmitt, Nancy Falxa-Raymond, Allison Fink ('12), <a target="_blank" href="http://adamgenecov.com">Adam Genecov ('13)</a>, David Germain, Maxine Holland ('11), Sally Hudson, <a target='_blank' href='http://www.lucaswilljohnson.com'>Lucas Johnson ('11)</a>, Dana Katz ('12), Binna Kim ('13), Monique King, Liezel Labios, David Miller, Bri Mostoller ('16), Kai Neo ('14), Jonathan Potter ('12), <a target='_blank' href='http://terribleben.com'>Ben Roth ('11), </a>, Jesse Ruder ('12), Emma Sagan ('14), Flip Tanedo, Art Tosborvorn, Will Tucker ('13), Justin Wiguna ('15), Alex Williamson, Cathy Ye, Nate Zwerdling ('11), Alan Propp, Amanda Quay, Leopold Wambersie</p>
