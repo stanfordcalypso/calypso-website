@@ -30,6 +30,7 @@
 				</div>
 				<nav id="nav">
 					<ul>
+<!--					<li><a href="recruiting.php">Auditions!</a></li> -->
 						<li><a href="#media">Hear us Play!</a></li>
 						<li><a href="#group">About Us</a></li>
 						<li><a href="#pans">About the Pans</a></li>
@@ -41,20 +42,22 @@
 
 		<!-- Banner -->
 			<section id="banner">
-				<!-- Auditions -->
-<!-- 				<div style="margin-bottom: 15px">
-				<a href="recruiting.php">
-					<div class="notice notice-button">
-	    	  			<h2 style="font-size: 13pt">Hey, you! Looking for a fun student group to join?</h2> 
-	      				<h2 style="font-size: 2em">Sign up to AUDITION FOR CALYPSO!</h2>
-					</div>
-				</a>
-				</div> -->
-				<h2>Cardinal Calypso</h2>
+								<h2>Cardinal Calypso</h2>
 				<p>Stanford's Premier Steelpan Band</p>
 				<ul class="actions">
 					<li><a href="booking.php" class="button special big">Book Us!</a></li>
 				</ul>
+				<!-- Auditions -->
+<!--			<div style="margin-bottom: 15px">
+				<a href="recruiting.php">
+					<div class="notice notice-button">
+	    	  			<br>
+	    	  			<h2 style="font-size: 15pt">Hey, you! Looking for a fun student group to join?</h2>
+	    	  			<br>
+	      				<h2 style="font-size: 2em">Click here to sign up to AUDITION FOR CALYPSO!</h2>
+					</div>
+				</a>
+				</div> -->
 			</section>
 
 			<!-- One -->
