@@ -30,7 +30,9 @@
 				</div>
 				<nav id="nav">
 					<ul>
-<!--					<li><a href="recruiting.php">Auditions!</a></li> -->
+<!-- UNCOMMENT FOR AUDITIONS
+						<li><a href="recruiting.php">Auditions!</a></li>
+-->
 						<li><a href="#media">Hear us Play!</a></li>
 						<li><a href="#group">About Us</a></li>
 						<li><a href="#pans">About the Pans</a></li>
@@ -48,7 +50,8 @@
 					<li><a href="booking.php" class="button special big">Book Us!</a></li>
 				</ul>
 				<!-- Auditions -->
-<!--			<div style="margin-bottom: 15px">
+<!-- UNCOMMENT FOR AUDITIONS
+				<div style="margin-bottom: 15px">
 				<a href="recruiting.php">
 					<div class="notice notice-button">
 	    	  			<br>
@@ -57,7 +60,8 @@
 	      				<h2 style="font-size: 2em">Click here to sign up to AUDITION FOR CALYPSO!</h2>
 					</div>
 				</a>
-				</div> -->
+				</div>
+-->
 			</section>
 
 			<!-- One -->
@@ -108,7 +112,7 @@
 									<iframe class="image fit" width="392" height="221" src="https://www.youtube.com/embed/MMtgUT63Xlg" frameborder="0" allowfullscreen></iframe>
 							</div>
 							<div class="6u 12u$(xsmall)">
-									<iframe class="image fit" width="392" height="221" src="http://www.youtube.com/embed/yUfXOv5MCeI" frameborder="0" allowfullscreen></iframe>
+									<iframe class="image fit" width="392" height="221" src="https://www.youtube.com/embed/-QFRFmDqmpg?start=25" frameborder="0" allowfullscreen></iframe>
 							</div>
 							<div class="6u 12u$(xsmall)">
 									<iframe class="image fit" width="392" height="221" src="https://www.youtube.com/embed/vNhct2wUPIc" frameborder="0" allowfullscreen></iframe><br />
@@ -169,6 +173,7 @@
 		If you are interested in having Cardinal Calypso perform at an event,
 		please visit <a href='booking.php'>booking</a>.</p>
 		<h1>Joining Cardinal Calypso</h1>
+<!-- UPDATE THIS PART FOR AUDITIONS! -->
 		<p>Auditions are held at the beginning of every fall quarter. Auditions for the 2016-17 school year are already complete. If you think you should fall outside of this schedule, or if you have any other questions, we encourage you to <a href='#contact'>contact us</a>.</p>
 		<h1>Current Lineup</h1>
 			<strong>'17</strong> Jim Andress, J Evans, Tucker Leavitt, Meghan Shea, Camille Townshend<br/>
