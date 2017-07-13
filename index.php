@@ -71,7 +71,7 @@
 							<div class="6u 12u$(medium)">
 								<header class="major">
 									<h2>Welcome!</h2>
-							<p>
+							<p style="color:#888888;">
 								Cardinal Calypso is Stanford University's <a target='_blank'
 								href='http://en.wikipedia.org/wiki/Steelpan'>steelpan</a> ensemble. Founded
 								in 2005, it may be seen anywhere around the greater Stanford campus, causing
@@ -106,6 +106,10 @@
 					<div class="container 75%">
 						<header class="major special">
 							<a name="media"><h2 class="anchor">Hear us Play!</h2></a>
+
+						<p style="color:#686868;">
+							You can listen to some of our performances on our <a href="https://www.youtube.com/channel/UCBrhmaRDGecKdk3sYILRwfw">YouTube channel</a> or check out some of the videos below!
+						</p>
 						</header>
 						<div class="row">
 							<div class="6u 12u$(xsmall)">
@@ -118,7 +122,7 @@
 									<iframe class="image fit" width="392" height="221" src="https://www.youtube.com/embed/vNhct2wUPIc" frameborder="0" allowfullscreen></iframe><br />
 							</div>
 							<div class="6u 12u$(xsmall)">
-									<iframe class="image fit" width="392" height="221" src="http://www.youtube.com/embed/TQ9xp5dxnUU" frameborder="0" allowfullscreen></iframe><br />
+									<iframe class="image fit" width="392" height="221" src="https://www.youtube.com/embed/TQ9xp5dxnUU" frameborder="0" allowfullscreen></iframe><br />
 							</div>
 						</div>
 						<h1>Recordings</h1>
@@ -240,7 +244,7 @@
 						</ul>
 						<header class="major">
 							<p>If you prefer, email us directly: stanfordcalypso at gmail dot com.<br />
-							Or, <a href="https://www.facebook.com/CardinalCalypso" style="color:white;">find us on facebook!</a><p>
+							Or, <a href="https://www.facebook.com/CardinalCalypso" style="color:white;">find us on Facebook!</a><p>
 							<!-- <div class="top-link">
 								<a href="#" class="aligner-item"><img class="image icon" src="images/calypso_logo.gif" alt></a>
 								<a href="#" class="aligner-item" style="color:gray;">Back to top</a>
