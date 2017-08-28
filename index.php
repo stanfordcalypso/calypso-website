@@ -37,6 +37,7 @@
 						<li><a href="#group">About Us</a></li>
 						<li><a href="#pans">About the Pans</a></li>
 						<li><a href="#contact">Contact</a></li>
+						<li><a href="booking.php">Book Us!</a></li>
 					</ul>
 				</nav>
 			</header>
@@ -108,7 +109,7 @@
 							<a name="media"><h2 class="anchor">Hear us Play!</h2></a>
 
 						<p style="color:#686868;">
-							You can listen to some of our performances on our <a href="https://www.youtube.com/channel/UCBrhmaRDGecKdk3sYILRwfw">YouTube channel</a> or check out some of the videos below!
+							You can listen to some of our performances on our <a href="https://www.youtube.com/channel/UCBrhmaRDGecKdk3sYILRwfw">YouTube channel</a> or check out the videos below!
 						</p>
 						</header>
 						<div class="row">
@@ -180,13 +181,12 @@
 <!-- UPDATE THIS PART FOR AUDITIONS! -->
 		<p>Auditions are held at the beginning of every fall quarter. Auditions for the 2016-17 school year are already complete. If you think you should fall outside of this schedule, or if you have any other questions, we encourage you to <a href='#contact'>contact us</a>.</p>
 		<h1>Current Lineup</h1>
-			<strong>'17</strong> Jim Andress, J Evans, Tucker Leavitt, Meghan Shea, Camille Townshend<br/>
-			<strong>'18</strong> Eisa Al-Shamma, Nathan Chael, Zach Birnholz, Elisa Lupin-Jimenez, Kijung Park, Kelsey Reardon<br/>
+			<strong>'18</strong> Eisa Al-Shamma, Zachary Birnholz, Nathan Chael, Elisa Lupin-Jimenez, Kijung Park, Kelsey Reardon<br/>
 			<strong>'19</strong> Caroline Young, Carlos Fresnillo, Astrid Casimire, Prasanna Ramakrishnan, Dorian Lumarque, Connor Gunn<br/>
 			<strong>'20</strong> Hank Tian, Jabari Hastings, Tristan Wagner, Cassandra Lin<br/>
 			</p>
 					<h1>Alumni</h1>
-				 <p>Marie-Jossee Mont-Reynaud, Chris Fajardo, Doreen Hoang, Lauryn Isford, Amy Kim, Clara McCreery, Amanda McNary, Prithvi Ramakrishnan, Carla Lewis, Paulina Chamely, Gio Jacuzzi, Akwasi Abrefah ('12), Aaron Acosta ('13), Josh Archibald-Seiffer, Alexis Arnold ('11), Chris Balane, Henry Biermann ('14), David Brown, Arielle Craig, Kevin Danna, Mike Demmitt, Nancy Falxa-Raymond, Allison Fink ('12), <a target="_blank" href="http://adamgenecov.com">Adam Genecov ('13)</a>, David Germain, Maxine Holland ('11), Sally Hudson, <a target='_blank' href='http://www.lucaswilljohnson.com'>Lucas Johnson ('11)</a>, Dana Katz ('12), Binna Kim ('13), Monique King, Liezel Labios, David Miller, Bri Mostoller ('16), Kai Neo ('14), Jonathan Potter ('12), <a target='_blank' href='http://terribleben.com'>Ben Roth ('11), </a>, Jesse Ruder ('12), Emma Sagan ('14), Flip Tanedo, Art Tosborvorn, Will Tucker ('13), Justin Wiguna ('15), Alex Williamson, Cathy Ye, Nate Zwerdling ('11), Alan Propp, Amanda Quay, Leopold Wambersie</p>
+				 <p>Marie-Jossee Mont-Reynaud, Chris Fajardo, Doreen Hoang, Lauryn Isford, Amy Kim, Clara McCreery, Amanda McNary, Prithvi Ramakrishnan, Carla Lewis, Paulina Chamely, Gio Jacuzzi, Akwasi Abrefah ('12), Aaron Acosta ('13), Josh Archibald-Seiffer, Alexis Arnold ('11), Chris Balane, Henry Biermann ('14), David Brown, Arielle Craig, Kevin Danna, Mike Demmitt, Nancy Falxa-Raymond, Allison Fink ('12), <a target="_blank" href="http://adamgenecov.com">Adam Genecov ('13)</a>, David Germain, Maxine Holland ('11), Sally Hudson, <a target='_blank' href='http://www.lucaswilljohnson.com'>Lucas Johnson ('11)</a>, Dana Katz ('12), Binna Kim ('13), Monique King, Liezel Labios, David Miller, Bri Mostoller ('16), Kai Neo ('14), Jonathan Potter ('12), <a target='_blank' href='http://terribleben.com'>Ben Roth ('11)</a>, Jesse Ruder ('12), Emma Sagan ('14), Flip Tanedo, Art Tosborvorn, Will Tucker ('13), Justin Wiguna ('15), Alex Williamson, Cathy Ye, Nate Zwerdling ('11), Alan Propp ('16), Amanda Quay ('16), Leopold Wambersie ('16), Jim Andress ('17), J Evans ('17), Tucker Leavitt ('17), Meghan Shea ('17), Camille Townshend ('17)</p>
 								<!-- <div class="top-link">
 									<a href="#" class="aligner-item"><img class="image icon" src="images/calypso_logo.gif" alt></a>
 									<a href="#" class="aligner-item">Back to top</a>

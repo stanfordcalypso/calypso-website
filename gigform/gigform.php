@@ -2,38 +2,38 @@
 <body>
 <style>
 .date select {background:#fff;border:solid #999 1px;margin-left:-5px}
-td {line-height:1.4em; color:#666; font-size:10pt};
+td {line-height:1.4em; color:#000; font-size:12pt};
 </style>
 <table><tr><td>
 
-This is only a request. We will contact you if we are able to play at your event.<br />&nbsp;<br />
+<p>This is only a request. We will contact you if we are able to play at your event.</p>
 
-<div style="width:400px">
+<div style="width:480px">
    <form action="gigformsubmit.php" method="post" onsubmit="parent.scroll(0,0)">
     <table>
       <tr>
         <td>
-          Name *<br/>
-          <input name="name">
+          <strong>Name *</strong><br/>
+          <input name="name" size=24>
         </td>
         <td>
-          Email *<br />
-          <input name="email">
+          <strong>Email *</strong><br />
+          <input name="email" size=24>
         </td>
         <td>
-          Phone *<br />
-          <input name="phone">
+          <strong>Phone *</strong><br />
+          <input name="phone" size=25>
         </td>
       </tr>
       <tr>
         <td>
-          Type of event<br />
-          <input name="type">
+          <strong>Type of event</strong><br />
+          <input name="type" size=24>
         </td>
         <td>
-          Date *<br />
+          <strong>Date *</strong><br />
           <div class="date">
-            <table>
+            <table width = 155px>
               <tr>
                 <td>
                   <select name="month">
@@ -108,14 +108,14 @@ This is only a request. We will contact you if we are able to play at your event
           </div>
         </td>
         <td>
-          Time of performance *<br />
-          <input name="time">
+          <strong>Time of performance *</strong><br />
+          <input name="time" size=25>
         </td>
       </tr>
       <tr>
         <td colspan=3>
-          Location (if entering an address, please specify the city)<br />
-          <input name="location" size="48">
+          <strong>Location</strong> (if entering an address, please specify the city)<br />
+          <input name="location" size="78">
         </td>
       </tr>
     </table>
@@ -123,13 +123,13 @@ This is only a request. We will contact you if we are able to play at your event
     <table>
       <tr>
         <td>
-          Comments<br />
-          <textarea name="comments" style="width:400px;height:60px"></textarea>
+          <strong>Comments</strong><br />
+          <textarea name="comments" style="width:480px;height:60px"></textarea>
         </td>
       </tr>
       <tr>
         <td>
-          <div style="border:solid #999 1px;border-radius:15px;position:relative;top:20px;height:20px;background:#eee;padding-left:20px;padding-top:3px">Human verification *</div>
+          <div style="border:solid #999 1px;border-radius:15px;position:relative;top:20px;height:20px;background:#eee;padding-left:20px;padding-top:3px"><strong>Human verification *</strong></div>
           <div style="border:solid #999 1px;border-radius:15px;padding:10px;padding-top:30px">
 
             <?php
