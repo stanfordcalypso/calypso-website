@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Cardinal Calypso</title>
+		<title>Cardinal Calypso - Booking</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
