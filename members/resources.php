@@ -11,7 +11,7 @@
     </ul>
 	<h1>Calypso on the Web</h1>
     <ul>
-    	<li><a href="http://www.youtube.com/cardinalcalypso">Youtube Channel</a></li>
+    	<li><a href="https://www.youtube.com/channel/UCBrhmaRDGecKdk3sYILRwfw">Youtube Channel</a></li>
     	<li><a href="http://www.facebook.com/pages/Cardinal-Calypso/106620806083662">Facebook</a></li>
         <li><a href="http://www.google.com/calendar/embed?src=tuleai9qf617ins2h47jfeiqac%40group.calendar.google.com">Google Calendar</a></li>
     </ul>
@@ -47,5 +47,5 @@
         <li><a href="http://git-scm.com/download/mac">Git Download for Mac</a></li>
         <li><a href="http://giving.stanford.edu/get/layout/g2s/TSF">TSF</a></li>
     </ul>
-    
+
 </td></tr>

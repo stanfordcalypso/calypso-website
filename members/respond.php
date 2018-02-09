@@ -68,7 +68,7 @@ function gigresponsesubmit() {
   var isplaying = id("gigplay").checked ? 1 : 0;
   var iscleanup = id("gigclean").checked ? 1 : 0;
   var iscar = id("gigcar").checked ? 1 : 0;
-  var comments = id("gigcomments").value;
+  var comments = id("gigcomments").value.replace("%", " percent");
   var sendstr = "gigresponse&id=<?php echo $SUNETID ?>&gigid=<?php echo $_GET[gigid] ?>&loading=" + isloading + "&playing=" + isplaying + "&cleanup=" + iscleanup + "&car=" + iscar + "&comments=" + comments;
   dopostajax(sendstr, gotgigresponse);
   id("gigresponsediv").innerHTML = "Processing...";
