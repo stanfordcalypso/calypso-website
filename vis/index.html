@@ -1,0 +1,201 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="css.css">
+		<script type="text/javascript" src="jquery.js"></script>
+		<script type="text/javascript" src="jquery.form.js"></script>
+		<script type="text/javascript" src="html5slider/html5slider.js"></script>
+		<script type="text/javascript" src="jasmid/stream.js"></script>
+		<script type="text/javascript" src="jasmid/midifile.js"></script>
+		<script type="text/javascript" src="js.js"></script>
+	</head>
+	<body onload="
+			var manager = new Manager(['lead', 'tenors', 'seconds', 'triples', 'new_triples']);
+			manager.setup_drums();
+			manager.add_controls();
+			manager.add_sound_elems();
+			window.onresize = function() {
+				manager.setup_drums();
+			}
+			$('#cover').fadeTo('slow', 0, function() {
+				$('#cover').css('z-index', '-1');
+			});
+	">
+		<div id="cover">
+			<h1><br><br>Loading...</h1>
+		</div>
+
+		<img id="lead" class="drum" src="lead.png">
+		<img id="tenors" class="drum" src="tenors.png">
+		<img id="seconds" class="drum" src="seconds.png">
+		<img id="triples" class="drum" src="triples.png">
+		<img id="new_triples" class="drum" src="new_triples.png">
+
+		<!-- Lead Notes -->
+		<img id="lead_60" class="note" src="notes/lead/c.png">
+		<img id="lead_61" class="note" src="notes/lead/cs.png">
+		<img id="lead_62" class="note" src="notes/lead/d.png">
+		<img id="lead_63" class="note" src="notes/lead/ds.png">
+		<img id="lead_64" class="note" src="notes/lead/e.png">
+		<img id="lead_65" class="note" src="notes/lead/f.png">
+		<img id="lead_66" class="note" src="notes/lead/fs.png">
+		<img id="lead_67" class="note" src="notes/lead/g.png">
+		<img id="lead_68" class="note" src="notes/lead/gs.png">
+		<img id="lead_69" class="note" src="notes/lead/a.png">
+		<img id="lead_70" class="note" src="notes/lead/as.png">
+		<img id="lead_71" class="note" src="notes/lead/b.png">
+		
+		<img id="lead_72" class="note" src="notes/lead/cc.png">
+		<img id="lead_73" class="note" src="notes/lead/ccs.png">
+		<img id="lead_74" class="note" src="notes/lead/dd.png">
+		<img id="lead_75" class="note" src="notes/lead/dds.png">
+		<img id="lead_76" class="note" src="notes/lead/ee.png">
+		<img id="lead_77" class="note" src="notes/lead/ff.png">
+		<img id="lead_78" class="note" src="notes/lead/ffs.png">
+		<img id="lead_79" class="note" src="notes/lead/gg.png">
+		<img id="lead_80" class="note" src="notes/lead/ggs.png">
+		<img id="lead_81" class="note" src="notes/lead/aa.png">
+		<img id="lead_82" class="note" src="notes/lead/aas.png">
+		<img id="lead_83" class="note" src="notes/lead/bb.png">
+
+		<img id="lead_84" class="note" src="notes/lead/ccc.png">
+		<img id="lead_85" class="note" src="notes/lead/cccs.png">
+		<img id="lead_86" class="note" src="notes/lead/ddd.png">
+		<img id="lead_87" class="note" src="notes/lead/ddds.png">
+		<img id="lead_88" class="note" src="notes/lead/eee.png">
+
+		<!-- Tenor Notes -->
+		<img id="tenors_53" class="note" src="notes/tenors/_f.png">
+		<img id="tenors_54" class="note" src="notes/tenors/_fs.png">
+		<img id="tenors_55" class="note" src="notes/tenors/_g.png">
+		<img id="tenors_56" class="note" src="notes/tenors/_gs.png">
+		<img id="tenors_57" class="note" src="notes/tenors/_a.png">
+		<img id="tenors_58" class="note" src="notes/tenors/_as.png">
+		<img id="tenors_59" class="note" src="notes/tenors/_b.png">
+		
+		<img id="tenors_60" class="note" src="notes/tenors/c.png">
+		<img id="tenors_61" class="note" src="notes/tenors/cs.png">
+		<img id="tenors_62" class="note" src="notes/tenors/d.png">
+		<img id="tenors_63" class="note" src="notes/tenors/ds.png">
+		<img id="tenors_64" class="note" src="notes/tenors/e.png">
+		<img id="tenors_65" class="note" src="notes/tenors/f.png">
+		<img id="tenors_66" class="note" src="notes/tenors/fs.png">
+		<img id="tenors_67" class="note" src="notes/tenors/g.png">
+		<img id="tenors_68" class="note" src="notes/tenors/gs.png">
+		<img id="tenors_69" class="note" src="notes/tenors/a.png">
+		<img id="tenors_70" class="note" src="notes/tenors/as.png">
+		<img id="tenors_71" class="note" src="notes/tenors/b.png">
+		
+		<img id="tenors_72" class="note" src="notes/tenors/cc.png">
+		<img id="tenors_73" class="note" src="notes/tenors/ccs.png">
+		<img id="tenors_74" class="note" src="notes/tenors/dd.png">
+		<img id="tenors_75" class="note" src="notes/tenors/dds.png">
+		<img id="tenors_76" class="note" src="notes/tenors/ee.png">
+		<img id="tenors_77" class="note" src="notes/tenors/ff.png">
+		<img id="tenors_78" class="note" src="notes/tenors/ffs.png">
+		<img id="tenors_79" class="note" src="notes/tenors/gg.png">
+		<img id="tenors_80" class="note" src="notes/tenors/ggs.png">
+		<img id="tenors_81" class="note" src="notes/tenors/aa.png">
+		<img id="tenors_82" class="note" src="notes/tenors/aas.png">
+
+		<!-- Seconds Notes -->
+		<img id="seconds_54" class="note" src="notes/seconds/_fs.png">
+		<img id="seconds_55" class="note" src="notes/seconds/_g.png">
+		<img id="seconds_56" class="note" src="notes/seconds/_gs.png">
+		<img id="seconds_57" class="note" src="notes/seconds/_a.png">
+		<img id="seconds_58" class="note" src="notes/seconds/_as.png">
+		<img id="seconds_59" class="note" src="notes/seconds/_b.png">
+		
+		<img id="seconds_60" class="note" src="notes/seconds/c.png">
+		<img id="seconds_61" class="note" src="notes/seconds/cs.png">
+		<img id="seconds_62" class="note" src="notes/seconds/d.png">
+		<img id="seconds_63" class="note" src="notes/seconds/ds.png">
+		<img id="seconds_64" class="note" src="notes/seconds/e.png">
+		<img id="seconds_65" class="note" src="notes/seconds/f.png">
+		<img id="seconds_66" class="note" src="notes/seconds/fs.png">
+		<img id="seconds_67" class="note" src="notes/seconds/g.png">
+		<img id="seconds_68" class="note" src="notes/seconds/gs.png">
+		<img id="seconds_69" class="note" src="notes/seconds/a.png">
+		<img id="seconds_70" class="note" src="notes/seconds/as.png">
+		<img id="seconds_71" class="note" src="notes/seconds/b.png">
+		
+		<img id="seconds_72" class="note" src="notes/seconds/cc.png">
+		<img id="seconds_73" class="note" src="notes/seconds/ccs.png">
+		<img id="seconds_74" class="note" src="notes/seconds/dd.png">
+		<img id="seconds_75" class="note" src="notes/seconds/dds.png">
+		<img id="seconds_76" class="note" src="notes/seconds/ee.png">
+		<img id="seconds_77" class="note" src="notes/seconds/ff.png">
+		<img id="seconds_78" class="note" src="notes/seconds/ffs.png">
+		<img id="seconds_79" class="note" src="notes/seconds/gg.png">
+		<img id="seconds_80" class="note" src="notes/seconds/ggs.png">
+		<img id="seconds_81" class="note" src="notes/seconds/aa.png">
+		<img id="seconds_82" class="note" src="notes/seconds/aas.png">
+		<img id="seconds_83" class="note" src="notes/seconds/bb.png">
+
+		<img id="seconds_84" class="note" src="notes/seconds/ccc.png">
+		<img id="seconds_85" class="note" src="notes/seconds/cccs.png">
+
+		<!-- Triples Notes -->
+		<img id="triples_47" class="note" src="notes/triples/_bb.png">
+		
+		<img id="triples_48" class="note" src="notes/triples/_c.png">
+		<img id="triples_49" class="note" src="notes/triples/_cs.png">
+		<img id="triples_50" class="note" src="notes/triples/_d.png">
+		<img id="triples_51" class="note" src="notes/triples/_ds.png">
+		<img id="triples_52" class="note" src="notes/triples/_e.png">
+		<img id="triples_53" class="note" src="notes/triples/_f.png">
+		<img id="triples_54" class="note" src="notes/triples/_fs.png">
+		<img id="triples_55" class="note" src="notes/triples/_g.png">
+		<img id="triples_56" class="note" src="notes/triples/_gs.png">
+		<img id="triples_57" class="note" src="notes/triples/_a.png">
+		<img id="triples_58" class="note" src="notes/triples/_as.png">
+		<img id="triples_59" class="note" src="notes/triples/_b.png">
+		
+		<img id="triples_60" class="note" src="notes/triples/c.png">
+		<img id="triples_61" class="note" src="notes/triples/cs.png">
+		<img id="triples_62" class="note" src="notes/triples/d.png">
+		<img id="triples_63" class="note" src="notes/triples/ds.png">
+		<img id="triples_64" class="note" src="notes/triples/e.png">
+		<img id="triples_65" class="note" src="notes/triples/f.png">
+		<img id="triples_66" class="note" src="notes/triples/fs.png">
+		<img id="triples_67" class="note" src="notes/triples/g.png">
+		<img id="triples_68" class="note" src="notes/triples/gs.png">
+		<img id="triples_69" class="note" src="notes/triples/a.png">
+		<img id="triples_70" class="note" src="notes/triples/as.png">
+		
+		<!-- New Triples Notes -->
+		<img id="new_triples_46" class="note" src="notes/new_triples/_aas.png">
+		<img id="new_triples_47" class="note" src="notes/new_triples/_bb.png">
+		
+		<img id="new_triples_48" class="note" src="notes/new_triples/_c.png">
+		<img id="new_triples_49" class="note" src="notes/new_triples/_cs.png">
+		<img id="new_triples_50" class="note" src="notes/new_triples/_d.png">
+		<img id="new_triples_51" class="note" src="notes/new_triples/_ds.png">
+		<img id="new_triples_52" class="note" src="notes/new_triples/_e.png">
+		<img id="new_triples_53" class="note" src="notes/new_triples/_f.png">
+		<img id="new_triples_54" class="note" src="notes/new_triples/_fs.png">
+		<img id="new_triples_55" class="note" src="notes/new_triples/_g.png">
+		<img id="new_triples_56" class="note" src="notes/new_triples/_gs.png">
+		<img id="new_triples_57" class="note" src="notes/new_triples/_a.png">
+		<img id="new_triples_58" class="note" src="notes/new_triples/_as.png">
+		<img id="new_triples_59" class="note" src="notes/new_triples/_b.png">
+		
+		<img id="new_triples_60" class="note" src="notes/new_triples/c.png">
+		<img id="new_triples_61" class="note" src="notes/new_triples/cs.png">
+		<img id="new_triples_62" class="note" src="notes/new_triples/d.png">
+		<img id="new_triples_63" class="note" src="notes/new_triples/ds.png">
+		<img id="new_triples_64" class="note" src="notes/new_triples/e.png">
+		<img id="new_triples_65" class="note" src="notes/new_triples/f.png">
+		<img id="new_triples_66" class="note" src="notes/new_triples/fs.png">
+		<img id="new_triples_67" class="note" src="notes/new_triples/g.png">
+		<img id="new_triples_68" class="note" src="notes/new_triples/gs.png">
+		<img id="new_triples_69" class="note" src="notes/new_triples/a.png">
+		<img id="new_triples_70" class="note" src="notes/new_triples/as.png">
+		<img id="new_triples_71" class="note" src="notes/new_triples/b.png">
+		
+		<img id="new_triples_72" class="note" src="notes/new_triples/cc.png">
+		
+		<!-- Controls -->
+		<div id="controls">
+		</div>
+	</body>
+<html>
