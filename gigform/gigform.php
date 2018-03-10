@@ -18,20 +18,16 @@ td {line-height:1.4em; color:#000; font-size:12pt};
         </td>
         <td>
           <strong>Email *</strong><br />
-          <input name="email" size=24>
+          <input name="email" size=25>
         </td>
         <td>
           <strong>Phone *</strong><br />
-          <input name="phone" size=25>
+          <input name="phone" size=26>
         </td>
       </tr>
       <tr>
         <td>
-          <strong>Type of event</strong><br />
-          <input name="type" size=24>
-        </td>
-        <td>
-          <strong>Date *</strong><br />
+          <strong>Event Date *</strong><br />
           <div class="date">
             <table width = 155px>
               <tr>
@@ -111,11 +107,21 @@ td {line-height:1.4em; color:#000; font-size:12pt};
           <strong>Time of performance *</strong><br />
           <input name="time" size=25>
         </td>
+        <td>
+          <strong>Performance duration *</strong><br />
+          <input name="duration" size=26>
+        </td>
+      </tr>
+      <tr>
+        <td colspan=3>
+          <strong>Event description *</strong> <br />
+          <input name="description" size="80">
+        </td>
       </tr>
       <tr>
         <td colspan=3>
           <strong>Location</strong> (if entering an address, please specify the city)<br />
-          <input name="location" size="78">
+          <input name="location" size="80">
         </td>
       </tr>
     </table>
@@ -124,7 +130,7 @@ td {line-height:1.4em; color:#000; font-size:12pt};
       <tr>
         <td>
           <strong>Comments</strong><br />
-          <textarea name="comments" style="width:480px;height:60px"></textarea>
+          <textarea name="comments" style="width:490px;height:60px"></textarea>
         </td>
       </tr>
       <tr>
