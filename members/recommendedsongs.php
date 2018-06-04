@@ -30,7 +30,7 @@ include_once(dirname(__FILE__) . "/../dbcon.php");
       <table id='nav' cellspacing='0' cellpadding='0'><tr>
 	<td><a href='http://www.stanford.edu/group/calypso/cgi-bin/'>Public Site</a></td>
 </tr></table>
-    </td> 
+    </td>
   </tr><tr>
     <td id='content'><table cellspacing='0' cellpadding='0' style='height:400px'>
 
