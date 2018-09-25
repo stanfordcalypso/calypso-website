@@ -64,13 +64,13 @@
 				      <ul><li>Desirements: experience playing with a group and an appreciation for calypso music. </li></ul>
 				    <p style="margin-bottom: 0;">Auditions will be held at the <b>Braun Music Center</b> on:</p>
 					<ul>
-					  <li><b>Sunday, September 30 from 11:10am to 5:20pm</b>, and</li>
-					  <li><b>Monday, October 1 from 6:00pm to 7:20pm</b>.</li>
+					  <li><b>Sunday, September 30 from 11am to 5:30pm</b>, and</li>
+					  <li><b>Monday, October 1 from 6:00pm to 7:30pm</b>.</li>
 					</li>
 				    <p style="margin-top: 10px">Sign up to AUDITION at <a href="https://docs.google.com/spreadsheets/d/112Yv6t-9KdcXtzQMeUu1mrMRVUNP5-IfzMwtQ8mLFeU/edit?usp=sharing">THIS LINK!</a> Please only sign up for one slot. During the actual audition, we'll interview you (just an informal get-to-know-you) and teach you a song on pan (drummers: we'll make you play a few beats for us too). We will let you know about callbacks a couple days after auditions.</p>
 				    <h1>Want More Info?</h1>
 				    <ul>
-				      <li>Come find us at the Activities Fair from <b>noon to 4pm</b> on <b>Friday, September 28, 2017</b> in White Plaza! We can answer whatever questions you have, including any about auditions!</li>
+				      <li>Come find us at the Activities Fair from <b>noon to 4pm</b> on <b>Friday, September 28, 2018</b> in White Plaza! We can answer whatever questions you have, including any about auditions!</li>
 				      <li>Feel free to email us at <b><a href="mailto:stanfordcalypso@gmail.com">stanfordcalypso@gmail.com</a></b>.</li>
 				    </ul>
 
