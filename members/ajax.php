@@ -225,7 +225,7 @@ else if ($action == "addgig") {
           $url = "https://www.stanford.edu/group/calypso/cgi-bin/members/?action=respond&gigid=" . $row['gigid'];
           send_to_members("emailnew = 1", "New Gig: " . $input['name'],
           "Click here to respond to this gig:<br />
-          <a href='" . $url . "'>" . $url . "</a>"); 
+          <a href='" . $url . "'>" . $url . "</a>");
 echo "New gig emails sent.<br />&nbsp;<br />";
 }
 echo "Gig added successfully!<br />&nbsp;<br /><a href='?action=gigs'>Back to gigs</a>";
@@ -288,7 +288,7 @@ else if ($action == "editgig") {
         $end->setDateTime($input['date'].'T'.$input['endtime'].':00');
         $end->setTimeZone('America/Los_Angeles');
         $event->setEnd($end);
-        
+
         // try to put the event in the calendar
         try {
           $new_event = $service->events->insert($calendar_id, $event);
@@ -299,7 +299,7 @@ else if ($action == "editgig") {
           syslog(LOG_ERR, $e->getMessage());
           echo $e->getMessage();
         }
-      } 
+      }
 
       // if we previously had an event in the calendar and want to take it down
       else if ($origIsInGoogleCalendar == 1 && $input['isInGoogleCalendar'] == 0) {
@@ -313,7 +313,7 @@ else if ($action == "editgig") {
           echo $e->getMessage();
           echo "GCalId: " . $googleCalendarId;
         }
-      } 
+      }
 
       // if we previously had an event in the calendar and want to update it
       else if ($origIsInGoogleCalendar == 1 && $input['isInGoogleCalendar'] == 1) {
@@ -360,7 +360,7 @@ else if ($action == "editgig") {
 else if ($action == "deletegig") {
   deleteoldgigs();
   if (haveinput('gigid')) {
-    
+
     // see if we have posted the event to the Google Calendar
     $origIsInGoogleCalendar = 1;
     $original = mysql_query("SELECT isInGoogleCalendar FROM gigs WHERE gigid = '$input[gigid]'");
@@ -472,11 +472,22 @@ else if ($action == "partsforgig") {
   }
 }
 else if ($action == "setsettings") {
-  if (haveinput('id') && haveinput('name') && haveinput('email') && haveinput('emailnew') && haveinput('emailconfirm') && haveinput('emailreminder')) {
-    mysql_query("REPLACE INTO members (sunetid, name, email, emailnew, emailconfirm, emailreminder)
-      VALUES
-      ('$input[id]','$input[name]','$input[email]','$input[emailnew]','$input[emailconfirm]','$input[emailreminder]')");
-    echo "Recorded information successfully!<br />&nbsp;<br /><a href='?action=profile'>Go to profile</a>";
+  if (haveinput('id') && haveinput('name') && haveinput('email') && haveinput('emailnew') && haveinput('emailconfirm') && haveinput('emailreminder') && haveinput('phonenumber') && haveinput('phonecarrier') && haveinput('textreminder')) {
+    if($input['phonecarrier'] == 'NULL') {
+      echo "Unable to update information. Please select a phone carrier.<br />&nbsp;<br /><a href='?action=settings'>Back to settings</a>";
+    } else if (empty($input['phonenumber'])) {
+      echo "Unable to update information. Please enter your phone number.<br />&nbsp;<br /><a href='?action=settings'>Back to settings</a>";
+    } else {
+      mysql_query("REPLACE INTO members (sunetid, name, email, emailnew, emailconfirm, emailreminder, phonenumber, phonecarrier, textreminder)
+        VALUES
+        ('$input[id]','$input[name]','$input[email]','$input[emailnew]','$input[emailconfirm]','$input[emailreminder]','$input[phonenumber]','$input[phonecarrier]','$input[textreminder]')");
+      if($input['textreminder'] == 1) {
+        echo "Recorded information successfully!<br />Sent a text message to ". $input[phonenumber] . " (" . $input['phonecarrier'] . ") to ensure phone number accuracy.<br /> &nbsp;<br /><a href='?action=profile'>Go to profile</a>";
+      } else {
+        echo "Recorded information successfully!<br />&nbsp;<br /><a href='?action=profile'>Go to profile</a>";
+      }
+      text_to_members("sunetid = '" . $input[id] . "'", "Calypso member profile updated", 'Hi ' + $input[name] + ', if this was not you, please check "settings" in the members portion of the calypso website.');
+    }
   }
   } else if ($action == "allpartsforallmembers") {
     $result = mysql_query("SELECT songs.name AS song, instruments.name AS inst, members.name AS player, parts.skillid, parts.songid, parts.instrumentid AS skill FROM parts, songs, members, instruments WHERE parts.sunetid = members.sunetid AND parts.songid = songs.songid AND parts.instrumentid = instruments.instrumentid ORDER BY songs.name, members.name, instruments.instrumentid");
