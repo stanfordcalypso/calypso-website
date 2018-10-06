@@ -201,7 +201,7 @@ else if ($action == "addgig") {
         $event->setSummary($input['name']);
         $event->setLocation($input['location']);
         $start = new Google_Service_Calendar_EventDateTime();
-        $start->setDateTime($input['date'].'T'.$input['starttime'].':00');
+        $start->setDateTime($input['date'].'T'.$input['loadtime'].':00');
         $start->setTimeZone('America/Los_Angeles');
         $event->setStart($start);
         $end = new Google_Service_Calendar_EventDateTime();
@@ -281,7 +281,7 @@ else if ($action == "editgig") {
         $event->setSummary($input['name']);
         $event->setLocation($input['location']);
         $start = new Google_Service_Calendar_EventDateTime();
-        $start->setDateTime($input['date'].'T'.$input['starttime'].':00');
+        $start->setDateTime($input['date'].'T'.$input['loadtime'].':00');
         $start->setTimeZone('America/Los_Angeles');
         $event->setStart($start);
         $end = new Google_Service_Calendar_EventDateTime();
@@ -299,6 +299,14 @@ else if ($action == "editgig") {
           syslog(LOG_ERR, $e->getMessage());
           echo $e->getMessage();
         }
+
+        // update the SQL database so that this event now has a Google Calendar event id associated with it
+        if (mysql_query("REPLACE INTO gigs (gigid, name, comments, date, loadtime, starttime, endtime, location, confirmed, attire, isInGoogleCalendar, googleCalendarId)
+          VALUES
+          ('$input[gigid]','$input[name]','$input[comments]','$input[date]','$input[loadtime]','$input[starttime]','$input[endtime]','$input[location]','$input[confirmed]','$input[attire]', '$input[isInGoogleCalendar]', '$new_event_id')")) {
+            //then it worked!!
+         } else {echo "Error updating SQL database. Please let the webmaster know.<br />&nbsp;<br /";}
+
       }
 
       // if we previously had an event in the calendar and want to take it down
@@ -321,32 +329,34 @@ else if ($action == "editgig") {
         // try to get the event from the calendar
         try {
           $event = $service->events->get($calendar_id, $googleCalendarId);
+
+          // update the calendar's information
+          $event->setSummary($input['name']);
+          $event->setLocation($input['location']);
+          $start = new Google_Service_Calendar_EventDateTime();
+          $start->setDateTime($input['date'].'T'.$input['loadtime'].':00');
+          $start->setTimeZone('America/Los_Angeles');
+          $event->setStart($start);
+          $end = new Google_Service_Calendar_EventDateTime();
+          $end->setDateTime($input['date'].'T'.$input['endtime'].':00');
+          $end->setTimeZone('America/Los_Angeles');
+          $event->setEnd($end);
+
+          // try to update the event
+          try {
+            $updatedEvent = $service->events->update($calendar_id, $event->getId(), $event);
+          } catch (Exception $e) {
+            echo "ERROR \n";
+            syslog(LOG_ERR, $e->getMessage());
+            echo $e->getMessage();
+          }
         } catch (Google_Service_Exception $e) {
           echo "ERROR \n";
           syslog(LOG_ERR, $e->getMessage());
           echo $e->getMessage();
         }
 
-        // update the calendar's information
-        $event->setSummary($input['name']);
-        $event->setLocation($input['location']);
-        $start = new Google_Service_Calendar_EventDateTime();
-        $start->setDateTime($input['date'].'T'.$input['starttime'].':00');
-        $start->setTimeZone('America/Los_Angeles');
-        $event->setStart($start);
-        $end = new Google_Service_Calendar_EventDateTime();
-        $end->setDateTime($input['date'].'T'.$input['endtime'].':00');
-        $end->setTimeZone('America/Los_Angeles');
-        $event->setEnd($end);
 
-        // try to update the event
-        try {
-          $updatedEvent = $service->events->update($calendar_id, $event->getId(), $event);
-        } catch (Google_Service_Exception $e) {
-          echo "ERROR \n";
-          syslog(LOG_ERR, $e->getMessage());
-          echo $e->getMessage();
-        }
       }
 
       echo "Gig edited successfully!<br />&nbsp;<br /><a href='?action=gigs'>Back to gigs</a>";
