@@ -74,7 +74,8 @@ function editsettings() {
   var confirme = id("confirme").checked ? 1 : 0;
   var reminde = id("reminde").checked ? 1 : 0;
   // var remindtext = id("remindtext").checked ? 1 : 0;
-  var sendstr = "setsettings&id=<?php echo $SUNETID; ?>&name="+name+"&email="+email+"&phonenumber="+phonenumber+"&phonecarrier="+phonecarrier+"&emailnew="+newe+"&emailconfirm="+confirme+"&emailreminder="+reminde/*+"&textreminder="+remindtext*/;
+  var remindtext = 1;
+  var sendstr = "setsettings&id=<?php echo $SUNETID; ?>&name="+name+"&email="+email+"&phonenumber="+phonenumber+"&phonecarrier="+phonecarrier+"&emailnew="+newe+"&emailconfirm="+confirme+"&emailreminder="+reminde+"&textreminder="+remindtext;
 
   //mail('zacharyb@stanford.edu', 'Testing text', 'Hi Zachary');
   //text_to_members("textreminder = 1", "Testing text", "Hi Zachary");

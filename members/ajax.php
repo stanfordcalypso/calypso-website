@@ -199,7 +199,7 @@ else if ($action == "addgig") {
       if ($input['isInGoogleCalendar'] == 1){
         $event = new Google_Service_Calendar_Event();
         $event->setSummary($input['name']);
-        $event->setLocation($input['location']);
+        $event->setLocation($input['location']. '; please check your email to respond to the gig request.');
         $start = new Google_Service_Calendar_EventDateTime();
         $start->setDateTime($input['date'].'T'.$input['loadtime'].':00');
         $start->setTimeZone('America/Los_Angeles');
@@ -222,15 +222,16 @@ else if ($action == "addgig") {
       if (mysql_query("INSERT INTO gigs (name, comments, date, loadtime, starttime, endtime, location, confirmed, attire, isInGoogleCalendar, googleCalendarId) VALUES ('$input[name]','$input[comments]','$input[date]','$input[loadtime]','$input[starttime]','$input[endtime]','$input[location]','$input[confirmed]','$input[attire]', '$input[isInGoogleCalendar]', '$new_event_id')")) {
         $result = mysql_query("SELECT gigid FROM gigs WHERE name = '$input[name]' AND date = '$input[date]' AND starttime = '$input[starttime]'");
         if ($result && $row = mysql_fetch_array($result)) {
-          $url = "https://www.stanford.edu/group/calypso/cgi-bin/members/?action=respond&gigid=" . $row['gigid'];
-          send_to_members("emailnew = 1", "New Gig: " . $input['name'],
-          "Click here to respond to this gig:<br />
-          <a href='" . $url . "'>" . $url . "</a>");
-echo "New gig emails sent.<br />&nbsp;<br />";
-}
-echo "Gig added successfully!<br />&nbsp;<br /><a href='?action=gigs'>Back to gigs</a>";
-}
-}
+            //email members about the new gig
+            $url = "https://www.stanford.edu/group/calypso/cgi-bin/members/?action=respond&gigid=" . $row['gigid'];
+            send_to_members("emailnew = 1", "New Gig: " . $input['name'],
+                "Click here to respond to this gig:<br />
+                <a href='" . $url . "'>" . $url . "</a>");
+            echo "New gig emails sent.<br />&nbsp;<br />";
+        }
+        echo "Gig added successfully!<br />&nbsp;<br /><a href='?action=gigs'>Back to gigs</a>";
+      }
+    }
 } else {
   echo "Error: Please try again";
 }
@@ -278,8 +279,8 @@ else if ($action == "editgig") {
        if ($origIsInGoogleCalendar == 0 && $input['isInGoogleCalendar'] == 1) {
         // create a new event
         $event = new Google_Service_Calendar_Event();
-        $event->setSummary($input['name']);
-        $event->setLocation($input['location']);
+        $event->setSummary('GIG: '.$input['name']);
+        $event->setLocation($input['location'] . '; please check your email to respond to the gig request.');
         $start = new Google_Service_Calendar_EventDateTime();
         $start->setDateTime($input['date'].'T'.$input['loadtime'].':00');
         $start->setTimeZone('America/Los_Angeles');
@@ -331,8 +332,8 @@ else if ($action == "editgig") {
           $event = $service->events->get($calendar_id, $googleCalendarId);
 
           // update the calendar's information
-          $event->setSummary($input['name']);
-          $event->setLocation($input['location']);
+          $event->setSummary('GIG: '.$input['name']);
+          $event->setLocation($input['location'] . '; please check your email to respond to the gig request.');
           $start = new Google_Service_Calendar_EventDateTime();
           $start->setDateTime($input['date'].'T'.$input['loadtime'].':00');
           $start->setTimeZone('America/Los_Angeles');
@@ -493,10 +494,11 @@ else if ($action == "setsettings") {
         ('$input[id]','$input[name]','$input[email]','$input[emailnew]','$input[emailconfirm]','$input[emailreminder]','$input[phonenumber]','$input[phonecarrier]','$input[textreminder]')");
       if($input['textreminder'] == 1) {
         echo "Recorded information successfully!<br />Sent a text message to ". $input[phonenumber] . " (" . $input['phonecarrier'] . ") to ensure phone number accuracy.<br /> &nbsp;<br /><a href='?action=profile'>Go to profile</a>";
+        text_to_members("sunetid = '" . $input[id] . "'", "Calypso member profile updated", 'Hi ' . $input[name] . ', if this was not you, please check "settings" in the members portion of the calypso website.');
       } else {
         echo "Recorded information successfully!<br />&nbsp;<br /><a href='?action=profile'>Go to profile</a>";
       }
-      text_to_members("sunetid = '" . $input[id] . "'", "Calypso member profile updated", 'Hi ' + $input[name] + ', if this was not you, please check "settings" in the members portion of the calypso website.');
+
     }
   }
   } else if ($action == "allpartsforallmembers") {
