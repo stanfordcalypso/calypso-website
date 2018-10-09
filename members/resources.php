@@ -6,7 +6,7 @@
     <ul>
     	<li><a href="http://groupspaces.com/CardinalCalypso/files/">GroupSpaces</a></li>
     	<li><a href="https://afs.stanford.edu/?path=/afs/ir/group/calypso/scores">Stanford AFS</a></li>
-    	<li><a href="https://www.dropbox.com/sh/cw2bv875u1qxv2y/i65-NDaf_U">Dropbox</a></li>
+    	<li><a href="https://stanford.box.com/s/iv072tpjgjbc4fdhakhe752xxhyhkxg0">Box Folder</a></li>
         <li><a href="https://docs.google.com/spreadsheet/ccc?key=0AgKYtGU3LpIWdEMwU0hoVEdiczVVUFNoLWpYWThZcmc#gid=0">Spring Show Theme Ideas</a></li>
     </ul>
 	<h1>Calypso on the Web</h1>
