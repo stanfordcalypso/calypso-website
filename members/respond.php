@@ -61,6 +61,10 @@ echo "<tr><td colspan=2>&nbsp;<br /><center><input type='button' value='Submit' 
 var txt = printdate("<?php echo $row['date']; ?>") + "?<br />";
 txt += "Loading starts at " + printtime("<?php echo $row['loadtime']; ?>") + ".<br />";
 txt += "We are playing from " + printtime("<?php echo $row['starttime']; ?>") + " to " + printtime("<?php echo $row['endtime']; ?>") + ".<br />";
+var additionalComments = "<?php echo $row['comments']; ?>";
+if (additionalComments != "") {
+  txt += "Additional comments: " + additionalComments + "<br />";
+}
 id("dateandtime").innerHTML = txt;
 
 function gigresponsesubmit() {
