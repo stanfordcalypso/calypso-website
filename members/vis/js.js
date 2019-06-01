@@ -43,7 +43,7 @@ var note_offsets = {
 		"57": {"left": 36, "top": 7},
 		"58": {"left": 578, "top": 95},
 		"59": {"left": 366, "top": 7},
-	
+
 		"60": {"left": 89, "top": 247},
 		"61": {"left": 158, "top": 6},
 		"62": {"left": 354, "top": 203},
@@ -78,7 +78,7 @@ var note_offsets = {
 		"57": {"left": 366, "top": 205},
 		"58": {"left": 206.75, "top": 192.5},
 		"59": {"left": 540, "top": 193},
-	
+
 		"60": {"left": 210, "top": 35},
 		"61": {"left": 342, "top": 63},
 		"62": {"left": 6.75, "top": 45},
@@ -111,39 +111,9 @@ var note_offsets = {
 
 	// TRIPLES
 	"triples": {
-		"47": {"left": 125, "top": 228},
-	
-		"48": {"left": 258, "top": 159},
-		"49": {"left": 429, "top": 252},
-		"50": {"left": 11, "top": 128},
-		"51": {"left": 266, "top": 6},
-		"52": {"left": 561, "top": 136},
-		"53": {"left": 5, "top": 211},
-		"54": {"left": 216, "top": 28},
-		"55": {"left": 457, "top": 123},
-		"56": {"left": 162, "top": 157.5},
-		"57": {"left": 363, "top": 105},
-		"58": {"left": 532.5, "top": 264.5},
-		"59": {"left": 40, "top": 277.5},
-	
-		"60": {"left": 213, "top": 118},
-		"61": {"left": 423, "top": 160.5},
-		"62": {"left": 100, "top": 124},
-		"63": {"left": 361, "top": 28},
-		"64": {"left": 578, "top": 222},
-		"65": {"left": 79, "top": 215.5},
-		"66": {"left": 298.5, "top": 90.5},
-		"67": {"left": 524, "top": 202},
-		"68": {"left": 125, "top": 213},
-		"69": {"left": 330, "top": 120},
-		"70": {"left": 542, "top": 230}
-	},
-
-	// NEW TRIPLES
-	"new_triples": {
 		"46": {"left": 574.5, "top": 183},
 		"47": {"left": 27, "top": 123},
-	
+
 		"48": {"left": 259, "top": 159},
 		"49": {"left": 425.5, "top": 266.5},
 		"50": {"left": 81, "top": 263},
@@ -156,7 +126,7 @@ var note_offsets = {
 		"57": {"left": 279, "top": 6.5},
 		"58": {"left": 539, "top": 280},
 		"59": {"left": 5, "top": 174},
-	
+
 		"60": {"left": 363, "top": 118},
 		"61": {"left": 415, "top": 204},
 		"62": {"left": 164, "top": 202},
@@ -169,7 +139,7 @@ var note_offsets = {
 		"69": {"left": 306, "top": 79},
 		"70": {"left": 525.75, "top": 253},
 		"71": {"left": 91.5, "top": 204},
-		
+
 		"72": {"left": 296, "top": 113}
 	}
 };
@@ -178,16 +148,14 @@ var track_nums = {
 	"lead": 1,
 	"tenors": 2,
 	"seconds": 3,
-	"triples": 4,
-	"new_triples": 4
+	"triples": 4
 };
 
 var num_drums = {
 	"lead": 1,
 	"tenors": 2,
 	"seconds": 2,
-	"triples": 3,
-	"new_triples": 3
+	"triples": 3
 };
 
 /*********************************
@@ -224,7 +192,7 @@ function Drum(type, manager) {
 			"left": left_offset + ((max_width - this.elem.width()) / 2)
 		});
 		offset = this.elem.offset();
-		
+
 		// Put notes in place
 		for (var key in this.my_notes) {
 			var id = this.type + "_" + key;
@@ -259,7 +227,7 @@ function Drum(type, manager) {
 	this.hide = function() {
 		if (this.hidden)
 			return;
-			
+
 		this.hidden = true;
 		this.elem.hide();
 		for (var key in this.my_notes) {
@@ -272,7 +240,7 @@ function Drum(type, manager) {
 	this.show = function() {
 		if (!this.hidden)
 			return;
-	
+
 		this.hidden = false;
 		this.elem.show();
 		for (var key in this.my_notes) {
@@ -285,10 +253,10 @@ function Drum(type, manager) {
 	this.note_on = function(note) {
 		if (this.hidden)
 			return;
-	
+
 		id = this.type + "_" + note;
 		$("#" + id).fadeTo(0, 1);
-		
+
 		if (this.manager.do_play_sound)
 			this.manager.play_sound(note);
 	}
@@ -331,7 +299,7 @@ function Manager(drums) {
 	this.stopped = true;
 	this.sound_map = {};
 	this.sound_redundancy = 4;
-	
+
 	// Helper function to compute offsets for a row of drums
 	this.compute_offsets = function(drum_plan, cur_row, highest_row) {
 		var total_drums = 0;
@@ -343,20 +311,20 @@ function Manager(drums) {
 		}
 		var max_width = (window.innerWidth - this.buffer * (total_types - 1)) /
 				total_drums;
-		
+
 		var drums_so_far = 0;
 		var types_so_far = 0;
 		for (var i in cur_row) {
 			var drum_type = cur_row[i];
 			var my_num_drums = num_drums[drum_type];
-			
-			drum_plan[drum_type] = 
+
+			drum_plan[drum_type] =
 				[
 					highest_row,
 					(drums_so_far * max_width) + (types_so_far * this.buffer),
 					max_width * my_num_drums
 				];
-					
+
 			drums_so_far += my_num_drums;
 			types_so_far++;
 		}
@@ -368,7 +336,7 @@ function Manager(drums) {
 		var highest_row = 0;
 		var drums_before = 0;
 		var cur_row = [];
-		
+
 		// Establish width plan first
 		for (var drum_type in this.drum_statuses) {
 			var status = this.drum_statuses[drum_type];
@@ -381,16 +349,16 @@ function Manager(drums) {
 					cur_row = [];
 					drums_before = 0;
 				}
-				
+
 				drums_before += my_num_drums;
 				cur_row.push(drum_type);
 			}
 		}
 		this.compute_offsets(drum_plan, cur_row, highest_row);
-		
+
 		var max_height = (window.innerHeight - $("#controls").height() - 30)
 				/ (highest_row + 1);
-		
+
 		// Set up drums
 		for (var drum_type in this.drum_statuses) {
 			var status = this.drum_statuses[drum_type];
@@ -421,7 +389,7 @@ function Manager(drums) {
 			this.setup_drums();
 		}
 	}
-	
+
 	// Plays a metronome sound
 	this.play_metronome = function() {
 		this_manager.met_timeout = setTimeout(function() {
@@ -442,9 +410,9 @@ function Manager(drums) {
 		if (index >= this_manager.midi_schedule.length) return;
 		var pos = parseFloat($("#slider").attr("value"));
 		var effective_pos = pos / this_manager.midi_step;
-		
+
 		var first = new Date().getMilliseconds();
-		
+
 		// play notes
 		while (true) {
 			var delta = this_manager.midi_schedule[index]["delta"];
@@ -459,20 +427,20 @@ function Manager(drums) {
 			index++;
 			if (index >= this_manager.midi_schedule.length) break;
 		}
-		
+
 		var second = new Date().getMilliseconds();
-		
+
 		// play metronome
 		if (should_click) {
 			this_manager.play_metronome();
 		}
-		
+
 		var third = new Date().getMilliseconds();
-		
+
 		var new_pos = pos + this_manager.midi_step * this_manager.tempo;
 		var effective_new_pos = new_pos / this_manager.midi_step;
 		var next_click = false;
-		
+
 		// determine next click
 		if (this_manager.click_track) {
 			for (var i = pos + 1; i <= new_pos; i++) {
@@ -482,7 +450,7 @@ function Manager(drums) {
 				}
 			}
 		}
-		
+
 		var fourth = new Date().getMilliseconds();
 
 		if (fourth - first > 1) {
@@ -493,7 +461,7 @@ function Manager(drums) {
 		}
 
 		$("#slider").val(new_pos);
-		
+
 		this_manager.next_timeout = setTimeout(function() {
 			this_manager.find_next_event(index, next_click);
 		}, 1);
@@ -502,7 +470,7 @@ function Manager(drums) {
 	// Handles single event
 	this.handle_event = function(index) {
 		if (this_manager.stopped) return;
-		
+
 		var ev = this_manager.midi_schedule[index];
 		var drum = this_manager.drums[ev["drum_type"]];
 		if (drum === undefined) return;
@@ -536,17 +504,17 @@ function Manager(drums) {
 	// Stop playing
 	this.stop = function() {
 		this.stopped = true;
-		
+
 		if (this_manager.next_timeout != undefined) {
 			clearTimeout(this_manager.next_timeout);
 			this_manager.next_timeout = undefined;
 		}
-		
+
 		if (this_manager.met_timeout != undefined) {
 			clearTimeout(this_manager.met_timeout);
 			this_manager.met_timeout = undefined;
 		}
-		
+
 		for (var type in this.drums) {
 			var drum = this.drums[type];
 			for (var key in note_offsets[type]) {
@@ -554,13 +522,13 @@ function Manager(drums) {
 			}
 		}
 	}
-	
+
 	// Put MIDI note events into a schedule
 	this.process_midi = function(file) {
 		var tracks = file["tracks"];
 		var header = file["header"];
 		this_manager.ticks_per_beat = header["ticksPerBeat"];
-		
+
 		for (var type in track_nums) {
 			var events = tracks[track_nums[type]];
 			var total_delta = 0;
@@ -568,12 +536,12 @@ function Manager(drums) {
 				var ev = events[i];
 				total_delta = total_delta + ev.deltaTime;
 				if (ev.subtype == "noteOn" || ev.subtype == "noteOff") {
-				
+
 					// make note cut-offs a little early
 					var eff_total_delta = total_delta;
 					if (ev.subtype == "noteOff")
 						eff_total_delta = eff_total_delta - 10;
-						
+
 					var to_insert = {
 						"delta": eff_total_delta,
 						"drum_type": type,
@@ -584,12 +552,12 @@ function Manager(drums) {
 				}
 			}
 		}
-		
+
 		this_manager.midi_schedule.sort(function(a, b) {
 			return a["delta"] - b["delta"];
 		});
 	}
-	
+
 	// Constructs MIDI visualization inside controls component
 	this.construct_midi_vis = function() {
 		var new_thing = $("<div>")
@@ -601,7 +569,7 @@ function Manager(drums) {
 			.css("height", "80px");
 		$("body").append(new_thing);
 	}
-	
+
 	// Constructs a div to flash in time with the metronome
 	this.construct_met_vis = function() {
 		var met1 = $("<div>",
@@ -632,7 +600,7 @@ function Manager(drums) {
 		$("body").append(met2);
 	}
 
-	// Load MIDI file and set up controls	
+	// Load MIDI file and set up controls
 	this.load_midi = function(midi_filename) {
 		this_manager.set_status_message("Loading " + midi_filename + "...&nbsp;<img src='loading.gif' width='20px' height='20px'></img>", false);
 		loadRemote(midi_filename, function(data) {
@@ -649,12 +617,12 @@ function Manager(drums) {
 				this_manager.set_status_message("Unable to load " + midi_filename + ".", true);
 			}
 		},
-		
+
 		function() {
 			this_manager.set_status_message("Unable to load "
 				+ midi_filename + ".", true);
 		});
-	}	
+	}
 
 	// Add controls at bottom of screen
 	this.add_controls = function() {
@@ -700,7 +668,7 @@ function Manager(drums) {
 					}
 				});
 		checks.push(sound_check);
-		var slider = $("<input>", 
+		var slider = $("<input>",
 			{
 				type: "range",
 				min: "0",
@@ -727,7 +695,7 @@ function Manager(drums) {
 			.change(function() {
 				this_manager.tempo = $(this).val() / 100.0;
 			});
-		
+
 		// MIDI upload management
 		var upload_div = $("<div>",
 			{
@@ -773,7 +741,7 @@ function Manager(drums) {
 				);
 				return false;
 			});
-			
+
 		var status_div = $("<div>",
 			{
 				id: "status"
@@ -784,7 +752,7 @@ function Manager(drums) {
 			.append(midis)
 			.append("<br>")
 			.append(status_div);
-		
+
 		// Add dat shit
 		$("#controls")
 			.html("")
@@ -804,7 +772,7 @@ function Manager(drums) {
 				.append(checks[i])
 				.append("&nbsp;&nbsp;&nbsp;");
 		}
-		
+
 		//this_manager.construct_midi_vis();
 		this_manager.construct_met_vis();
 		this_manager.load_midis_control(true);
@@ -833,12 +801,12 @@ function Manager(drums) {
 			if (should_load_midi)
 				select_button.click();
 		},
-		
+
 		function() {
 			$("#midis").html("Unable to load file list.");
 		});
 	}
-	
+
 	// Sets text of status message field in controls
 	this.set_status_message = function(message, clear) {
 		$("#status").html(message);
@@ -856,7 +824,7 @@ function Manager(drums) {
 		for (var note = 0; note <= 88; note++) {
 			if (note > 0 && note < 46)
 				continue;
-			
+
 			var sound_object = {"index": 0, "elems": []};
 			for (var i = 0; i < this_manager.sound_redundancy; i++) {
 				try
@@ -922,4 +890,3 @@ function loadRemote(path, callback1, callback2) {
 	fetch.send();
 }
 /****************************/
-
