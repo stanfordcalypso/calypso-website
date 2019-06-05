@@ -49,7 +49,9 @@ if ($row = mysql_fetch_array($result)) {
 
    <tr><td>I want an email when a new gig is posted: <input type="checkbox" <?php if ($memailnew == 1){echo "checked='checked ' ";} ?>id="newe" /></td></tr>
    <tr><td>I want an email when a gig is confirmed: <input type="checkbox" <?php if ($memailconfirm == 1){echo "checked='checked ' ";} ?>id="confirme" /></td></tr>
-   <tr><td>I want an email reminder before each gig: <input type="checkbox" <?php if ($memailreminder == 1){echo "checked='checked ' ";} ?>id="reminde" /> </td></tr>
+   <!-- Old email reminder system; abandoned because a continuously running cron job (for reminders) was too complicated
+       <tr><td>I want an email reminder before each gig: <input type="checkbox" <?php if ($memailreminder == 1){echo "checked='checked ' ";} ?>id="reminde" /> </td></tr>
+     -->
    <!-- Most recent attempt at SMS reminders; abandonded in favor of Slack
        <tr><td>I want a text reminder before each gig: <input type="checkbox" <?php if ($mtextreminder == 1){echo "checked='checked ' ";} ?>id="remindtext" /> </td></tr>
      -->
@@ -72,7 +74,8 @@ function editsettings() {
   var phonecarrier = id("phonecarrier").value;
   var newe = id("newe").checked ? 1 : 0;
   var confirme = id("confirme").checked ? 1 : 0;
-  var reminde = id("reminde").checked ? 1 : 0;
+  // var reminde = id("reminde").checked ? 1 : 0;
+  var reminde = 1;
   // var remindtext = id("remindtext").checked ? 1 : 0;
   var remindtext = 1;
   var sendstr = "setsettings&id=<?php echo $SUNETID; ?>&name="+name+"&email="+email+"&phonenumber="+phonenumber+"&phonecarrier="+phonecarrier+"&emailnew="+newe+"&emailconfirm="+confirme+"&emailreminder="+reminde+"&textreminder="+remindtext;

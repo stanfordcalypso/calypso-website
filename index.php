@@ -161,7 +161,7 @@
 		university community by performing both traditional Caribbean music and
 		popular songs, as well as exuding general enthusiasm for music, dancing,
 		and sunshine. Our members are all students at Stanford, and we arrange all
-		our own songs. We also write <a href='#premieres'>original music</a>.</p>
+		our own songs. We also write original music.</p>
 	<p>We are organized as a student group under the Stanford University Office
 		of Student Affairs. We were founded in 2005 through a
 		<a target='_blank' href='http://www.stanfordalumni.org/students/studentsreader.html?content_instance_id=114676'>
