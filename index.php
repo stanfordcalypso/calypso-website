@@ -146,12 +146,12 @@
 						<div class="row 150%">
 							<div class="6u 12u$(xsmall)">
 								<div class="image fit">
-									<img src="images/kelsey_laila_tank.jpg" alt="" />
+									<img src="images/Cass_Earth_Day.jpg" alt="" />
 								</div>
 							</div>
 							<div class="6u$ 12u$(xsmall)">
 								<div class="image fit">
-									<img src="images/the_gang_nike.jpg" alt="" />
+									<img src="images/feelin_it.jpg" alt="" />
 								</div>
 							</div>
 						</div>
