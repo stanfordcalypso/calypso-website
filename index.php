@@ -30,9 +30,8 @@
 				</div>
 				<nav id="nav">
 					<ul>
-<!-- UNCOMMENT FOR AUDITIONS
+<!-- UNCOMMENT recruiting.php FOR AUDITIONS, COMMENT AFTER DONE-->
 						<li><a href="recruiting.php">Auditions!</a></li>
--->
 						<li><a href="#media">Hear us Play!</a></li>
 						<li><a href="#group">About Us</a></li>
 						<li><a href="#pans">About the Pans</a></li>
@@ -51,7 +50,7 @@
 					<li><a href="booking.php" class="button special big">Book Us!</a></li>
 				</ul>
 				<!-- Auditions -->
-<!-- UNCOMMENT FOR AUDITIONS until before the </section>
+<!-- UNCOMMENT FOR AUDITIONS until before the </section>-->
 				<div style="margin-bottom: 15px">
 				<a href="recruiting.php">
 					<div class="notice notice-button">
@@ -62,7 +61,7 @@
 					</div>
 				</a>
 				</div>
--->
+
 			</section>
 
 			<!-- One -->
@@ -178,12 +177,11 @@
 		If you are interested in having Cardinal Calypso perform at an event,
 		please visit <a href='booking.php'>booking</a>.</p>
 		<h1>Joining Cardinal Calypso</h1>
-<!-- UNCOMMENT AFTER AUDITIONS ARE OVER-->
-		<p>Auditions are held at the beginning of every fall quarter. Auditions for the 2018-19 school year are already complete. If you think you should fall outside of this schedule, or if you have any other questions, we encourage you to <a href='#contact'>contact us</a>.</p>
-
-<!-- UNCOMMENT FOR AUDITIONS
-		<p>Auditions for the 2019-20 school year are happening now! For more information and to sign up for an audition, please click <a href='recruiting.php'>HERE</a>, or feel free to <a href='#contact'>contact us</a> with any questions.</p>
+<!-- COMMENT DURING AUDITIONS, UNCOMMENT AFTER AUDITIONS ARE OVER
+		<p>Auditions are held at the beginning of every fall quarter. Auditions for the 2019-20 school year are already complete. If you think you should fall outside of this schedule, or if you have any other questions, we encourage you to <a href='#contact'>contact us</a>.</p>
 -->
+<!-- UNCOMMENT NEXT LINE FOR AUDITIONS, COMMENT AFTER AUDITIONS ARE OVER -->
+		<p>Auditions for the 2019-20 school year are happening now! For more information and to sign up for an audition, please click <a href='recruiting.php'>HERE</a>, or feel free to <a href='#contact'>contact us</a> with any questions.</p>
 		<h1>Current Lineup</h1>
 			<strong>'20</strong> Hank Tian, Jabari Hastings, Tristan Wagner, Cassandra Lin<br/>
 			<strong>'21</strong> Ayoade Balogun, Mimi Werdegar, Julia Rathmann-Bloch, Coco Sun, Brad Immel, Cooper Reed<br/>
