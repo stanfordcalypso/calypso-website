@@ -113,7 +113,7 @@
 						</header>
 						<div class="row">
 							<div class="6u 12u$(xsmall)">
-									<iframe class="image fit" width="392" height="221" src="https://www.youtube.com/embed/MMtgUT63Xlg" frameborder="0" allowfullscreen></iframe>
+									<iframe class="image fit" width="392" height="221" src="https://www.youtube.com/embed/We7zBTouZmY" frameborder="0" allowfullscreen></iframe>
 							</div>
 							<div class="6u 12u$(xsmall)">
 									<iframe class="image fit" width="392" height="221" src="https://www.youtube.com/embed/-QFRFmDqmpg?start=25" frameborder="0" allowfullscreen></iframe>
@@ -122,7 +122,7 @@
 									<iframe class="image fit" width="392" height="221" src="https://www.youtube.com/embed/16Fvy3qXeaM" frameborder="0" allowfullscreen></iframe><br />
 							</div>
 							<div class="6u 12u$(xsmall)">
-									<iframe class="image fit" width="392" height="221" src="https://www.youtube.com/embed/vNhct2wUPIc" frameborder="0" allowfullscreen></iframe><br />
+									<iframe class="image fit" width="392" height="221" src="https://www.youtube.com/embed/TKQrvauyM-4?start=80" frameborder="0" allowfullscreen></iframe><br />
 							</div>
 						</div>
 						<h1>Recordings</h1>
@@ -178,13 +178,25 @@
 		please visit <a href='booking.php'>booking</a>.</p>
 		<h1>Joining Cardinal Calypso</h1>
 <!-- COMMENT DURING AUDITIONS, UNCOMMENT AFTER AUDITIONS ARE OVER -->
-		<p>Auditions are held at the beginning of every fall quarter. Auditions for the 2019-20 school year are already complete. If you think you should fall outside of this schedule, or if you have any other questions, we encourage you to <a href='#contact'>contact us</a>.</p>
+		<p>Calypso is a vibrant, fun, and warm-hearted community. From masterclasses
+			 with guest artists like Liam Teague, Duvone Stewart, and Andy Narell to
+			 performances at Carnaval San Francisco, we participate in exciting
+			 opportunities every year. Members of Cardinal Calypso audition with a
+			 wide range of musical knowledge, but no prior experience is required. So
+			 whether you played steelpan throughout high school or just discovered it
+			 today, we’d love to teach you more about the instrument and see you at
+			 our next auditions.</p>
+
+		<p>Auditions are held at the beginning of every fall quarter. Auditions for
+			the 2019-20 school year are already complete. If you think you should fall
+			 outside of this schedule, or if you have any other questions, we
+			 encourage you to <a href='#contact'>contact us</a>.</p>
 
 <!-- UNCOMMENT NEXT LINE FOR AUDITIONS, COMMENT AFTER AUDITIONS ARE OVER -->
 		<!-- <p>Auditions for the 2019-20 school year are happening now! For more information and to sign up for an audition, please click <a href='recruiting.php'>HERE</a>, or feel free to <a href='#contact'>contact us</a> with any questions.</p> -->
 		<h1>Current Lineup</h1>
 			<strong>'20</strong> Hank Tian, Jabari Hastings, Tristan Wagner, Cassandra Lin<br/>
-			<strong>'21</strong> Ayoade Balogun, Mimi Werdegar, Julia Rathmann-Bloch, Coco Sun, Brad Immel, Cooper Reed<br/>
+			<strong>'21</strong> Mimi Werdegar, Julia Rathmann-Bloch, Coco Sun, Brad Immel, Cooper Reed<br/>
 			<strong>'22</strong> Callum Burgess, Cam Lincoln, Michelle Xing, Asia Zhang, Matthew Zheng, Evan Kanji, Jacob Tie-Shue<br/>
 			<strong>'23</strong> Lauren Selden, Kiana Hu, Sairah Hyman, Jenny Jackson, William Golub, Angel Sandoval Castillo<br/>
 			</p>
