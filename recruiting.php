@@ -47,8 +47,8 @@
 				<table cellspacing='0' cellpadding='0'><tr>
  				    <div class='notice'>
 				      <h1>We Want to Meet You!</h1>
-				      <p>Interested in auditioning? <a href="https://docs.google.com/spreadsheets/d/1NB-5V3OaD3TLBabrskD8xnSrHmODb2L3U6tXRRkoiww/edit?usp=sharing">SIGN UP HERE!</a> Or, to learn more about the group:</p>
-				      <p> Find us at the Activities Fair from <b>noon to 4pm</b> on <b>Friday, September 27, 2019</b> in White Plaza!</p>
+				      <p>Interested in auditioning? <a href="https://docs.google.com/spreadsheets/d/1-YzhULHSVmY0O-0ibKzMEYT0-yWXIR5sWqzeGXjQQlw/edit?usp=sharing">SIGN UP HERE!</a> Or, to learn more about the group:</p>
+				      <p> Find us at the Activities Fair from <b>4pm to 7pm</b> on <b>Thursday, September 30, 2021</b> in White Plaza!</p>
 				    </div>
 				    <p>Cardinal Calypso holds auditions once per year at the beginning of fall quarter. If you love music and sunshine and want to be a part of a friendly and exciting student group, we would love for you to try out.
 				    <ul>
@@ -64,13 +64,13 @@
 				      <ul><li>Desirements: experience playing with a group and an appreciation for calypso music. </li></ul>
 				    <p style="margin-bottom: 0;">Auditions will be held at the <b>Braun Music Center</b> on:</p>
 					<ul>
-					  <li><b>Saturday, September 29 from 10am to 2pm</b>, and</li>
-					  <li><b>Sunday, September 30 from 10am to 2pm</b>.</li>
+					  <li><b>Saturday, October 2 from 11am to 6pm</b>, and</li>
+					  <li><b>Sunday, October 3 from 11am to 6pm</b>.</li>
 					</li>
-				    <p style="margin-top: 10px">Sign up to AUDITION at <a href="https://docs.google.com/spreadsheets/d/1NB-5V3OaD3TLBabrskD8xnSrHmODb2L3U6tXRRkoiww/edit?usp=sharing">THIS LINK!</a> Please only sign up for one slot. During the actual audition, we'll interview you (just an informal get-to-know-you) and teach you a song on pan (drummers: we'll make you play a few beats for us too). We will let you know about callbacks a couple days after auditions.</p>
+				    <p style="margin-top: 10px">Sign up to AUDITION at <a href="https://docs.google.com/spreadsheets/d/1-YzhULHSVmY0O-0ibKzMEYT0-yWXIR5sWqzeGXjQQlw/edit?usp=sharing">THIS LINK!</a> Please only sign up for one slot. During the actual audition, we'll interview you (just an informal get-to-know-you) and teach you a song on pan (drummers: we'll make you play a few beats for us too). We will let you know about callbacks a couple days after auditions.</p>
 				    <h1>Want More Info?</h1>
 				    <ul>
-				      <li>Come find us at the Activities Fair from <b>noon to 4pm</b> on <b>Friday, September 27, 2019</b> in White Plaza! We can answer whatever questions you have, including any about auditions!</li>
+				      <li>Come find us at the Activities Fair from <b>4pm to 7pm</b> on <b>Thursday, September 30, 2021</b> in White Plaza! We can answer whatever questions you have, including any about auditions!</li>
 				      <li>Feel free to email us at <b><a href="mailto:stanfordcalypso@gmail.com">stanfordcalypso@gmail.com</a></b>.</li>
 				    </ul>
 
