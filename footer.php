@@ -7,7 +7,7 @@
   		<li>&copy; 2006-<?=date('Y')?> Cardinal Calypso</li>
   		<li>Design: <a href="http://templated.co">TEMPLATED</a></li>
   		<li><a href="http://assu.stanford.edu/">ASSU</a></li>
-  		<li><a href="http://cardinalcalypso.stanford.edu/members">Members</a></li>
+  		<li><a href="https://web.stanford.edu/group/calypso/cgi-bin/members">Members</a></li>
   	</ul>
   </div>
 </footer>

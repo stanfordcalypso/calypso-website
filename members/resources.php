@@ -19,7 +19,7 @@
      <ul>
     	<li><a href="layouts.png">Pan Layouts</a></li>
         <li><a href="soloing.html">Akwasi's Guide to Soloing</a></li>
-    	<li><a href="http://cardinalcalypso.stanford.edu/vis">JP's Song Visualizer</a></li>
+    	<li><a href="http://cardinalcalypso.stanford.edu/vis">JP's Song Visualizer</a></li> 
     </ul>
     <h1>Arranging and Composing</h1>
     <ul>

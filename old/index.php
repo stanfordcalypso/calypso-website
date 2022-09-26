@@ -33,6 +33,6 @@
       include_once "content/{$p}.php";
     ?></td>
   </tr>
-  <tr id='foot'><td colspan='2'>Copyright &copy;2006-<?=date('Y')?> Cardinal Calypso &middot; <a href='http://assu.stanford.edu' target='_blank'>ASSU</a> &middot; <a href='http://www.facebook.com/pages/Cardinal-Calypso/106620806083662' target='_blank'>FB</a> &middot; <a href="http://cardinalcalypso.stanford.edu/members">Members</a></td></tr>
+  <tr id='foot'><td colspan='2'>Copyright &copy;2006-<?=date('Y')?> Cardinal Calypso &middot; <a href='http://assu.stanford.edu' target='_blank'>ASSU</a> &middot; <a href='http://www.facebook.com/pages/Cardinal-Calypso/106620806083662' target='_blank'>FB</a> &middot; <a href="https://web.stanford.edu/group/calypso/cgi-bin/members">Members</a></td></tr>
 </table></div></body>
 </html>
