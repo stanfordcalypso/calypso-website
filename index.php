@@ -199,7 +199,7 @@
 			<strong>'22</strong> Callum Burgess, Cooper Reed, Jacob Tie-Shue<br/>
 			<strong>'23</strong> Angel Sandoval Castillo, William Golub, Kiana Hu, Sairah Hyman, Jenny Jackson, Stephanie Jackson, Evan Kanji, Steven Kohl, Annie Nguyen, Lauren Selden<br/>
 			<strong>'24</strong> Hawi Abraham, William Doolittle, Erin Floranda, Rebecca-Ann Jattan, Emmanuelle Williamson<br/>
-			<strong>'25</strong> Raisha Abubo, Aanika Atluri, Jean Rachel Bahk, Daniyelle Bennett, Benjamin Foster, Oriana Jackson, Sherlock Langevine, Anya Miksovsky, Jaelen Sobers, Laura Sun <br/>
+			<strong>'25</strong> Raisha Abubo, Aanika Atluri, Jean Rachel Bahk, Daniyelle Bennett, Benjamin Foster, Oriana Jackson, Sherlock Langevine, Evan Miksovsky, Jaelen Sobers, Laura Sun <br/>
 			<strong>'26</strong> Elijah Anderson, Kai Charp, Ty Hosein, Malaya Gaerlan<br/>
 			</p>
 				 <h1>Alumni</h1>
