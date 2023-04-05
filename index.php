@@ -233,10 +233,12 @@
 								first evolved as a way of spreading news and free speech under
 								corrupt British rule. Cardinal Calypso promotes this rich culture
 								by playing calypso music in addition to other popular songs.</p>
-							<p>We buy most of our instruments from Gill's Pan Shop in Curepe,
-								Trinidad. They are tuned by Joe Kelly of
-								<a href='http://www.californiapercussion.com' target='_blank'>
-									California Percussion</a>.</p>
+							<p>The instruments in our ensemble were purchased from a variety of pan builders including: <br />
+								Gill's Pan Shop - Curepe, Trinidad <br />
+Mannette Instruments - Morgantown, West Virginia <br />
+Desmond 'Mappo' Richardson - Trinidad and Tobago <br />
+Joe Kelly - San Rafael, California <br />
+They are tuned by Joe Kelly.</p>
 								</div>
 								<!-- <div class="top-link">
 									<a href="#" class="aligner-item"><img class="image icon" src="images/calypso_logo.gif" alt></a>
