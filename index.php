@@ -171,7 +171,7 @@
 				donations to
 				<a target='_blank' href='http://givingtostanford.stanford.edu/tsf/'>
 					The Stanford Fund</a>.
-					Unlike <a target='_blank' href='http://www.orgs.muohio.edu/musteel/'>
+					Unlike <a target='_blank' href='https://www.niu.edu/music/ensembles/steelband.shtml'>
 						some collegiate ensembles</a>, we are a relatively young and small
 						student group, but we have great aspirations.</p>
 		If you are interested in having Cardinal Calypso perform at an event,
