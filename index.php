@@ -30,8 +30,10 @@
 				</div>
 				<nav id="nav">
 					<ul>
-<!-- UNCOMMENT recruiting.php FOR AUDITIONS, COMMENT AFTER DONE--> 
-						<!-- <li><a href="recruiting.php">Auditions!</a></li> -->
+<!-- UNCOMMENT NEXT LINE FOR AUDITIONS, COMMENT AFTER AUDITIONS ARE OVER --> 
+						<!-- -->
+							<li><a href="recruiting.php">Auditions!</a></li> 
+						<!-- -->
 						<li><a href="#media">Hear us Play!</a></li>
 						<li><a href="#group">About Us</a></li>
 						<li><a href="#pans">About the Pans</a></li>
@@ -51,7 +53,8 @@
 				</ul>
 				<!-- Auditions -->
 <!-- UNCOMMENT FOR AUDITIONS until before the </section> -->
-				<!-- <div style="margin-bottom: 15px">
+				<!-- -->
+				<div style="margin-bottom: 15px">
 				<a href="recruiting.php">
 					<div class="notice notice-button">
 	    	  			<br>
@@ -60,7 +63,8 @@
 	      				<h2 style="font-size: 2em">Click here to sign up to AUDITION FOR CALYPSO!</h2>
 					</div>
 				</a>
-				</div> -->
+				</div>
+				<!-- -->
  <!-- -->
 			</section>
 
@@ -178,7 +182,7 @@
 		please visit <a href='booking.php'>booking</a>.</p>
 		<h1>Joining Cardinal Calypso</h1>
 <!-- COMMENT DURING AUDITIONS, UNCOMMENT AFTER AUDITIONS ARE OVER -->
-
+		<!-- 
 		<p>Calypso is a vibrant, fun, and warm-hearted community. From masterclasses
 			 with guest artists like Liam Teague, Duvone Stewart, and Andy Narell to
 			 performances at Carnaval San Francisco, we participate in exciting
@@ -192,9 +196,11 @@
 			the 2022-23 school year are already complete. If you think you should fall
 			 outside of this schedule, or if you have any other questions, we
 			 encourage you to <a href='#contact'>contact us</a>.</p>
-
+		 -->
 <!-- UNCOMMENT NEXT LINE FOR AUDITIONS, COMMENT AFTER AUDITIONS ARE OVER -->
-		<!-- <p>Auditions for the 2022-23 school year are happening now! For more information and to sign up for an audition, please click <a href='recruiting.php'>HERE</a>, or feel free to <a href='#contact'>contact us</a> with any questions.</p> -->
+		<!-- -->
+			<p>Auditions for the 2022-23 school year are happening now! For more information and to sign up for an audition, please click <a href='recruiting.php'>HERE</a>, or feel free to <a href='#contact'>contact us</a> with any questions.</p>
+		<!-- -->
 		<h1>Current Lineup</h1>
 			<strong>'22</strong> Callum Burgess, Cooper Reed, Jacob Tie-Shue<br/>
 			<strong>'23</strong> Angel Sandoval Castillo, William Golub, Kiana Hu, Sairah Hyman, Jenny Jackson, Stephanie Jackson, Evan Kanji, Steven Kohl, Annie Nguyen, Lauren Selden<br/>
