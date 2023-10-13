@@ -31,9 +31,9 @@
 				<nav id="nav">
 					<ul>
 <!-- UNCOMMENT NEXT LINE FOR AUDITIONS, COMMENT AFTER AUDITIONS ARE OVER --> 
-						<!-- -->
+						<!-- 
 							<li><a href="recruiting.php">Auditions!</a></li> 
-						<!-- -->
+						     -->
 						<li><a href="#media">Hear us Play!</a></li>
 						<li><a href="#group">About Us</a></li>
 						<li><a href="#pans">About the Pans</a></li>
@@ -53,7 +53,7 @@
 				</ul>
 				<!-- Auditions -->
 <!-- UNCOMMENT FOR AUDITIONS until before the </section> -->
-				<!-- -->
+				<!-- 
 				<div style="margin-bottom: 15px">
 				<a href="recruiting.php">
 					<div class="notice notice-button">
@@ -64,7 +64,7 @@
 					</div>
 				</a>
 				</div>
-				<!-- -->
+				     -->
  <!-- -->
 			</section>
 
@@ -182,7 +182,7 @@
 		please visit <a href='booking.php'>booking</a>.</p>
 		<h1>Joining Cardinal Calypso</h1>
 <!-- COMMENT DURING AUDITIONS, UNCOMMENT AFTER AUDITIONS ARE OVER -->
-		<!-- 
+		<!-- -->
 		<p>Calypso is a vibrant, fun, and warm-hearted community. From masterclasses
 			 with guest artists like Liam Teague, Duvone Stewart, and Andy Narell to
 			 performances at Carnaval San Francisco, we participate in exciting
@@ -193,23 +193,23 @@
 			 our next auditions.</p>
 
 		<p>Auditions are held at the beginning of every fall quarter. Auditions for
-			the 2022-23 school year are already complete. If you think you should fall
+			the 2023-24 school year are already complete. If you think you should fall
 			 outside of this schedule, or if you have any other questions, we
 			 encourage you to <a href='#contact'>contact us</a>.</p>
-		 -->
+		<!-- -->
 <!-- UNCOMMENT NEXT LINE FOR AUDITIONS, COMMENT AFTER AUDITIONS ARE OVER -->
-		<!-- -->
-			<p>Auditions for the 2022-23 school year are happening now! For more information and to sign up for an audition, please click <a href='recruiting.php'>HERE</a>, or feel free to <a href='#contact'>contact us</a> with any questions.</p>
-		<!-- -->
+		<!-- 
+			<p>Auditions for the 2023-24 school year are happening now! For more information and to sign up for an audition, please click <a href='recruiting.php'>HERE</a>, or feel free to <a href='#contact'>contact us</a> with any questions.</p>
+		     -->
 		<h1>Current Lineup</h1>
-			<strong>'22</strong> Callum Burgess, Cooper Reed, Jacob Tie-Shue<br/>
-			<strong>'23</strong> Angel Sandoval Castillo, William Golub, Kiana Hu, Sairah Hyman, Jenny Jackson, Stephanie Jackson, Evan Kanji, Steven Kohl, Annie Nguyen, Lauren Selden<br/>
-			<strong>'24</strong> Hawi Abraham, William Doolittle, Erin Floranda, Rebecca-Ann Jattan, Emmanuelle Williamson<br/>
-			<strong>'25</strong> Raisha Abubo, Aanika Atluri, Jean Rachel Bahk, Daniyelle Bennett, Benjamin Foster, Oriana Jackson, Sherlock Langevine, Evan Miksovsky, Jaelen Sobers, Laura Sun <br/>
-			<strong>'26</strong> Elijah Anderson, Kai Charp, Ty Hosein, Malaya Gaerlan<br/>
+			<strong>'23</strong> Jenny Jackson, Stephanie Jackson, Evan Kanji, Annie Nguyen<br/>
+			<strong>'24</strong> Hawi Abraham, Jessica Dong, William Doolittle, Erin Floranda, Rebecca-Ann Jattan, Angel Sandoval Castillo, Emmanuelle Williamson<br/>
+			<strong>'25</strong> Raisha Abubo, Aanika Atluri, Jean Rachel Bahk, Daniyelle Bennett, Benjamin Foster, Oriana Jackson, Sherlock Langevine, Evan Miksovsky, Jaelen Sobers, Laura Sun, Matthew Vilaysack<br/>
+			<strong>'26</strong> Elijah Anderson, Kai Charp, Malaya Gaerlan, Ty Hosien, Erick Ore<br/>
+            <strong>'27</strong> Leon Garcia, Henry Kasulka, Johnny Martinez, Olivia Pham, Hugh Sheehan, Sathvika Sitaraman
 			</p>
 				 <h1>Alumni</h1>
-				 <p>Marie-Jossee Mont-Reynaud, Chris Fajardo, Doreen Hoang, Lauryn Isford, Amy Kim, Clara McCreery, Amanda McNary, Prithvi Ramakrishnan, Carla Lewis, Paulina Chamely, Eisa Al-Shamma, Gio Jacuzzi, Akwasi Abrefah ('12), Aaron Acosta ('13), Josh Archibald-Seiffer, Alexis Arnold ('11), Chris Balane, Henry Biermann ('14), David Brown, Arielle Craig, Kevin Danna, Mike Demmitt, Nancy Falxa-Raymond, Allison Fink ('12), <a target="_blank" href="http://adamgenecov.com">Adam Genecov ('13)</a>, David Germain, Maxine Holland ('11), Sally Hudson, <a target='_blank' href='http://www.lucaswilljohnson.com'>Lucas Johnson ('11)</a>, Dana Katz ('12), Binna Kim ('13), Monique King, Liezel Labios, David Miller, Bri Mostoller ('16), Kai Neo ('14), Jonathan Potter ('12), <a target='_blank' href='http://terribleben.com'>Ben Roth ('11)</a>, Jesse Ruder ('12), Emma Sagan ('14), Flip Tanedo, Art Tosborvorn, Will Tucker ('13), Justin Wiguna ('15), Alex Williamson, Cathy Ye, Nate Zwerdling ('11), Alan Propp ('16), Amanda Quay ('16), Leopold Wambersie ('16), Jim Andress ('17), J Evans ('17), Tucker Leavitt ('17), Meghan Shea ('17), Camille Townshend ('17), Zachary Birnholz ('18), Nathan Chael ('18), Elisa Lupin-Jimenez ('18), Kijung Park ('18), Kelsey Reardon ('18), Greyson Assa, Acassia Ferguson, Caroline Young ('19), Carlos Fresnillo ('19), Astrid Casimire ('19), Prasanna Ramakrishnan ('19), Dorian Lumarque ('19), Connor Gunn ('19), John Kustin, Ayoade Balogun, Hank Tian ('20), Tristan Wagner ('20), Cassandra Lin ('20), Jabari Hastings ('21), Mimi Werdegar ('21), Julia Rathmann-Bloch ('21), Coco Sun ('21), Brad Immel ('21),  Fatima Karim ('22'), Cam Lincoln ('22'), Michelle Xing ('22'), Asia Zhang ('22'), Matthew Zheng ('22')</p>
+				 <p>Marie-Jossee Mont-Reynaud, Chris Fajardo, Doreen Hoang, Lauryn Isford, Amy Kim, Clara McCreery, Amanda McNary, Prithvi Ramakrishnan, Carla Lewis, Paulina Chamely, Eisa Al-Shamma, Gio Jacuzzi, Akwasi Abrefah ('12), Aaron Acosta ('13), Josh Archibald-Seiffer, Alexis Arnold ('11), Chris Balane, Henry Biermann ('14), David Brown, Arielle Craig, Kevin Danna, Mike Demmitt, Nancy Falxa-Raymond, Allison Fink ('12), <a target="_blank" href="http://adamgenecov.com">Adam Genecov ('13)</a>, David Germain, Maxine Holland ('11), Sally Hudson, <a target='_blank' href='http://www.lucaswilljohnson.com'>Lucas Johnson ('11)</a>, Dana Katz ('12), Binna Kim ('13), Monique King, Liezel Labios, David Miller, Bri Mostoller ('16), Kai Neo ('14), Jonathan Potter ('12), <a target='_blank' href='http://terribleben.com'>Ben Roth ('11)</a>, Jesse Ruder ('12), Emma Sagan ('14), Flip Tanedo, Art Tosborvorn, Will Tucker ('13), Justin Wiguna ('15), Alex Williamson, Cathy Ye, Nate Zwerdling ('11), Alan Propp ('16), Amanda Quay ('16), Leopold Wambersie ('16), Jim Andress ('17), J Evans ('17), Tucker Leavitt ('17), Meghan Shea ('17), Camille Townshend ('17), Zachary Birnholz ('18), Nathan Chael ('18), Elisa Lupin-Jimenez ('18), Kijung Park ('18), Kelsey Reardon ('18), Greyson Assa, Acassia Ferguson, Caroline Young ('19), Carlos Fresnillo ('19), Astrid Casimire ('19), Prasanna Ramakrishnan ('19), Dorian Lumarque ('19), Connor Gunn ('19), John Kustin, Ayoade Balogun, Hank Tian ('20), Tristan Wagner ('20), Cassandra Lin ('20), Jabari Hastings ('21), Mimi Werdegar ('21), Julia Rathmann-Bloch ('21), Coco Sun ('21), Brad Immel ('21), Callum Burgess ('22'), Fatima Karim ('22'), Cam Lincoln ('22'), Jacob Tie-Shue ('22'), Michelle Xing ('22'), Asia Zhang ('22'), Matthew Zheng ('22'), William Golub ('23'), Kiana Hu ('23'), Sairah Hyman ('23'), Steven Kohl ('23'), Cooper Reed ('23'), Lauren Selden ('23')</p>
 								<!-- <div class="top-link">
 									<a href="#" class="aligner-item"><img class="image icon" src="images/calypso_logo.gif" alt></a>
 									<a href="#" class="aligner-item">Back to top</a>
